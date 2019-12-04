@@ -1,0 +1,29 @@
+# == Schema Information
+#
+# Table name: reservations
+#
+#  id               :integer          not null, primary key
+#  time             :time             not null
+#  num_participants :integer          not null
+#  date             :date             not null
+#  participant_id   :integer          not null
+#  event_id         :integer          not null
+#  created_at       :datetime         not null
+#  updated_at       :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  time: 2019-12-03 21:39:36
+  num_participants: 1
+  date: 2019-12-03
+  participant_id: 1
+  event_id: 1
+
+two:
+  time: 2019-12-03 21:39:36
+  num_participants: 1
+  date: 2019-12-03
+  participant_id: 1
+  event_id: 1
