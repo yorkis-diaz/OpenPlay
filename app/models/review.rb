@@ -12,4 +12,13 @@
 #
 
 class Review < ApplicationRecord
+    validates :body, :rating
+
+    belongs_to :reviewer,
+        foreign_key: :reviewer_id,
+        class_name: :User
+
+    belongs_to :event
+        foreign_key: :event_id,
+        class_name: :Event
 end

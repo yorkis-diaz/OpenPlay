@@ -26,4 +26,20 @@
 #
 
 class Event < ApplicationRecord
+    validates :id, :name, :info, :event, :event, :event, :event, :type, :phone, :skill, :rat, 
+        :address, :cost, :lat , :lng , :participation_open_time, :participation_close_time, :event_duration, presence: true
+
+    has_many :reservations,
+        foreign_key: :event_id,
+        class_name: :Reservation,
+        dependent: :destroy
+
+    has_many :participants,
+        through: :reservations,
+        source: :participant
+
+    has_many :reviews,
+        foreign_key: :event_id,
+        class_name: :Review,
+        dependent: :destroy
 end

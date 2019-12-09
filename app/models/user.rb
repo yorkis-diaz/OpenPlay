@@ -15,7 +15,27 @@
 class User < ApplicationRecord
     validates :email, :session_token, presence: true, uniqueness: true
     validates :firstname, :lastname, :password_digest, presence: true
-    validates :password length: { minimum: 6}, allow_nil: true
+    validates :password, length: { minimum: 6}, allow_nil: true
+
+    has_many :reservations,
+        foreign_key: :participant_id,
+        class_name: :Reservation,
+        dependent: :destroy
+
+    has_many :reviews,
+        foreign_key: :reviewer_id,
+        class_name: :Review,
+        dependent: :destroy
+
+    has_many :saved_events,
+        class_name: :SavedEvent,
+        dependent: :destroy
+
+    has_many :events,
+        thorugh: :reservations,
+        source: :event
+
+    
 
     attr_reader :password
     after_initialize :ensure_session_token
@@ -30,7 +50,7 @@ class User < ApplicationRecord
     end
 
     def ensure_session_token
-        self.session_token ||= self.class.ensure_session_token
+        self.session_token ||= self.class.generate_session_token
     end
 
     def is_password?(password)
