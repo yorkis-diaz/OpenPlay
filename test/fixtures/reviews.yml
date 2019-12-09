@@ -2,13 +2,14 @@
 #
 # Table name: reviews
 #
-#  id          :integer          not null, primary key
-#  body        :string           not null
-#  rating      :integer          not null
-#  reviewer_id :integer          not null
-#  event_id    :integer          not null
-#  created_at  :datetime         not null
-#  updated_at  :datetime         not null
+#  id             :integer          not null, primary key
+#  body           :string           not null
+#  rating         :integer          not null
+#  reviewer_id    :integer          not null
+#  event_id       :integer          not null
+#  created_at     :datetime         not null
+#  updated_at     :datetime         not null
+#  reservation_id :integer          not null
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html

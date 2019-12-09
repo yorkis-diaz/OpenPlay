@@ -1,8 +1,6 @@
 class Api::UsersController < ApplicationController
-
     def show
-        @user.find(params[:id])
-        render :show
+        @user = User.find(params[:id])
     end
 
     def create
@@ -29,7 +27,7 @@ class Api::UsersController < ApplicationController
         @user.find(params[:id])
 
         if @user.destroy
-            render { message: "account deleted successfully" }
+            render json: { message: "account deleted successfully" }
         else
             render @user.errors.full_messages, status: 422
         end

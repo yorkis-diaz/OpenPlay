@@ -9,7 +9,7 @@
 #  event_state              :string           not null
 #  event_zipcode            :string           not null
 #  event_country            :string           not null
-#  type                     :string           not null
+#  event_type               :string           not null
 #  phone                    :string           not null
 #  skill_level              :string           not null
 #  rating                   :integer          default("0"), not null

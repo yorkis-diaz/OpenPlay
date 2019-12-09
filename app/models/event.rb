@@ -9,7 +9,7 @@
 #  event_state              :string           not null
 #  event_zipcode            :string           not null
 #  event_country            :string           not null
-#  type                     :string           not null
+#  event_type               :string           not null
 #  phone                    :string           not null
 #  skill_level              :string           not null
 #  rating                   :integer          default("0"), not null
@@ -26,8 +26,8 @@
 #
 
 class Event < ApplicationRecord
-    validates :id, :name, :info, :event, :event, :event, :event, :type, :phone, :skill, :rat, 
-        :address, :cost, :lat , :lng , :participation_open_time, :participation_close_time, :event_duration, presence: true
+    validates :name, :info, :event_city, :event_state, :event_zipcode, :event_country, :event_type, :phone, :skill_level, :rating, 
+        :address, :capacity, :cost, :lat , :lng , :participation_open_time, :participation_close_time, :event_duration, presence: true
 
     has_many :reservations,
         foreign_key: :event_id,

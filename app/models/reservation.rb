@@ -13,7 +13,7 @@
 #
 
 class Reservation < ApplicationRecord
-    validates :time, :num_participants, :date
+    validates :time, :num_participants, :date, presence: true
 
     belongs_to :participant,
         foreign_key: :participant_id,
@@ -22,4 +22,8 @@ class Reservation < ApplicationRecord
     belongs_to :event,
         foreign_key: :event_id,
         class_name: :Event
+
+    has_many :reviews,
+        class_name: :Review,
+        dependent: :destroy
 end

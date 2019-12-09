@@ -32,7 +32,7 @@ class User < ApplicationRecord
         dependent: :destroy
 
     has_many :events,
-        thorugh: :reservations,
+        through: :reservations,
         source: :event
 
     

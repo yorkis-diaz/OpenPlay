@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_09_155616) do
+ActiveRecord::Schema.define(version: 2019_12_09_192539) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 2019_12_09_155616) do
     t.string "event_state", null: false
     t.string "event_zipcode", null: false
     t.string "event_country", null: false
-    t.string "type", null: false
+    t.string "event_type", null: false
     t.string "phone", null: false
     t.string "skill_level", null: false
     t.integer "rating", default: 0, null: false
@@ -61,6 +61,7 @@ ActiveRecord::Schema.define(version: 2019_12_09_155616) do
     t.integer "event_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "reservation_id", null: false
     t.index ["event_id"], name: "index_reviews_on_event_id"
   end
 
