@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_04_025157) do
+ActiveRecord::Schema.define(version: 2019_12_09_155616) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,8 +23,6 @@ ActiveRecord::Schema.define(version: 2019_12_04_025157) do
     t.string "event_zipcode", null: false
     t.string "event_country", null: false
     t.string "type", null: false
-    t.time "start_time", null: false
-    t.date "date", null: false
     t.string "phone", null: false
     t.string "skill_level", null: false
     t.integer "rating", default: 0, null: false
@@ -33,6 +31,11 @@ ActiveRecord::Schema.define(version: 2019_12_04_025157) do
     t.float "cost", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.float "lat", null: false
+    t.float "lng", null: false
+    t.time "participation_open_time", null: false
+    t.time "participation_close_time", null: false
+    t.float "event_duration", null: false
     t.index ["event_city"], name: "index_events_on_event_city"
     t.index ["name"], name: "index_events_on_name"
     t.index ["skill_level"], name: "index_events_on_skill_level"
@@ -52,7 +55,6 @@ ActiveRecord::Schema.define(version: 2019_12_04_025157) do
   end
 
   create_table "reviews", force: :cascade do |t|
-    t.string "title", null: false
     t.string "body", null: false
     t.integer "rating", null: false
     t.integer "reviewer_id", null: false
@@ -60,8 +62,13 @@ ActiveRecord::Schema.define(version: 2019_12_04_025157) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["event_id"], name: "index_reviews_on_event_id"
-    t.index ["reviewer_id"], name: "index_reviews_on_reviewer_id"
-    t.index ["title"], name: "index_reviews_on_title"
+  end
+
+  create_table "saved_events", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "event_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
