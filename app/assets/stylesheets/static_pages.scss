@@ -1,3 +1,73 @@
 // Place all the styles related to the static_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+// body {
+//     height: 1000px;
+// }
+
+// main {
+//     height: 100%;
+//     background-color: red;
+// }
+
+.signup {
+    width: 60%;
+    justify-content: center;
+    background-color: red;
+    padding: 55px 0;
+    height: 800px;
+    margin: 0 auto;
+
+}
+
+.signup > form {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.form-header {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.form-header > h1 {
+    width: 80%;
+    font-size: 22px;
+    font-weight: 550;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.form-header > hr {
+    width: 80%;
+}
+
+.form > p {
+    font-size: 15px;
+}
+
+
+.signup input {
+    border: 1px solid gray;
+    width: 80%;
+    border-radius: 3px;
+    padding: 15px;
+}
+
+
+.signup input:first-of-type {
+    margin-top: 10px;
+}
+
+.signin-btn {
+    border: 1px solid gray;
+    width: 80%;
+    border-radius: 3px;
+    padding: 15px;
+    background-color: white;
+    text-align: center;
+    background-color: rgb(69, 69, 236);
+    color: white;
+    font-size: 18px;
+}
