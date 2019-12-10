@@ -11,6 +11,7 @@ class SignupForm extends React.Component {
       lastname: "",
       password: ""
     }
+
     this.handleUpdate = this.handleUpdate.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   };
@@ -30,11 +31,11 @@ class SignupForm extends React.Component {
   };
 
   render () {
-    if (this.props.loggedIn) {
-      return <Redirect to='/'/>
-    }
+    // if (this.props.loggedIn) {
+    //   return <Redirect to='/'/>
+    // }
     return (
-      <div>
+      <div className="form-container">
         <h1>Welcome to OpenPlay!</h1>
         <form onSubmit={this.handleSubmit}>
           <label>
@@ -69,15 +70,15 @@ class SignupForm extends React.Component {
               value={this.state.password}
             />
           </label>
-          {/* <label>
+          <label>
             <input
               type="password"
               onChange={this.handleUpdate("password")}
               placeholder="Re-nter password*"
               value={this.state.password}
             />
-          </label> */}
-          <button>Create Account</button>
+          </label>
+          <button className="signin-btn">Create Account</button>
         </form>
       </div>
     );

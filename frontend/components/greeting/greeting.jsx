@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Greeting = ({loggedIn, logout, currentUser }) => {
+const Greeting = ({loggedIn, logout, currentUser, openModal, closeModal }) => {
   if (loggedIn) {
     return (
-      <div>
+      <div> 
         <h1>Hi, {currentUser.firstname}</h1>
         <button onClick={() => logout()}>Logout</button>
       </div>
@@ -12,8 +12,8 @@ const Greeting = ({loggedIn, logout, currentUser }) => {
   } else {
     return (
       <div>
-        <Link to="/signup">Signup</Link>
-        <Link to="/login">Login</Link>
+        <button onClick={() => openModal('signup')}>Sign up</button>
+        <button onClick={() => openModal('login')}>Sign in</button>
       </div>
     );
   }

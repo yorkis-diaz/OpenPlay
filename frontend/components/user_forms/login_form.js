@@ -38,15 +38,13 @@ class LoginForm extends React.Component {
   };
 
   render () {
-    if (this.props.loggedIn) {
-      return <Redirect to='/'/>
-    }
+    // if (this.props.loggedIn) {
+    //   return <Redirect to='/'/>
+    // }
     return (
-      <div className="signup">
-        <div className="form-header">
-          <h1>Please sign in</h1>
-          <hr />
-        </div>
+      <div className="form-container">
+        <h1>Please sign in</h1>
+        {/* <hr/> */}
         <form onSubmit={this.handleSubmit}>
           <label>
             <input
@@ -64,10 +62,21 @@ class LoginForm extends React.Component {
               value={this.state.password}
             />
           </label>
+          <Link to="#">Forgot Password?</Link>
           <button className="signin-btn">Sign In</button>
-          <p>New to OpenPlay? <Link to="/signup">Create an account</Link></p>
-          <button onClick={this.demoUser}>Demo User</button>
+          <hr/>
+          <button className="demo-user-btn" onClick={this.demoUser}>Demo User</button>
         </form>
+        <ul className="external-resource">
+          <h3>Don't want to complete the form?</h3>
+          <button className="external-resource-btn">Continue with Booking.com</button>
+          <button className="external-resource-btn">Continue with FaceBook</button>
+          <button className="external-resource-btn">Continue with Google</button>
+        </ul>
+        <p>New to OpenPlay? {this.props.signupForm}</p>
+        <p>
+          This site is protected by reCAPTCHA and the Google <span>Privacy</span> <span>Policy</span> and <span>Terms of Service</span> apply.
+        </p>
       </div>
     );
   }
