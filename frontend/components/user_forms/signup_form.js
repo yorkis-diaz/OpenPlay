@@ -13,7 +13,6 @@ class SignupForm extends React.Component {
       lastname: "",
       password: ""
     }
-    debugger
 
     this.handleUpdate = this.handleUpdate.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -47,7 +46,6 @@ class SignupForm extends React.Component {
   };
 
   render () {
-    debugger
     return (
       <div className="form-container">
         <h1>Welcome to OpenPlay!</h1>
@@ -57,7 +55,7 @@ class SignupForm extends React.Component {
               type="text"
               onChange={this.handleUpdate("firstname")}
               placeholder="First Name*"
-              value={this.state.email}
+              value={this.state.firstname}
             />
             < ErrorItem error={this.errors.firstName} 
               message={"Enter your first name"} 
@@ -70,7 +68,7 @@ class SignupForm extends React.Component {
               type="text"
               onChange={this.handleUpdate("lastname")}
               placeholder="Last Name*"
-              value={this.state.password}
+              value={this.state.lastname}
             />
             < ErrorItem 
               error={this.errors.firstName} 
@@ -84,7 +82,7 @@ class SignupForm extends React.Component {
               type="email"
               onChange={this.handleUpdate("email")}
               placeholder="Enter email*"
-              value={this.state.password}
+              value={this.state.email}
             />
             < ErrorItem 
               error={this.errors.firstName} 
@@ -105,14 +103,14 @@ class SignupForm extends React.Component {
               style={"error-item"}
             />
           </label>
-          <label>
+          {/* <label>
             <input
               type="password"
               onChange={this.handleUpdate("password")}
               placeholder="Re-nter password*"
               value={this.state.password}
             />
-          </label>
+          </label> */}
           <div className="checkboxes">
             <input type="checkbox" name="" id="1" />
             I am an administrative professional who books reservations for others.

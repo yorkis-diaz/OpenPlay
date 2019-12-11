@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import DropdownContainer from "../dropdowns/dropdown_container";
+import DropdownNav from "../nav_bar/dropdown_nav";
 
 class Greeting extends React.Component {
   constructor(props) {
@@ -13,10 +14,13 @@ class Greeting extends React.Component {
   // }
 
   handleDropdown (value) {
-
     return (e) => {
+      debugger
       e.preventDefault();
-      if (this.props.dropdown !== value) {
+      if ((this.props.dropdown !== null) && (this.props.dropdown !== value)) {
+        this.props.closeDropdown();
+        this.props.openDropdown(value);
+      } else if (this.props.dropdown === null) {     
         this.props.openDropdown(value)
       } else {
         this.props.closeDropdown()
@@ -26,13 +30,16 @@ class Greeting extends React.Component {
 
   render () {
     if (this.props.loggedIn) {
+      const dropdown = (this.props.dropdown === "greeting-menu") ? <DropdownContainer/> : null
       return (
         <div className="greeting">
-          <DropdownContainer />
-          <button onClick={this.handleDropdown('greeting-menu')}>
+          {dropdown}
+          <button className="greeting-content" onClick={this.handleDropdown('greeting-menu')}>
              <h1>Hi, {this.props.currentUser.firstname} </h1>
           </button>
-          
+          {/* <div>
+            <h1>{"\u2303"}</h1>
+          </div> */}
         </div>
       );
     } else {

@@ -5,7 +5,7 @@ import LoginFormContainer from "./user_forms/login_form_container";
 import { AuthRoute } from '../util/routes_api';
 import SignupFormContainer from './user_forms/signup_form_container';
 import ModalContainer from '../components/user_forms/modal/modal_container';
-import NavBar from './nav_bar/nav_bar';
+import NavBarContainer from './nav_bar/nav_bar_container';
 // import ErrorItem from './user_forms/errors/error_item';
 
 
@@ -13,7 +13,7 @@ const App = () => {
     return (
       <main>
         < ModalContainer /> 
-        < NavBar />
+        < NavBarContainer />
         {/* < ErrorItem error={"I have to do this"} /> */}
         {/* <Route exact path="/" component={GreetingContainer} /> */}
         {/* < LoginFormContainer /> */}

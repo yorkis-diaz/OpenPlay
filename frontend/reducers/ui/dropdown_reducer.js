@@ -15,8 +15,8 @@ const DropdownReducer = (state = _nullState, action) => {
         case DROPDOWN_CLOSE:
             return _nullState
 
-        case RECEIVE_CURRENT_USER:
-            return _nullState
+        // case RECEIVE_CURRENT_USER:
+        //     return _nullState
 
         default:
             return state;

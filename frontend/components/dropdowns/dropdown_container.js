@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { closeDropdown } from '../../actions/dropdown_actions';
+import { closeDropdown, openDropdown } from '../../actions/dropdown_actions';
 import Dropdown from './dropdown';
 import { logout } from '../../actions/session_actions';
 
@@ -12,6 +12,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = dispatch => {
     return {
         closeDropdown: () => dispatch(closeDropdown()),
+        openDropdown: (dropdown) => dispatch(openDropdown(dropdown)),
         logout: () => dispatch(logout())
     }
 }

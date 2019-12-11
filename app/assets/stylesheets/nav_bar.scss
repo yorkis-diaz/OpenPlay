@@ -10,7 +10,8 @@
     justify-content: flex-end;
     // border: 2px solid black;
     width: 100%;
-
+    transition-property: display;
+    transition-duration: 500ms;
 }
 
 .upper-nav > a {
@@ -109,6 +110,10 @@
     display: flex;
     justify-content: space-between;
     padding-left: 10px;
+    // margin: 0;
+    // padding: 0;
+    width: 100%;
+    // width: 50px;
     border-bottom: 1px solid rgba(192, 191, 191, 0.466);;
 }
 
@@ -117,10 +122,15 @@
     list-style: none;
     display: flex;
     justify-content: space-between;
-    overflow: hidden;
+    position: relative;
+    // overflow: hidden;
     padding-left: 20px;
     border-right: 1px solid rgba(192, 191, 191, 0.466);
     width: 200px;
+}
+
+.logo li {
+    // position: relative;
 }
 
 .logo li::before {
@@ -128,7 +138,7 @@
     color: rgba(42, 42, 194, 0.801);
     font-size: 30px;
     position: absolute;
-    top: 30px;
+    top: 4px;
 }
 
 .logo li::after {
@@ -139,13 +149,13 @@
     font-weight: bold;
     font-size: 90px;
     margin-left: 30px;
-    top: -15px;
+    top: -43px;
 }
 
 .logo > h2 {
     position: absolute;
     left: 120px;
-    top: 42px;
+    top: 16px;
     font-weight: bold;
     font-size: 20px;
 }
@@ -153,6 +163,10 @@
 // .greeting-container {
 //     width: 20%;
 // }
+.greeting-info {
+    display: flex;
+    align-items: center;
+}
 
 .greeting {
     font-family: Arial, Helvetica, sans-serif;
@@ -166,20 +180,25 @@
     margin: 15px 0;
     padding-left: 10px;
     padding-right: 50px;
+    // align-self: flex-end;
 }
 
-.greeting::after {
+.greeting-content {
+    // for greeting-content::after
+}
+
+.greeting-content::after {
     content: "\2303";
     transform: rotate(180deg);
     position: absolute;
     right: 30px;
-    top: -1px;
+    top: -5px;
     font-weight: lighter;
     color: rgba(110, 110, 110, 0.507);
     // background-color: orange;
 }
 
-.greeting:hover::after {
+.greeting-content:hover::after {
     color: rgba(110, 110, 110, 0.842);
 }
 
@@ -247,13 +266,113 @@
     background-color: rgba(255, 255, 255, 0.473);
 }
 
-// .points-div::before {
-//     position: absolute;
-//     content: "\2303";
-//     right: 75px;
-//     top: -9px;
-//     color: black;
-//     color: rgba(192, 191, 191, 0.466);
 
-//     // color: rgba(255, 255, 255, 0.473);
-// }
+
+
+@media (max-width:1140px){ 
+    
+}
+
+@media (max-width:760px){
+    /////////// adding media query
+    .upper-nav{
+        display: none;
+    }
+
+    .greeting {
+        padding-right: 20px;
+    }
+
+    .greeting-content::after {
+        right: 0px
+    }
+
+
+    .nav-drop-menu-btn {
+        position: relative;
+        padding-right: 20px;
+    }
+
+    .nav-drop-menu-btn > button {
+        width: 20px;
+        height: 20px;
+        margin: 0 10px;
+        // background-color: red;
+        background-image: url("hamburger.png");
+        background-size: contain;
+        border: none;
+    }
+
+    .nav-drop-menu-content {
+        display: flex;
+        position: absolute;
+        right: 50px;
+        height: fit-content;
+        width: 235px;
+        flex-direction: column;
+        border: 1px solid rgba(192, 191, 191, 0.466);
+        border-radius: 3px;
+        right: 20px;
+        top: 35px;
+        background-color: rgba(255, 255, 255, 0.473);
+        z-index: 2;
+    }
+
+    .nav-drop-menu-content a {
+        padding: 10px;
+        padding-bottom: 15px;
+        padding-left: 18px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: rgb(110, 110, 110);
+        background-color: rgba(255, 255, 255, 0.473);
+    }
+
+    .nav-drop-menu-content a:hover {
+        background-color: rgba(226, 224, 224, 0.493)
+    }
+
+    .drop-menu-languages {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        padding-bottom: 5px;
+        padding-left: 18px;
+        font-family: Arial, Helvetica, sans-serif;
+        // color: rgba(110, 110, 110, 0.733);
+        background-color: rgba(255, 255, 255, 0.336);
+    }
+
+    .drop-menu-languages h1 {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        color: rgba(110, 110, 110, 0.733);
+    }
+
+    .drop-menu-languages a {
+        color: rgba(110, 110, 110, 0.733);
+    }
+
+
+    .drop-menu-languages a:hover {
+        margin-left: -18px;
+        background-color: rgba(2, 165, 165, 0.185);
+        border-left: 3px solid teal;
+    }
+
+    // .nav-drop-menu-btn:hover .nav-drop-menu-content {
+    //     right: -1px;
+    //     opacity: 1;
+    // }
+}
+
+@media (min-width: 761px) {
+    .nav-drop-menu-btn > button {
+        display: none;
+    }
+}
+
+@media (max-width: 640px) {
+    .greeting {
+        display: none;
+    }
+}

@@ -63,7 +63,6 @@ class LoginForm extends React.Component {
         style={"error-item"}
       />
     }
-    debugger
     return (
       <div className="form-container">
         <h1>Please sign in</h1>
