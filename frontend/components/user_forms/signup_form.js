@@ -20,6 +20,13 @@ class SignupForm extends React.Component {
     e.preventDefault();
     const user = Object.assign({}, this.state)
     this.props.signup(user);
+    this.props.closeModal()
+    this.setState({
+      email: "",
+      firstname: "",
+      lastname: "",
+      password: ""
+    })
   }
 
   handleUpdate (value) {
@@ -78,8 +85,26 @@ class SignupForm extends React.Component {
               value={this.state.password}
             />
           </label>
+          <div className="checkboxes">
+            <input type="checkbox" name="" id="1" />
+            I am an administrative professional who books reservations for others.
+          </div>
+          <div className="checkboxes">
+            <input type="checkbox" name="" id="2" />
+            Remember me
+          </div>
+          
           <button className="signin-btn">Create Account</button>
         </form>
+        <ul className="external-resource">
+          <h3>Don't want to complete the form?</h3>
+          <button className="external-resource-btn">Continue with Booking.com</button>
+          <button className="external-resource-btn">Continue with FaceBook</button>
+          <button className="external-resource-btn">Continue with Google</button>
+        </ul>
+        <p>
+          By creating an account you agree to the <span>OpenPlay Terms of Use</span> <span>Privacy Policy</span>
+        </p>
       </div>
     );
   }

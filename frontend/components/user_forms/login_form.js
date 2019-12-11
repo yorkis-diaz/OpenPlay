@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Redirect, withRouter } from 'react-router-dom';
+import GreetingMenu from '../greeting/greeting_menu';
 
 class LoginForm extends React.Component {
   constructor (props) {
@@ -9,6 +10,7 @@ class LoginForm extends React.Component {
       email: "",
       password: ""
     }
+    // this.menu = null
     this.handleUpdate = this.handleUpdate.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.demoUser = this.demoUser.bind(this);
@@ -20,13 +22,18 @@ class LoginForm extends React.Component {
       email: "johndoe@gmail.com",
       password: "johndoe"
     })
+    this.props.closeModal()
   }
   
   handleSubmit (e) {
     e.preventDefault();
     const user = Object.assign({}, this.state)
-    this.props.login(user).then(() => this.props.history.push('/'));
-      
+    this.props.login(user);
+    this.props.closeModal()
+    this.setState({
+      email: "",
+      password: ""
+    })
   }
 
   handleUpdate (value) {
@@ -34,7 +41,9 @@ class LoginForm extends React.Component {
       this.setState({
         [value]: e.target.value
       });
+      // this.menu = < GreetingMenu />
     };
+
   };
 
   render () {
@@ -44,6 +53,7 @@ class LoginForm extends React.Component {
     return (
       <div className="form-container">
         <h1>Please sign in</h1>
+        {this.menu}
         {/* <hr/> */}
         <form onSubmit={this.handleSubmit}>
           <label>

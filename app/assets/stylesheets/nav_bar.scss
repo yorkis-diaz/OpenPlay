@@ -1,0 +1,323 @@
+.nav-bar {
+    display: flex;
+    flex-direction: column;
+    padding-top: 2px;
+}
+
+.upper-nav {
+    background-color: rgba(236, 234, 234, 0.863);
+    display: flex;
+    justify-content: flex-end;
+    // border: 2px solid black;
+    width: 100%;
+
+}
+
+.upper-nav > a {
+    text-decoration: none;
+    color: rgb(110, 110, 110);
+    margin: 2px;
+    font-size: 12px;
+    border: 3px solid rgba(236, 234, 234, 0.863);
+    background-color: rgba(236, 234, 234, 0.863);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.upper-nav > a:hover {
+    color: black;
+}
+
+.upper-nav > select {
+    margin: 2px;
+    margin-left: 10px;
+    color: rgb(110, 110, 110);
+    // list-style: none;\
+    border: 3px solid rgba(236, 234, 234, 0.863);
+    background-color: rgba(236, 234, 234, 0.863);
+    cursor: pointer;
+}
+
+.upper-nav > select:last-of-type {
+    margin: 2px 0;
+    margin-left: 30px;
+    margin-right: 20px;
+    color: rgb(110, 110, 110);
+    // list-style: none;\
+    // border: none;
+    border: 3px solid rgba(236, 234, 234, 0.863);
+    background-color: rgba(236, 234, 234, 0.863);
+}
+
+.session-buttons {
+    // background-color: rgba(255, 255, 255, 0.473);
+    width: 20%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.signup-greet-btn {
+    // border: 1px solid gray;
+    // width: 80%;
+    border-radius: 3px;
+    padding: 8.5px 14px;
+    margin-right: 10px;
+    margin-left: 15px;
+    padding-top: 8px;
+    height: 16px;
+    // background-color: white;
+    text-align: center;
+    background-color: teal;
+    color: white;
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+    transition-property: background-color;
+    transition-duration: 500ms;
+}
+
+.signin-greet-btn {
+    // border: 1px solid gray;
+    // width: 80%;
+    border-radius: 3px;
+    padding: 7px 13px;
+    
+    margin-right: 20%;
+    height: 15px;
+    background-color: (255, 255, 255, 0.473);
+    text-align: center;
+
+    color: black;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    transition-property: background-color;
+    transition-duration: 500ms;
+}
+
+
+.signup-greet-btn:hover {
+    background-color: rgb(0, 99, 99);
+}
+
+
+
+.upper.nav > select:hover {
+    color: black;
+}
+
+.lower-nav {
+    background-color: rgba(255, 255, 255, 0.473);
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10px;
+    border-bottom: 1px solid rgba(192, 191, 191, 0.466);;
+}
+
+.logo {
+    height: 56px;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    border-right: 1px solid rgba(192, 191, 191, 0.466);
+    width: 13%;
+}
+
+.logo li::before {
+    content: "⤗";
+    color: rgba(42, 42, 194, 0.801);
+    font-size: 30px;
+    position: absolute;
+    top: 30px;
+}
+
+.logo li::after {
+    content: "\233E";
+    position: absolute;
+    color: rgba(42, 42, 194, 0.726);
+    width: 50px;
+    font-weight: bold;
+    font-size: 90px;
+    margin-left: 30px;
+    top: -15px;
+}
+
+.logo > h2 {
+    position: absolute;
+    left: 95px;
+    top: 40px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.greeting-container {
+    width: 20%;
+}
+
+.greeting {
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    display: flex;
+    align-items: center;
+    border-left: 2px solid rgba(202, 200, 200, 0.466);
+    width: 10%;
+    // background-color: red;
+    text-align: center;
+    margin: 15px 0;
+    padding-left: 10px;
+}
+
+.greeting::after {
+    content: "\02C5";
+    position: absolute;
+    right: 60px;
+    color: rgb(110, 110, 110);
+}
+
+
+
+.session-menu {
+    height: fit-content;
+    width: 235px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(192, 191, 191, 0.466);
+    border-radius: 3px;
+    right: 60px;
+    top: 80px;
+    background-color: rgba(255, 255, 255, 0.473);
+    z-index: 2;
+    box-shadow: 1, 1, 5, rgba(255, 255, 255, 0.473);
+
+}
+
+
+
+
+
+.session-menu a {
+    padding: 10px;
+    padding-bottom: 15px;
+    padding-left: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(110, 110, 110);
+    background-color: rgba(255, 255, 255, 0.473);
+}
+
+.session-menu a:first-of-type {
+    padding-top: 15px;
+}
+
+.session-menu a:hover {
+   background-color: rgba(236, 234, 234, 0.863);
+   color: black;
+}
+
+.session-menu button:hover {
+    background-color: rgba(236, 234, 234, 0.863);
+    color: black;
+
+}
+
+
+.session-menu button {
+    padding: 12px;
+    padding-left: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(110, 110, 110);
+    background-color: rgba(255, 255, 255, 0.473);
+
+}
+
+.points-div {
+    position: relative;
+    border-bottom: 1px solid rgba(192, 191, 191, 0.466);
+    font-family: Arial, Helvetica, sans-serif;
+    height: 110px;
+    background-color: rgba(255, 255, 255, 0.473);
+
+
+}
+
+// .points-div::before {
+//     position: absolute;
+//     content: "\2303";
+//     right: 75px;
+//     top: -9px;
+//     color: black;
+//     color: rgba(192, 191, 191, 0.466);
+
+//     // color: rgba(255, 255, 255, 0.473);
+// }
+
+
+
+.session-menu-test {
+    height: 300px;
+    width: 235px;
+    position: absolute;
+    display: hidden;
+    flex-direction: column;
+    border: 1px solid rgba(192, 191, 191, 0.466);
+    border-radius: 3px;
+    right: 60px;
+    top: 80px;
+    background-color: rgba(255, 255, 255, 0.473);
+    z-index: 2;
+    box-shadow: 1, 1, 5, rgba(255, 255, 255, 0.473);
+
+}
+
+
+
+
+
+.session-menu-test li {
+    padding: 10px;
+    padding-bottom: 15px;
+    padding-left: 18px;
+    // width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(110, 110, 110);
+    background-color: rgba(255, 255, 255, 0.473);
+}
+
+.session-menu-test li:first-of-type {
+    padding-top: 15px;
+}
+
+.session-menu-test a:hover {
+   background-color: rgba(236, 234, 234, 0.863);
+   color: black;
+//    width: 100%;
+}
+
+.session-menu-test button:hover {
+    background-color: rgba(236, 234, 234, 0.863);
+    color: black;
+
+}
+
+
+.session-menu-test button {
+    padding: 12px;
+    padding-left: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(110, 110, 110);
+    background-color: rgba(255, 255, 255, 0.473);
+    // width: 100%;
+
+}
+
+.points-div-test {
+    position: relative;
+    border-bottom: 1px solid rgba(192, 191, 191, 0.466);
+    font-family: Arial, Helvetica, sans-serif;
+    height: 110px;
+    background-color: rgba(255, 255, 255, 0.473);
+    // width: 100%;
+}
+
+.signin-greet-btn:hover .session-menu-test {
+    display: none;
+}
