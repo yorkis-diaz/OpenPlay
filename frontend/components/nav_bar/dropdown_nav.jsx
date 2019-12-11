@@ -1,14 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const DropdownNav = ({ logout }) => {
+const DropdownNav = ({ logout, newClass}) => {
+
     return (
         <div className="nav-drop-menu-content">
             <div className="drop-menu-profile">
                 <Link to="#">My Profile</Link>
-                <Link to="#">My Dining History</Link>
-                <Link to="#">My Saved Restaurants</Link>
-                <button onClick={() => logout()}>Logout</button>
+                <Link to="#">Favorites</Link>
+                <Link to="#">Event History</Link>
+                <button onClick={() => logout()}>Sign out</button>
             </div>
             <div className="drop-menu-languages">
                 <h1>Languages</h1>

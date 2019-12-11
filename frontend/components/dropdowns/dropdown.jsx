@@ -15,7 +15,7 @@ const Dropdown = ({ dropdown, closeDropdown, logout, openDropdown }) => {
             break;
 
         case 'dropdown-nav':
-            component = < DropdownNav logout={logout} openDropdown={openDropdown} closeDropdown={closeDropdown}/>
+            component = < DropdownNav logout={logout} openDropdown={openDropdown} closeDropdown={closeDropdown} newClass={"content"}/>
             break;
 
         default:

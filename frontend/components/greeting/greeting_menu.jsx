@@ -10,9 +10,9 @@ const GreetingMenu = ({ logout }) => {
             <div className="points-div">
             </div>
             <Link to="#">My Profile</Link>
-            <Link to="#">My Dining History</Link>
-            <Link to="#">My Saved Restaurants</Link>
-            <button onClick={() => logout()}>Logout</button>
+            <Link to="#">My Event History</Link>
+            <Link to="#">My Saved Events</Link>
+            <button onClick={() => logout()}>Sign out</button>
         </div>
     )
 }

@@ -251,7 +251,7 @@ __webpack_require__.r(__webpack_exports__);
  // import ErrorItem from './user_forms/errors/error_item';
 
 var App = function App() {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("main", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_user_forms_modal_modal_container__WEBPACK_IMPORTED_MODULE_6__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_nav_bar_nav_bar_container__WEBPACK_IMPORTED_MODULE_7__["default"], null));
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("main", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_user_forms_modal_modal_container__WEBPACK_IMPORTED_MODULE_6__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_nav_bar_nav_bar_container__WEBPACK_IMPORTED_MODULE_7__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio aliquam unde quas pariatur odit minus possimus expedita suscipit odio neque. Iure quod vitae maiores culpa dolorem ipsum distinctio fugit quae.lo Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo deleniti assumenda praesentium accusamus delectus voluptate sapiente consectetur obcaecati sint cum, mollitia incidunt ducimus deserunt soluta voluptatibus quibusdam neque recusandae illum. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo cum vel, aspernatur ipsa consequuntur quae sint maiores? Veniam, dolor aperiam. Reprehenderit laboriosam laudantium magnam quo aspernatur aliquam! A, ad obcaecati! Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis nam maiores aut similique, veniam, nobis odit assumenda vero itaque reprehenderit a cumque consequuntur exercitationem laborum magni impedit deserunt? Alias, incidunt! Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis sed atque non fugit? Sapiente voluptate blanditiis ea inventore nisi, numquam nam saepe. Molestiae ea fugit saepe cupiditate at, nulla eaque? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora dolor harum, esse eum nulla adipisci odit aliquid facilis incidunt quisquam magni provident deserunt eveniet ratione, quam repellat sint? Neque, officiis! Lorem ipsum dolor sit amet consectetur adipisicing elit. A blanditiis accusantium culpa ab laudantium autem harum, ea officia reiciendis numquam! Quae facere ducimus dolore inventore eum maxime distinctio voluptatibus nulla? Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga doloribus dignissimos impedit iste reprehenderit eum, saepe autem quidem sit sint assumenda aspernatur delectus quisquam quod, maiores adipisci molestias corporis harum! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque, dolorem a expedita eum laudantium numquam dolore aspernatur recusandae itaque veniam delectus consequuntur, quia optio? Maiores cupiditate eaque rem molestias adipisci! Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus assumenda possimus vitae similique totam odio veritatis ipsum, velit ipsa doloremque sint id? Consequuntur deserunt laborum natus autem maiores quaerat officia! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi dicta at iste temporibus fuga! Facilis consequatur quisquam quo repudiandae aspernatur quia, minus laborum maiores possimus esse ipsa nostrum at ea. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta illo nemo, ab fuga architecto sit rerum ullam repudiandae quisquam qui magnam quaerat alias minima laudantium pariatur sequi adipisci a cum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio aliquam unde quas pariatur odit minus possimus expedita suscipit odio neque. Iure quod vitae maiores culpa dolorem ipsum distinctio fugit quae.lo Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo deleniti assumenda praesentium accusamus delectus voluptate sapiente consectetur obcaecati sint cum, mollitia incidunt ducimus deserunt soluta voluptatibus quibusdam neque recusandae illum. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo cum vel, aspernatur ipsa consequuntur quae sint maiores? Veniam, dolor aperiam. Reprehenderit laboriosam laudantium magnam quo aspernatur aliquam! A, ad obcaecati! Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis nam maiores aut similique, veniam, nobis odit assumenda vero itaque reprehenderit a cumque consequuntur exercitationem laborum magni impedit deserunt? Alias, incidunt! Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis sed atque non fugit? Sapiente voluptate blanditiis ea inventore nisi, numquam nam saepe. Molestiae ea fugit saepe cupiditate at, nulla eaque? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora dolor harum, esse eum nulla adipisci odit aliquid facilis incidunt quisquam magni provident deserunt eveniet ratione, quam repellat sint? Neque, officiis! Lorem ipsum dolor sit amet consectetur adipisicing elit. A blanditiis accusantium culpa ab laudantium autem harum, ea officia reiciendis numquam! Quae facere ducimus dolore inventore eum maxime distinctio voluptatibus nulla? Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga doloribus dignissimos impedit iste reprehenderit eum, saepe autem quidem sit sint assumenda aspernatur delectus quisquam quod, maiores adipisci molestias corporis harum! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque, dolorem a expedita eum laudantium numquam dolore aspernatur recusandae itaque veniam delectus consequuntur, quia optio? Maiores cupiditate eaque rem molestias adipisci! Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus assumenda possimus vitae similique totam odio veritatis ipsum, velit ipsa doloremque sint id? Consequuntur deserunt laborum natus autem maiores quaerat officia! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi dicta at iste temporibus fuga! Facilis consequatur quisquam quo repudiandae aspernatur quia, minus laborum maiores possimus esse ipsa nostrum at ea. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta illo nemo, ab fuga architecto sit rerum ullam repudiandae quisquam qui magnam quaerat alias minima laudantium pariatur sequi adipisci a cum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio aliquam unde quas pariatur odit minus possimus expedita suscipit odio neque. Iure quod vitae maiores culpa dolorem ipsum distinctio fugit quae.lo Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo deleniti assumenda praesentium accusamus delectus voluptate sapiente consectetur obcaecati sint cum, mollitia incidunt ducimus deserunt soluta voluptatibus quibusdam neque recusandae illum. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo cum vel, aspernatur ipsa consequuntur quae sint maiores? Veniam, dolor aperiam. Reprehenderit laboriosam laudantium magnam quo aspernatur aliquam! A, ad obcaecati! Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis nam maiores aut similique, veniam, nobis odit assumenda vero itaque reprehenderit a cumque consequuntur exercitationem laborum magni impedit deserunt? Alias, incidunt! Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis sed atque non fugit? Sapiente voluptate blanditiis ea inventore nisi, numquam nam saepe. Molestiae ea fugit saepe cupiditate at, nulla eaque? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora dolor harum, esse eum nulla adipisci odit aliquid facilis incidunt quisquam magni provident deserunt eveniet ratione, quam repellat sint? Neque, officiis! Lorem ipsum dolor sit amet consectetur adipisicing elit. A blanditiis accusantium culpa ab laudantium autem harum, ea officia reiciendis numquam! Quae facere ducimus dolore inventore eum maxime distinctio voluptatibus nulla? Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga doloribus dignissimos impedit iste reprehenderit eum, saepe autem quidem sit sint assumenda aspernatur delectus quisquam quod, maiores adipisci molestias corporis harum! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque, dolorem a expedita eum laudantium numquam dolore aspernatur recusandae itaque veniam delectus consequuntur, quia optio? Maiores cupiditate eaque rem molestias adipisci! Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus assumenda possimus vitae similique totam odio veritatis ipsum, velit ipsa doloremque sint id? Consequuntur deserunt laborum natus autem maiores quaerat officia! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi dicta at iste temporibus fuga! Facilis consequatur quisquam quo repudiandae aspernatur quia, minus laborum maiores possimus esse ipsa nostrum at ea. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta illo nemo, ab fuga architecto sit rerum ullam repudiandae quisquam qui magnam quaerat alias minima laudantium pariatur sequi adipisci a cum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio aliquam unde quas pariatur odit minus possimus expedita suscipit odio neque. Iure quod vitae maiores culpa dolorem ipsum distinctio fugit quae.lo Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo deleniti assumenda praesentium accusamus delectus voluptate sapiente consectetur obcaecati sint cum, mollitia incidunt ducimus deserunt soluta voluptatibus quibusdam neque recusandae illum. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo cum vel, aspernatur ipsa consequuntur quae sint maiores? Veniam, dolor aperiam. Reprehenderit laboriosam laudantium magnam quo aspernatur aliquam! A, ad obcaecati! Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis nam maiores aut similique, veniam, nobis odit assumenda vero itaque reprehenderit a cumque consequuntur exercitationem laborum magni impedit deserunt? Alias, incidunt! Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis sed atque non fugit? Sapiente voluptate blanditiis ea inventore nisi, numquam nam saepe. Molestiae ea fugit saepe cupiditate at, nulla eaque? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora dolor harum, esse eum nulla adipisci odit aliquid facilis incidunt quisquam magni provident deserunt eveniet ratione, quam repellat sint? Neque, officiis! Lorem ipsum dolor sit amet consectetur adipisicing elit. A blanditiis accusantium culpa ab laudantium autem harum, ea officia reiciendis numquam! Quae facere ducimus dolore inventore eum maxime distinctio voluptatibus nulla? Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga doloribus dignissimos impedit iste reprehenderit eum, saepe autem quidem sit sint assumenda aspernatur delectus quisquam quod, maiores adipisci molestias corporis harum! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque, dolorem a expedita eum laudantium numquam dolore aspernatur recusandae itaque veniam delectus consequuntur, quia optio? Maiores cupiditate eaque rem molestias adipisci! Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus assumenda possimus vitae similique totam odio veritatis ipsum, velit ipsa doloremque sint id? Consequuntur deserunt laborum natus autem maiores quaerat officia! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi dicta at iste temporibus fuga! Facilis consequatur quisquam quo repudiandae aspernatur quia, minus laborum maiores possimus esse ipsa nostrum at ea. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta illo nemo, ab fuga architecto sit rerum ullam repudiandae quisquam qui magnam quaerat alias minima laudantium pariatur sequi adipisci a cum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio aliquam unde quas pariatur odit minus possimus expedita suscipit odio neque. Iure quod vitae maiores culpa dolorem ipsum distinctio fugit quae.lo Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo deleniti assumenda praesentium accusamus delectus voluptate sapiente consectetur obcaecati sint cum, mollitia incidunt ducimus deserunt soluta voluptatibus quibusdam neque recusandae illum. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo cum vel, aspernatur ipsa consequuntur quae sint maiores? Veniam, dolor aperiam. Reprehenderit laboriosam laudantium magnam quo aspernatur aliquam! A, ad obcaecati! Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis nam maiores aut similique, veniam, nobis odit assumenda vero itaque reprehenderit a cumque consequuntur exercitationem laborum magni impedit deserunt? Alias, incidunt! Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis sed atque non fugit? Sapiente voluptate blanditiis ea inventore nisi, numquam nam saepe. Molestiae ea fugit saepe cupiditate at, nulla eaque? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora dolor harum, esse eum nulla adipisci odit aliquid facilis incidunt quisquam magni provident deserunt eveniet ratione, quam repellat sint? Neque, officiis! Lorem ipsum dolor sit amet consectetur adipisicing elit. A blanditiis accusantium culpa ab laudantium autem harum, ea officia reiciendis numquam! Quae facere ducimus dolore inventore eum maxime distinctio voluptatibus nulla? Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga doloribus dignissimos impedit iste reprehenderit eum, saepe autem quidem sit sint assumenda aspernatur delectus quisquam quod, maiores adipisci molestias corporis harum! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque, dolorem a expedita eum laudantium numquam dolore aspernatur recusandae itaque veniam delectus consequuntur, quia optio? Maiores cupiditate eaque rem molestias adipisci! Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus assumenda possimus vitae similique totam odio veritatis ipsum, velit ipsa doloremque sint id? Consequuntur deserunt laborum natus autem maiores quaerat officia! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi dicta at iste temporibus fuga! Facilis consequatur quisquam quo repudiandae aspernatur quia, minus laborum maiores possimus esse ipsa nostrum at ea. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta illo nemo, ab fuga architecto sit rerum ullam repudiandae quisquam qui magnam quaerat alias minima laudantium pariatur sequi adipisci a cum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio aliquam unde quas pariatur odit minus possimus expedita suscipit odio neque. Iure quod vitae maiores culpa dolorem ipsum distinctio fugit quae.lo Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo deleniti assumenda praesentium accusamus delectus voluptate sapiente consectetur obcaecati sint cum, mollitia incidunt ducimus deserunt soluta voluptatibus quibusdam neque recusandae illum. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo cum vel, aspernatur ipsa consequuntur quae sint maiores? Veniam, dolor aperiam. Reprehenderit laboriosam laudantium magnam quo aspernatur aliquam! A, ad obcaecati! Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis nam maiores aut similique, veniam, nobis odit assumenda vero itaque reprehenderit a cumque consequuntur exercitationem laborum magni impedit deserunt? Alias, incidunt! Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis sed atque non fugit? Sapiente voluptate blanditiis ea inventore nisi, numquam nam saepe. Molestiae ea fugit saepe cupiditate at, nulla eaque? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora dolor harum, esse eum nulla adipisci odit aliquid facilis incidunt quisquam magni provident deserunt eveniet ratione, quam repellat sint? Neque, officiis! Lorem ipsum dolor sit amet consectetur adipisicing elit. A blanditiis accusantium culpa ab laudantium autem harum, ea officia reiciendis numquam! Quae facere ducimus dolore inventore eum maxime distinctio voluptatibus nulla? Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga doloribus dignissimos impedit iste reprehenderit eum, saepe autem quidem sit sint assumenda aspernatur delectus quisquam quod, maiores adipisci molestias corporis harum! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque, dolorem a expedita eum laudantium numquam dolore aspernatur recusandae itaque veniam delectus consequuntur, quia optio? Maiores cupiditate eaque rem molestias adipisci! Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus assumenda possimus vitae similique totam odio veritatis ipsum, velit ipsa doloremque sint id? Consequuntur deserunt laborum natus autem maiores quaerat officia! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi dicta at iste temporibus fuga! Facilis consequatur quisquam quo repudiandae aspernatur quia, minus laborum maiores possimus esse ipsa nostrum at ea. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta illo nemo, ab fuga architecto sit rerum ullam repudiandae quisquam qui magnam quaerat alias minima laudantium pariatur sequi adipisci a cum!"));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (App);
@@ -298,7 +298,8 @@ var Dropdown = function Dropdown(_ref) {
       component = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_nav_bar_dropdown_nav__WEBPACK_IMPORTED_MODULE_2__["default"], {
         logout: logout,
         openDropdown: openDropdown,
-        closeDropdown: closeDropdown
+        closeDropdown: closeDropdown,
+        newClass: "content"
       });
       break;
 
@@ -416,7 +417,6 @@ function (_React$Component) {
       var _this2 = this;
 
       return function (e) {
-        debugger;
         e.preventDefault();
 
         if (_this2.props.dropdown !== null && _this2.props.dropdown !== value) {
@@ -551,13 +551,13 @@ var GreetingMenu = function GreetingMenu(_ref) {
     to: "#"
   }, "My Profile"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     to: "#"
-  }, "My Dining History"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+  }, "My Event History"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     to: "#"
-  }, "My Saved Restaurants"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+  }, "My Saved Events"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     onClick: function onClick() {
       return logout();
     }
-  }, "Logout"));
+  }, "Sign out"));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (GreetingMenu);
@@ -580,7 +580,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var DropdownNav = function DropdownNav(_ref) {
-  var logout = _ref.logout;
+  var logout = _ref.logout,
+      newClass = _ref.newClass;
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "nav-drop-menu-content"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -589,13 +590,13 @@ var DropdownNav = function DropdownNav(_ref) {
     to: "#"
   }, "My Profile"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     to: "#"
-  }, "My Dining History"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+  }, "Favorites"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     to: "#"
-  }, "My Saved Restaurants"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+  }, "Event History"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     onClick: function onClick() {
       return logout();
     }
-  }, "Logout")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, "Sign out")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "drop-menu-languages"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Languages"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     to: "#"
@@ -668,10 +669,7 @@ function (_React$Component) {
     _this = _possibleConstructorReturn(this, _getPrototypeOf(NavBar).call(this, props));
     _this.handleDropdown = _this.handleDropdown.bind(_assertThisInitialized(_this));
     return _this;
-  } // componentWillUnmount () {
-  //     this.closeDropdown();
-  // }
-
+  }
 
   _createClass(NavBar, [{
     key: "handleDropdown",
@@ -679,7 +677,6 @@ function (_React$Component) {
       var _this2 = this;
 
       return function (e) {
-        debugger;
         e.preventDefault();
 
         if (_this2.props.dropdown !== null && _this2.props.dropdown !== value) {
@@ -697,7 +694,7 @@ function (_React$Component) {
     key: "render",
     value: function render() {
       var dropdown = this.props.dropdown === "dropdown-nav" ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_dropdowns_dropdown_container__WEBPACK_IMPORTED_MODULE_3__["default"], null) : null;
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
         className: "nav-bar"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "upper-nav"
@@ -723,9 +720,9 @@ function (_React$Component) {
         component: _greeting_greeting_container__WEBPACK_IMPORTED_MODULE_2__["default"]
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "nav-drop-menu-btn"
-      }, dropdown, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         onClick: this.handleDropdown('dropdown-nav')
-      })))));
+      }))))), dropdown);
     }
   }]);
 
@@ -758,8 +755,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var mapStateToProps = function mapStateToProps(state, ownProps) {
-  debugger; // const currentUser = state.session.currentUser
-
+  // const currentUser = state.session.currentUser
   return {
     // loggedIn: Boolean(currentUser),
     // currentUser,
@@ -768,7 +764,6 @@ var mapStateToProps = function mapStateToProps(state, ownProps) {
 };
 
 var mapDispatchToProps = function mapDispatchToProps(dispatch) {
-  debugger;
   return {
     openDropdown: function openDropdown(dropdown) {
       return dispatch(Object(_actions_dropdown_actions__WEBPACK_IMPORTED_MODULE_3__["openDropdown"])(dropdown));

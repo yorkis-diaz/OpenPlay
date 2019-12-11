@@ -15,7 +15,6 @@ class Greeting extends React.Component {
 
   handleDropdown (value) {
     return (e) => {
-      debugger
       e.preventDefault();
       if ((this.props.dropdown !== null) && (this.props.dropdown !== value)) {
         this.props.closeDropdown();

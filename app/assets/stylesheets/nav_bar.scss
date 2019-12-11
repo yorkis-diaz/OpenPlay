@@ -214,7 +214,7 @@
     border-radius: 3px;
     right: 20px;
     top: 35px;
-    background-color: rgba(255, 255, 255, 0.473);
+    background-color: rgb(236, 234, 234);
     z-index: 2;
     // box-shadow: 3px, 3px, 5px, 5px rgba(255, 255, 255, 0.473);
     // background-color: palegreen;
@@ -266,7 +266,9 @@
     background-color: rgba(255, 255, 255, 0.473);
 }
 
-
+.drop-menu-profile {
+    display: none;
+}
 
 
 @media (max-width:1140px){ 
@@ -307,15 +309,17 @@
         display: flex;
         position: absolute;
         right: 50px;
-        height: fit-content;
+        height: 100%;
         width: 235px;
         flex-direction: column;
         border: 1px solid rgba(192, 191, 191, 0.466);
         border-radius: 3px;
-        right: 20px;
-        top: 35px;
-        background-color: rgba(255, 255, 255, 0.473);
-        z-index: 2;
+        right: 0px;
+        top: 50px;
+        background-color: rgba(255, 255, 255, 1);
+        z-index: 20;
+        transition-property: background-color;
+        transition-duration: 5s;
     }
 
     .nav-drop-menu-content a {
@@ -328,6 +332,7 @@
     }
 
     .nav-drop-menu-content a:hover {
+        color: black;
         background-color: rgba(226, 224, 224, 0.493)
     }
 
@@ -359,6 +364,9 @@
         border-left: 3px solid teal;
     }
 
+
+
+
     // .nav-drop-menu-btn:hover .nav-drop-menu-content {
     //     right: -1px;
     //     opacity: 1;
@@ -375,4 +383,47 @@
     .greeting {
         display: none;
     }
+
+
+    .drop-menu-profile {
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        background-color: rgba(255, 255, 255, 0.473);
+    }
+
+    .drop-menu-profile a {
+        padding: 10px;
+        padding-bottom: 15px;
+        padding-left: 18px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: rgb(110, 110, 110);
+        background-color: rgba(255, 255, 255, 0.473);
+    }
+
+    .drop-menu-profile a:first-of-type {
+        padding-top: 15px;
+    }
+
+    .drop-menu-profile a:hover {
+    background-color: rgba(226, 224, 224, 0.493);
+    color: black;
+    }
+
+    .drop-menu-profile button:hover {
+        background-color: rgba(226, 224, 224, 0.493);
+        color: black;
+
+    }
+
+
+    .drop-menu-profile button {
+        padding: 12px;
+        padding-left: 18px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: rgb(110, 110, 110);
+        background-color: rgba(255, 255, 255, 0.473);
+
+    }
+
 }
