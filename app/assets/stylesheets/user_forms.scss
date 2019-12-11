@@ -1,0 +1,215 @@
+
+.form-modal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 10;
+    overflow: auto;
+}
+
+.form-modal-child {
+    position: absolute;
+    top: 52%;
+    bottom: 50%;
+    left: 50%;
+    margin: 0 auto;
+    transform: translate(-50%, -50%);
+    height: 800px;
+    width: 460px;
+    // border: 2px solid purple;
+
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    height: fit-content;
+    padding: 10% 8%;
+    // border: 2px solid red;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.form-container > h1 {
+    // width: 80%;
+    font-size: 22px;
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+    border-bottom: 1px solid rgba(223, 221, 221, 0.8);
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    // border: 2px solid black;
+}
+
+
+
+.form-container > form {
+    display: flex;
+    flex-direction: column;
+    width: inherit;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+.form-container label {
+    border: 1px solid lightgray;
+    // width: 100%;
+    border-radius: 3px;
+    padding: 15px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.form-container label:hover {
+    border: 1px solid rgb(189, 187, 187) ;
+}
+
+.form-container > form > a {
+    color: teal;
+    align-self: flex-end;
+    margin-bottom: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.form-container > form hr {
+    margin: 30px 0;
+    border: 1px solid rgba(235, 233, 233, 0.8);
+    border-width: 0.5px;
+}
+
+.signin-btn {
+    border: 1px solid gray;
+    // width: 80%;
+    border-radius: 3px;
+    padding: 15px;
+    background-color: white;
+    text-align: center;
+    background-color: rgb(69, 69, 236);
+    color: white;
+    font-size: 18px;
+    transition-property: background-color;
+    transition-duration: 500ms;
+}
+
+.demo-user-btn {
+    border: 1px solid gray;
+    // width: 80%;
+    border-radius: 3px;
+    padding: 15px;
+    background-color: white;
+    text-align: center;
+    background-color: rgb(69, 69, 236);
+    color: white;
+    font-size: 18px;
+    transition-property: background-color;
+    transition-duration: 500ms;
+}
+
+.signin-btn:hover {
+    background-color: rgb(42, 42, 194);
+}
+
+.demo-user-btn:hover {
+    background-color: rgb(42, 42, 194);
+
+}
+
+.external-resource {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    height: fit-content;
+    // padding: 10% 8%;
+    // border: 2px solid red;
+    font-family: Arial, Helvetica, sans-serif;
+    // width: 100%;
+}
+
+.external-resource > h3{
+    font-size: 15px;
+}
+
+.external-resource-btn {
+    border: 1px solid lightgray;
+    // width: 100%;
+    border-radius: 3px;
+    padding: 15px;
+    margin-bottom: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    // width: 100%;
+}
+
+.external-resource-btn:hover {
+    border: 1px solid rgb(233, 37, 37);
+    
+}
+
+.form-container > p:first-of-type > a {
+    color: rgb(233, 37, 37);
+}
+
+.form-container > p:last-of-type  {
+    margin: 10% 0;
+    font-size: 12px;
+}
+
+.form-container > p:last-of-type span  {
+    color: red;
+}
+
+
+.checkboxes {
+    display: flex;
+    margin: 10px 0;
+}
+
+.checkboxes > input {
+    margin-right: 4px;
+}
+
+
+
+// .form > p {
+//     font-size: 15px;
+// }
+
+
+// .form-container label {
+//     border: 1px solid gray;
+//     width: 80%;
+//     border-radius: 3px;
+//     padding: 15px;
+// }
+
+
+// .form-container input:first-of-type {
+//     margin-top: 10px;
+// }
+
+
+.error-item {
+    border: 1px solid lightgray;
+    padding: 1px 10px;
+    border-radius: 20px;
+    background-color: white;
+    font-family: Helvetica, sans-serif;
+    color: red;
+    text-align: center;
+    // align-self: center;
+    position: absolute;
+    bottom: -27px;
+    z-index: 2;
+    margin-bottom: 5px;
+}
+
+.error-item:hover {
+    background-color: rgb(238, 236, 236)
+}
+
+
