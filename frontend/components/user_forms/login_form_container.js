@@ -4,6 +4,7 @@ import { login } from '../../actions/session_actions';
 import LoginForm from './login_form'
 import { Link } from 'react-router-dom'
 import { openModal, closeModal } from '../../actions/modal_actions';
+import { clearErrors } from '../../actions/session_actions';
 
 const mapStateToProps = state => {
   return {
@@ -20,7 +21,8 @@ const mapDispatchToProps = dispatch => {
         Create an account
       </Link>
     ),
-    closeModal: () =>  dispatch(closeModal())
+    closeModal: () =>  dispatch(closeModal()),
+    clearErrors: () => dispatch(clearErrors())
   }
 };
 

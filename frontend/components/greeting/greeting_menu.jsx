@@ -3,16 +3,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const GreetingMenu = () => {
+const GreetingMenu = ({ logout }) => {
+    
     return (
-        <ul className="session-menu-test">
-            {/* <div className="points-div-test">
-            </div> */}
-            <li><Link to="#">My Profile</Link></li>
-            <li><Link to="#">My Dining History</Link></li>
-            <li><Link to="#">My Saved Restaurants</Link></li>
-            {/* <button onClick={() => logout()}>Logout</button> */}
-        </ul>
+        <div className="session-menu">
+            <div className="points-div">
+            </div>
+            <Link to="#">My Profile</Link>
+            <Link to="#">My Dining History</Link>
+            <Link to="#">My Saved Restaurants</Link>
+            <button onClick={() => logout()}>Logout</button>
+        </div>
     )
 }
 

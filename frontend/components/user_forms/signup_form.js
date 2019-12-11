@@ -1,26 +1,35 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Redirect, withRouter } from 'react-router-dom';
+import ErrorItem from './errors/error_item';
 
 class SignupForm extends React.Component {
   constructor (props) {
     super(props)
+    this.errors = this.props.errors
     this.state = {
       email: "",
       firstname: "",
       lastname: "",
       password: ""
     }
+    debugger
 
     this.handleUpdate = this.handleUpdate.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   };
+
+  componentDidMount() {
+    this.props.clearErrors();
+  }
   
   handleSubmit (e) {
     e.preventDefault();
+    this.props.clearErrors();
     const user = Object.assign({}, this.state)
-    this.props.signup(user);
-    this.props.closeModal()
+    this.props.signup(user).then(() => {
+      this.props.closeModal()
+    });
     this.setState({
       email: "",
       firstname: "",
@@ -38,9 +47,7 @@ class SignupForm extends React.Component {
   };
 
   render () {
-    // if (this.props.loggedIn) {
-    //   return <Redirect to='/'/>
-    // }
+    debugger
     return (
       <div className="form-container">
         <h1>Welcome to OpenPlay!</h1>
@@ -52,7 +59,12 @@ class SignupForm extends React.Component {
               placeholder="First Name*"
               value={this.state.email}
             />
+            < ErrorItem error={this.errors.firstName} 
+              message={"Enter your first name"} 
+              style={"error-item"}
+            />
           </label>
+          
           <label>
             <input
               type="text"
@@ -60,13 +72,24 @@ class SignupForm extends React.Component {
               placeholder="Last Name*"
               value={this.state.password}
             />
+            < ErrorItem 
+              error={this.errors.firstName} 
+              message={"Enter your last name"}
+              style={"error-item"}
+            />
           </label>
+          
           <label>
             <input
               type="email"
               onChange={this.handleUpdate("email")}
               placeholder="Enter email*"
               value={this.state.password}
+            />
+            < ErrorItem 
+              error={this.errors.firstName} 
+              message={"Enter your email"}
+              style={"error-item"}
             />
           </label>
           <label>
@@ -75,6 +98,11 @@ class SignupForm extends React.Component {
               onChange={this.handleUpdate("password")}
               placeholder="Enter password*"
               value={this.state.password}
+            />
+            < ErrorItem 
+              error={this.errors.firstName} 
+              message={"Enter a password"}
+              style={"error-item"}
             />
           </label>
           <label>

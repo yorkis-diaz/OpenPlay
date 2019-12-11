@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Redirect, withRouter } from 'react-router-dom';
 import GreetingMenu from '../greeting/greeting_menu';
+import ErrorItem from './errors/error_item';
 
 class LoginForm extends React.Component {
   constructor (props) {
@@ -16,20 +17,27 @@ class LoginForm extends React.Component {
     this.demoUser = this.demoUser.bind(this);
   };
 
+  componentDidMount () {
+    this.props.clearErrors();
+  }
+
   demoUser (e) {
     e.preventDefault();
     this.props.login({
       email: "johndoe@gmail.com",
       password: "johndoe"
-    })
-    this.props.closeModal()
+    }).then(() => {
+      this.props.closeModal()
+    });
   }
   
   handleSubmit (e) {
     e.preventDefault();
+    this.props.clearErrors();
     const user = Object.assign({}, this.state)
-    this.props.login(user);
-    this.props.closeModal()
+    this.props.login(user).then(() => {
+      this.props.closeModal()
+    });
     this.setState({
       email: "",
       password: ""
@@ -47,18 +55,24 @@ class LoginForm extends React.Component {
   };
 
   render () {
-    // if (this.props.loggedIn) {
-    //   return <Redirect to='/'/>
-    // }
+    let error;
+    if (this.props.errors.length > 0) {
+      error = < ErrorItem 
+        error={true} 
+        message={this.props.errors[0]}
+        style={"error-item"}
+      />
+    }
+    debugger
     return (
       <div className="form-container">
         <h1>Please sign in</h1>
-        {this.menu}
-        {/* <hr/> */}
+        
         <form onSubmit={this.handleSubmit}>
           <label>
+            {error}
             <input
-              type="text"
+              type="email"
               onChange={this.handleUpdate("email")}
               placeholder="Email"
               value={this.state.email}
