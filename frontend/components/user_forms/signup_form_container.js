@@ -7,7 +7,7 @@ const mapStateToProps = state => {
     const { session } = state.errors
     const errors = {
         firstName: (session.includes("Firstname can't be blank")),
-        lastNAme: (session.includes("Lastname can't be blank")),
+        lastName: (session.includes("Lastname can't be blank")),
         email: (session.includes("Email can't be blank")),
         password: (session.includes("Password is too short (minimum is 6 characters)"))
     }

@@ -654,166 +654,14 @@ var DropdownNav = function DropdownNav(_ref) {
 
 /***/ }),
 
-/***/ "./frontend/components/nav_bar/nav_bar.jsx":
-/*!*************************************************!*\
-  !*** ./frontend/components/nav_bar/nav_bar.jsx ***!
-  \*************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
-/* harmony import */ var _greeting_greeting_container__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../greeting/greeting_container */ "./frontend/components/greeting/greeting_container.js");
-/* harmony import */ var _dropdowns_dropdown_container__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../dropdowns/dropdown_container */ "./frontend/components/dropdowns/dropdown_container.js");
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-
-
-
-
-
-var NavBar =
-/*#__PURE__*/
-function (_React$Component) {
-  _inherits(NavBar, _React$Component);
-
-  function NavBar(props) {
-    var _this;
-
-    _classCallCheck(this, NavBar);
-
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(NavBar).call(this, props));
-    _this.handleDropdown = _this.handleDropdown.bind(_assertThisInitialized(_this));
-    debugger;
-    return _this;
-  }
-
-  _createClass(NavBar, [{
-    key: "handleDropdown",
-    value: function handleDropdown(value) {
-      var _this2 = this;
-
-      return function (e) {
-        e.preventDefault();
-
-        if (_this2.props.dropdown !== null && _this2.props.dropdown !== value) {
-          _this2.props.closeDropdown();
-
-          _this2.props.openDropdown(value);
-        } else if (_this2.props.dropdown === null) {
-          _this2.props.openDropdown(value);
-        } else {
-          _this2.props.closeDropdown();
-        }
-      };
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      var dropdown = this.props.dropdown === "dropdown-nav" ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_dropdowns_dropdown_container__WEBPACK_IMPORTED_MODULE_3__["default"], null) : null;
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
-        className: "nav-bar"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "upper-nav"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "#"
-      }, "For Events"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-        placeholder: "Mobile",
-        hidden: true
-      }, "Mobile"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", null, "iOS App"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", null, "Android App")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "#"
-      }, "Help"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-        placeholder: "EN",
-        hidden: true
-      }, "EN"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", null, "Deutch"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", null, "English"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", null, "Espa\xF1ol"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "lower-nav"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "logo"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "OpenPlay")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "greeting-info"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
-        exact: true,
-        path: "/",
-        component: _greeting_greeting_container__WEBPACK_IMPORTED_MODULE_2__["default"]
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "nav-drop-menu-btn"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        onClick: this.handleDropdown('dropdown-nav')
-      }))))), dropdown);
-    }
-  }]);
-
-  return NavBar;
-}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
-
-/* harmony default export */ __webpack_exports__["default"] = (NavBar);
-
-/***/ }),
-
 /***/ "./frontend/components/nav_bar/nav_bar_container.js":
 /*!**********************************************************!*\
   !*** ./frontend/components/nav_bar/nav_bar_container.js ***!
   \**********************************************************/
 /*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var _actions_session_actions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../actions/session_actions */ "./frontend/actions/session_actions.js");
-/* harmony import */ var _actions_dropdown_actions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../actions/dropdown_actions */ "./frontend/actions/dropdown_actions.js");
-/* harmony import */ var _nav_bar__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./nav_bar */ "./frontend/components/nav_bar/nav_bar.jsx");
-
-
-
-
-
-
-var mapStateToProps = function mapStateToProps(state, ownProps) {
-  var currentUser = state.session.currentUser;
-  return {
-    loggedIn: Boolean(currentUser),
-    // currentUser,
-    dropdown: state.ui.dropdown
-  };
-};
-
-var mapDispatchToProps = function mapDispatchToProps(dispatch) {
-  return {
-    openDropdown: function openDropdown(dropdown) {
-      return dispatch(Object(_actions_dropdown_actions__WEBPACK_IMPORTED_MODULE_3__["openDropdown"])(dropdown));
-    },
-    closeDropdown: function closeDropdown() {
-      return dispatch(Object(_actions_dropdown_actions__WEBPACK_IMPORTED_MODULE_3__["closeDropdown"])());
-    },
-    logout: function logout() {
-      return dispatch(Object(_actions_session_actions__WEBPACK_IMPORTED_MODULE_2__["logout"])());
-    }
-  };
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps, mapDispatchToProps)(_nav_bar__WEBPACK_IMPORTED_MODULE_4__["default"]));
+throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: /Users/yorkisdiaz/Desktop/OpenPlay/frontend/components/nav_bar/nav_bar_container.js: Unexpected token (9:1)\n\n\u001b[0m \u001b[90m  7 | \u001b[39m\u001b[0m\n\u001b[0m \u001b[90m  8 | \u001b[39m\u001b[36mconst\u001b[39m mapStateToProps \u001b[33m=\u001b[39m (state\u001b[33m,\u001b[39m ownProps) \u001b[33m=>\u001b[39m {\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  9 | \u001b[39m\u001b[33m<<\u001b[39m\u001b[33m<<\u001b[39m\u001b[33m<<\u001b[39m\u001b[33m<\u001b[39m \u001b[33mHEAD\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    | \u001b[39m \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 10 | \u001b[39m    \u001b[36mconst\u001b[39m currentUser \u001b[33m=\u001b[39m state\u001b[33m.\u001b[39msession\u001b[33m.\u001b[39mcurrentUser\u001b[0m\n\u001b[0m \u001b[90m 11 | \u001b[39m\u001b[33m===\u001b[39m\u001b[33m===\u001b[39m\u001b[33m=\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 12 | \u001b[39m    \u001b[36mdebugger\u001b[39m\u001b[0m\n    at Object.raise (/Users/yorkisdiaz/Desktop/OpenPlay/node_modules/@babel/parser/lib/index.js:6975:17)\n    at Object.unexpected (/Users/yorkisdiaz/Desktop/OpenPlay/node_modules/@babel/parser/lib/index.js:8368:16)\n    at Object.jsxParseIdentifier (/Users/yorkisdiaz/Desktop/OpenPlay/node_modules/@babel/parser/lib/index.js:3871:12)\n    at Object.jsxParseNamespacedName (/Users/yorkisdiaz/Desktop/OpenPlay/node_modules/@babel/parser/lib/index.js:3881:23)\n    at Object.jsxParseElementName (/Users/yorkisdiaz/Desktop/OpenPlay/node_modules/@babel/parser/lib/index.js:3892:21)\n    at Object.jsxParseOpeningElementAt (/Users/yorkisdiaz/Desktop/OpenPlay/node_modules/@babel/parser/lib/index.js:3978:22)\n    at Object.jsxParseElementAt (/Users/yorkisdiaz/Desktop/OpenPlay/node_modules/@babel/parser/lib/index.js:4011:33)\n    at Object.jsxParseElement (/Users/yorkisdiaz/Desktop/OpenPlay/node_modules/@babel/parser/lib/index.js:4085:17)\n    at Object.parseExprAtom (/Users/yorkisdiaz/Desktop/OpenPlay/node_modules/@babel/parser/lib/index.js:4092:19)\n    at Object.parseExprSubscripts (/Users/yorkisdiaz/Desktop/OpenPlay/node_modules/@babel/parser/lib/index.js:9210:23)\n    at Object.parseMaybeUnary (/Users/yorkisdiaz/Desktop/OpenPlay/node_modules/@babel/parser/lib/index.js:9190:21)\n    at Object.parseExprOps (/Users/yorkisdiaz/Desktop/OpenPlay/node_modules/@babel/parser/lib/index.js:9056:23)\n    at Object.parseMaybeConditional (/Users/yorkisdiaz/Desktop/OpenPlay/node_modules/@babel/parser/lib/index.js:9029:23)\n    at Object.parseMaybeAssign (/Users/yorkisdiaz/Desktop/OpenPlay/node_modules/@babel/parser/lib/index.js:8975:21)\n    at Object.parseExpression (/Users/yorkisdiaz/Desktop/OpenPlay/node_modules/@babel/parser/lib/index.js:8925:23)\n    at Object.parseStatementContent (/Users/yorkisdiaz/Desktop/OpenPlay/node_modules/@babel/parser/lib/index.js:10785:23)\n    at Object.parseStatement (/Users/yorkisdiaz/Desktop/OpenPlay/node_modules/@babel/parser/lib/index.js:10656:17)\n    at Object.parseBlockOrModuleBlockBody (/Users/yorkisdiaz/Desktop/OpenPlay/node_modules/@babel/parser/lib/index.js:11232:25)\n    at Object.parseBlockBody (/Users/yorkisdiaz/Desktop/OpenPlay/node_modules/@babel/parser/lib/index.js:11219:10)\n    at Object.parseBlock (/Users/yorkisdiaz/Desktop/OpenPlay/node_modules/@babel/parser/lib/index.js:11203:10)\n    at Object.parseFunctionBody (/Users/yorkisdiaz/Desktop/OpenPlay/node_modules/@babel/parser/lib/index.js:10222:24)\n    at Object.parseArrowExpression (/Users/yorkisdiaz/Desktop/OpenPlay/node_modules/@babel/parser/lib/index.js:10163:10)\n    at Object.parseParenAndDistinguishExpression (/Users/yorkisdiaz/Desktop/OpenPlay/node_modules/@babel/parser/lib/index.js:9789:12)\n    at Object.parseExprAtom (/Users/yorkisdiaz/Desktop/OpenPlay/node_modules/@babel/parser/lib/index.js:9548:21)\n    at Object.parseExprAtom (/Users/yorkisdiaz/Desktop/OpenPlay/node_modules/@babel/parser/lib/index.js:4097:20)\n    at Object.parseExprSubscripts (/Users/yorkisdiaz/Desktop/OpenPlay/node_modules/@babel/parser/lib/index.js:9210:23)\n    at Object.parseMaybeUnary (/Users/yorkisdiaz/Desktop/OpenPlay/node_modules/@babel/parser/lib/index.js:9190:21)\n    at Object.parseExprOps (/Users/yorkisdiaz/Desktop/OpenPlay/node_modules/@babel/parser/lib/index.js:9056:23)\n    at Object.parseMaybeConditional (/Users/yorkisdiaz/Desktop/OpenPlay/node_modules/@babel/parser/lib/index.js:9029:23)\n    at Object.parseMaybeAssign (/Users/yorkisdiaz/Desktop/OpenPlay/node_modules/@babel/parser/lib/index.js:8975:21)");
 
 /***/ }),
 
@@ -866,7 +714,7 @@ var ErrorItem = function ErrorItem(_ref) {
       style = _ref.style;
 
   if (error) {
-    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
       className: style
     }, message);
   } else {
@@ -1001,7 +849,7 @@ function (_React$Component) {
         className: "form-container"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Please sign in"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
         onSubmit: this.handleSubmit
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, error, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      }, error, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "email",
         onChange: this.handleUpdate("email"),
         placeholder: "Email",
@@ -1018,15 +866,7 @@ function (_React$Component) {
       }, "Sign In"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         className: "demo-user-btn",
         onClick: this.demoUser
-      }, "Demo User")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
-        className: "external-resource"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Don't want to complete the form?"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        className: "external-resource-btn"
-      }, "Continue with Booking.com"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        className: "external-resource-btn"
-      }, "Continue with FaceBook"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        className: "external-resource-btn"
-      }, "Continue with Google")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "New to OpenPlay? ", this.props.signupForm), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "This site is protected by reCAPTCHA and the Google ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Privacy"), " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Policy"), " and ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Terms of Service"), " apply."));
+      }, "Demo User")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "New to OpenPlay? ", this.props.signupForm), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "This site is protected by reCAPTCHA and the Google", " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Privacy"), " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Policy"), " and", " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Terms of Service"), " apply."));
     }
   }]);
 
@@ -1137,7 +977,7 @@ var Modal = function Modal(_ref) {
     onClick: function onClick() {
       return closeModal();
     }
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, "X"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "form-modal-child",
     onClick: function onClick(e) {
       return e.stopPropagation();
@@ -1232,7 +1072,6 @@ function (_React$Component) {
     _classCallCheck(this, SignupForm);
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(SignupForm).call(this, props));
-    _this.errors = _this.props.errors;
     _this.state = {
       email: "",
       firstname: "",
@@ -1279,6 +1118,7 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
+      debugger;
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "form-container"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Welcome to OpenPlay!"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
@@ -1288,60 +1128,40 @@ function (_React$Component) {
         onChange: this.handleUpdate("firstname"),
         placeholder: "First Name*",
         value: this.state.firstname
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_errors_error_item__WEBPACK_IMPORTED_MODULE_2__["default"], {
-        error: this.errors.firstName,
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_errors_error_item__WEBPACK_IMPORTED_MODULE_2__["default"], {
+        error: this.props.errors.firstName,
         message: "Enter your first name",
         style: "error-item"
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "text",
         onChange: this.handleUpdate("lastname"),
         placeholder: "Last Name*",
         value: this.state.lastname
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_errors_error_item__WEBPACK_IMPORTED_MODULE_2__["default"], {
-        error: this.errors.firstName,
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_errors_error_item__WEBPACK_IMPORTED_MODULE_2__["default"], {
+        error: this.props.errors.lastName,
         message: "Enter your last name",
         style: "error-item"
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "email",
         onChange: this.handleUpdate("email"),
         placeholder: "Enter email*",
         value: this.state.email
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_errors_error_item__WEBPACK_IMPORTED_MODULE_2__["default"], {
-        error: this.errors.firstName,
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_errors_error_item__WEBPACK_IMPORTED_MODULE_2__["default"], {
+        error: this.props.errors.email,
         message: "Enter your email",
         style: "error-item"
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "password",
         onChange: this.handleUpdate("password"),
         placeholder: "Enter password*",
         value: this.state.password
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_errors_error_item__WEBPACK_IMPORTED_MODULE_2__["default"], {
-        error: this.errors.firstName,
-        message: "Enter a password",
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_errors_error_item__WEBPACK_IMPORTED_MODULE_2__["default"], {
+        error: this.props.errors.password,
+        message: "Password is too short (minimum is 6 characters)",
         style: "error-item"
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "checkboxes"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        type: "checkbox",
-        name: "",
-        id: "1"
-      }), "I am an administrative professional who books reservations for others."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "checkboxes"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        type: "checkbox",
-        name: "",
-        id: "2"
-      }), "Remember me"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         className: "signin-btn"
-      }, "Create Account")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
-        className: "external-resource"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Don't want to complete the form?"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        className: "external-resource-btn"
-      }, "Continue with Booking.com"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        className: "external-resource-btn"
-      }, "Continue with FaceBook"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        className: "external-resource-btn"
-      }, "Continue with Google")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "By creating an account you agree to the ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "OpenPlay Terms of Use"), " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Privacy Policy")));
+      }, "Create Account")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "By creating an account you agree to the", " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "OpenPlay Terms of Use"), " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Privacy Policy")));
     }
   }]);
 
@@ -1374,7 +1194,7 @@ var mapStateToProps = function mapStateToProps(state) {
   var session = state.errors.session;
   var errors = {
     firstName: session.includes("Firstname can't be blank"),
-    lastNAme: session.includes("Lastname can't be blank"),
+    lastName: session.includes("Lastname can't be blank"),
     email: session.includes("Email can't be blank"),
     password: session.includes("Password is too short (minimum is 6 characters)")
   };

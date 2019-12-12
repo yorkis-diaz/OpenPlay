@@ -126,19 +126,20 @@
     // overflow: hidden;
     padding-left: 20px;
     border-right: 1px solid rgba(192, 191, 191, 0.466);
-    width: 200px;
+    width: 170px;
+    cursor: pointer;
 }
 
 .logo li {
-    // position: relative;
+    position: relative;
 }
 
 .logo li::before {
     content: "⤗";
     color: rgba(42, 42, 194, 0.801);
-    font-size: 30px;
+    font-size: 25px;
     position: absolute;
-    top: 4px;
+    top: 8px;
 }
 
 .logo li::after {
@@ -147,14 +148,14 @@
     color: rgba(42, 42, 194, 0.726);
     width: 50px;
     font-weight: bold;
-    font-size: 90px;
-    margin-left: 30px;
-    top: -43px;
+    font-size: 65px;
+    margin-left: 25px;
+    top: -24px;
 }
 
 .logo > h2 {
     position: absolute;
-    left: 120px;
+    left: 85px;
     top: 16px;
     font-weight: bold;
     font-size: 20px;

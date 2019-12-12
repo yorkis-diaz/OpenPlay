@@ -11,7 +11,7 @@ class Api::SessionsController < ApplicationController
             login(@user)
             render "api/users/show"
         else
-            render json: ["wrong email/password combo"], status: 422
+            render json: ["Wrong email/password combo"], status: 422
         end
     end
 
