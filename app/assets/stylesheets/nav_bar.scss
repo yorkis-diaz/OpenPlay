@@ -109,12 +109,12 @@
     background-color: rgba(255, 255, 255, 0.473);
     display: flex;
     justify-content: space-between;
-    padding-left: 10px;
+    // padding-left: 10px;
     // margin: 0;
     // padding: 0;
     width: 100%;
     // width: 50px;
-    border-bottom: 1px solid rgba(192, 191, 191, 0.466);;
+    border-bottom: 1px solid rgba(192, 191, 191, 0.466);
 }
 
 .logo {
@@ -180,7 +180,7 @@
     margin: 15px 0;
     padding-left: 10px;
     padding-right: 50px;
-    // align-self: flex-end;
+    align-self: flex-end;
 }
 
 .greeting-content {

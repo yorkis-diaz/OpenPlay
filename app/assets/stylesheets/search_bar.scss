@@ -1,19 +1,179 @@
 .search-form {
-    background-color: lightgray;
-    border-top: 1px solid;
+    // background-color: lightblue;
+    // border-top: 1px solid;
     height: 415px;
     border-radius: 1px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100%;
-
+    // background-image: url(https://live.staticflickr.com/8272/29086455075_e66df12f09_b.jpg);
+    background-image: url(http://www.advpolytech.com/wp-content/uploads/Private-Residence-Miami-Beach-2012-Cushion-Plus.jpg);
+    background-size: cover;
+    background-position-y: center;
+    background-repeat: no-repeat;
+    margin: 0 auto;
 }
 
 .search-form h1 {
-    font-size: 40px;
+    font-size: 42px;
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
     color: white;
+    margin-bottom: 35px;
+}
 
+
+
+.outer-div {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    margin: 0 5px;
+}
+
+input[type="date"]{
+    width: 132px;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+    border: none;
+    text-align: center;
+    background-color: white;
+    font-family: sans-serif serif;
+    height: 49px;
+    border-radius: 5px 0 0 5px;
+    border-right: 1px solid rgba(192, 191, 191, 0.466);
+    cursor: pointer;
+}
+
+input[type="date"]::-webkit-inner-spin-button {
+    display: none;
+}
+
+input[type="date"]::-webkit-clear-button {
+    display: none;
+}
+
+input[type="date"]::-webkit-calendar-picker-indication {
+    // display: none;
+}
+
+
+
+
+.form-selects {
+    display: flex;
+    margin: 0 12px;
+    justify-content: center;
+    align-items: center;
+    width: 480px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.form-selects select {
+    height: 49px;
+    border: 1px solid white;
+    background-color: white;
+    margin: 0 1px;
+    width: 140px;
+    font-size: 18px;
+    font-family: sans-serif serif;
+    padding-left: 5px;
+    outline: none;
+    cursor: pointer;
+    // -webkit-appearance: none;
+}
+
+.form-selects > select {
+    width: 134px;
+}
+
+.select-containers {
+    border-right: 1px solid rgba(192, 191, 191, 0.466);
+}
+
+.select-containers > select {
+    width: 158px;
+}
+
+.outer-div > input{
+    width: 250px;
+    height: 49px;
+    margin: 0;
+    margin: 0 10px;
+    margin-left: 12px;
+    padding-left: 40px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+
+.outer-div > button {
+    // border: 1px solid gray;
+    height: 18px;
+    border-radius: 5px;
+    width: 115px;
+    padding: 15px;
+    margin: 0 12px;
+    background-color: white;
+    text-align: center;
+    background-color: rgb(69, 69, 236);
+    color: white;
+    font-size: 18px;
+    transition-property: background-color;
+    transition-duration: 800ms;
+}
+
+.outer-div > button:hover {
+    background-color: rgb(42, 42, 194);
+}
+
+@media (max-width: 1002px) {
+    .outer-div {
+        flex-direction: column;
+        width: 677px;
+        height: 200px;
+        justify-content: space-evenly;
+        margin: 0;
+    }
+
+    .outer-div h1{
+        margin: 0 auto;
+    }
+
+    input[type="date"] {
+        width: 33.33%;
+        flex-shrink: 3;
+    }
+
+    .form-selects {
+        width: 100%;
+        flex-shrink: 1;
+    }
+
+    .select-containers {
+        width: 33.33%;
+    }
+
+    .form-selects > select {
+        width: 33.33%;
+    }
+
+    .select-containers > select {
+        width: 214px;
+    }
+
+    .outer-div  > input {
+        width: 638px;
+        padding-right: 0;
+    }
+
+    .outer-div > button {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
 }
