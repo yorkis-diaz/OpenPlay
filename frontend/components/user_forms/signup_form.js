@@ -45,7 +45,6 @@ class SignupForm extends React.Component {
   };
 
   render () {
-    debugger
     return (
       <div className="form-container">
         <h1>Welcome to OpenPlay!</h1>
