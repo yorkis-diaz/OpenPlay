@@ -5,7 +5,6 @@ import { logout } from '../../actions/session_actions';
 
 const mapStateToProps = (state) => {
     const  { currentUser } = state.session
-    debugger
     return {
         loggedIn: Boolean(currentUser),
         dropdown: state.ui.dropdown
