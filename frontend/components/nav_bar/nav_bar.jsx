@@ -9,12 +9,8 @@ class NavBar extends React.Component {
     constructor (props) {
         super(props)
         this.handleDropdown = this.handleDropdown.bind(this)
-<<<<<<< HEAD
-        debugger
-=======
         this.handleClick = this.handleClick.bind(this);
 
->>>>>>> user_auth
     }
     
     handleDropdown(value) {
@@ -32,7 +28,6 @@ class NavBar extends React.Component {
     }
 
     handleClick (e) {
-        debugger
         e.preventDefault();
         this.props.history.push("/")
     }
