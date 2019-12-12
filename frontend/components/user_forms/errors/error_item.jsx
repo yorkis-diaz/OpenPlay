@@ -3,9 +3,7 @@ import React from 'react';
 const ErrorItem = ({error, message, style}) => {
     if (error) {
         return (
-            <span className={style}>
-                {message}
-            </span>
+            <li className={style}>{message}</li>
         )
     } else {
         return (

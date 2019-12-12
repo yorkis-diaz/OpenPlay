@@ -23,6 +23,7 @@ const Modal = ({modal, closeModal}) => {
 
     return (
         <div className="form-modal" onClick={() => closeModal()}>
+            <button>X</button>
             <div className="form-modal-child" onClick={e => e.stopPropagation()}>
                 { component }
             </div>

@@ -6,7 +6,6 @@ import ErrorItem from './errors/error_item';
 class SignupForm extends React.Component {
   constructor (props) {
     super(props)
-    this.errors = this.props.errors
     this.state = {
       email: "",
       firstname: "",
@@ -46,6 +45,7 @@ class SignupForm extends React.Component {
   };
 
   render () {
+    debugger
     return (
       <div className="form-container">
         <h1>Welcome to OpenPlay!</h1>
@@ -57,12 +57,12 @@ class SignupForm extends React.Component {
               placeholder="First Name*"
               value={this.state.firstname}
             />
-            < ErrorItem error={this.errors.firstName} 
-              message={"Enter your first name"} 
-              style={"error-item"}
-            />
           </label>
-          
+          <ErrorItem
+            error={this.props.errors.firstName}
+            message={"Enter your first name"}
+            style={"error-item"}
+          />
           <label>
             <input
               type="text"
@@ -70,13 +70,13 @@ class SignupForm extends React.Component {
               placeholder="Last Name*"
               value={this.state.lastname}
             />
-            < ErrorItem 
-              error={this.errors.firstName} 
-              message={"Enter your last name"}
-              style={"error-item"}
-            />
           </label>
-          
+          <ErrorItem
+            error={this.props.errors.lastName}
+            message={"Enter your last name"}
+            style={"error-item"}
+          />
+
           <label>
             <input
               type="email"
@@ -84,12 +84,12 @@ class SignupForm extends React.Component {
               placeholder="Enter email*"
               value={this.state.email}
             />
-            < ErrorItem 
-              error={this.errors.firstName} 
-              message={"Enter your email"}
-              style={"error-item"}
-            />
           </label>
+          <ErrorItem
+            error={this.props.errors.email}
+            message={"Enter your email"}
+            style={"error-item"}
+          />
           <label>
             <input
               type="password"
@@ -97,12 +97,12 @@ class SignupForm extends React.Component {
               placeholder="Enter password*"
               value={this.state.password}
             />
-            < ErrorItem 
-              error={this.errors.firstName} 
-              message={"Enter a password"}
-              style={"error-item"}
-            />
           </label>
+          <ErrorItem
+            error={this.props.errors.password}
+            message={"Password is too short (minimum is 6 characters)"}
+            style={"error-item"}
+          />
           {/* <label>
             <input
               type="password"
@@ -111,25 +111,12 @@ class SignupForm extends React.Component {
               value={this.state.password}
             />
           </label> */}
-          <div className="checkboxes">
-            <input type="checkbox" name="" id="1" />
-            I am an administrative professional who books reservations for others.
-          </div>
-          <div className="checkboxes">
-            <input type="checkbox" name="" id="2" />
-            Remember me
-          </div>
-          
+
           <button className="signin-btn">Create Account</button>
         </form>
-        <ul className="external-resource">
-          <h3>Don't want to complete the form?</h3>
-          <button className="external-resource-btn">Continue with Booking.com</button>
-          <button className="external-resource-btn">Continue with FaceBook</button>
-          <button className="external-resource-btn">Continue with Google</button>
-        </ul>
         <p>
-          By creating an account you agree to the <span>OpenPlay Terms of Use</span> <span>Privacy Policy</span>
+          By creating an account you agree to the{" "}
+          <span>OpenPlay Terms of Use</span> <span>Privacy Policy</span>
         </p>
       </div>
     );

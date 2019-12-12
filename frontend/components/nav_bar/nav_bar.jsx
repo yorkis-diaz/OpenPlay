@@ -9,6 +9,7 @@ class NavBar extends React.Component {
     constructor (props) {
         super(props)
         this.handleDropdown = this.handleDropdown.bind(this)
+        this.handleClick = this.handleClick.bind(this);
 
     }
     handleDropdown(value) {
@@ -23,6 +24,12 @@ class NavBar extends React.Component {
                 this.props.closeDropdown()
             }
         }
+    }
+
+    handleClick (e) {
+        debugger
+        e.preventDefault();
+        this.props.history.push("/")
     }
 
     render () {
@@ -46,7 +53,7 @@ class NavBar extends React.Component {
                         </select>
                     </div>
                     <div className="lower-nav">
-                        <div className="logo">
+                        <div className="logo" onClick={this.handleClick}>
                             <li></li>
                             <h2>OpenPlay</h2>
                         </div>

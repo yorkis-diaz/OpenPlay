@@ -1,10 +1,12 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { logout } from '../../actions/session_actions';
+import { withRouter } from 'react-router-dom'
 import { openDropdown, closeDropdown } from '../../actions/dropdown_actions';
 import NavBar from './nav_bar';
 
 const mapStateToProps = (state, ownProps) => {
+    debugger
     // const currentUser = state.session.currentUser
     return {
         // loggedIn: Boolean(currentUser),
@@ -21,4 +23,4 @@ const mapDispatchToProps = (dispatch) => {
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(NavBar);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(NavBar));
