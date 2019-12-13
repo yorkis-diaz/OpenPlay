@@ -8,6 +8,10 @@ class SearchBar extends React.Component {
         }
     }
 
+    handleSearch () {
+      e.preventDefault();
+    }
+
 
     render () {
         const { date } = this.state

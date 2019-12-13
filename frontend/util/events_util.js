@@ -9,3 +9,12 @@ export const fetchEvent = (eventId) => {
       url: `/api/events/${eventId}`
     });
 }
+
+export const searchEvents = (search) => {
+  debugger
+  return $.ajax({
+    url: "/api/events/search",
+    data: { search }
+  });
+  
+}

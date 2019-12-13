@@ -7,7 +7,6 @@ const Dropdown = ({ dropdown, closeDropdown, logout, openDropdown, loggedIn }) =
     if (!dropdown) {
         return null;
     }
-    debugger
 
     let component;
     switch (dropdown) {

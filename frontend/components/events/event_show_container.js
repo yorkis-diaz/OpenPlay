@@ -4,7 +4,6 @@ import EventShow from './event_show';
 
 
 const mapStateToProps = (state, ownProps) => {
-  debugger
   const  id = ownProps.match.params.eventId
   const event = state.entities.events[id]
   

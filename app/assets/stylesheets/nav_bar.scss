@@ -431,3 +431,37 @@
     }
 
 }
+
+
+//testing dropdown effects ##### 
+
+.new-btn {
+    background-color: green;
+    position: absolute;
+    right: 100px;
+}
+
+.testing-2 {
+    background-color: red;
+    transition-duration: 3s;
+    position: absolute;
+    opacity: .5;
+    right: -400px;
+    top: 0;
+    // display: none;
+}
+
+.test-content {
+    position: absolute;
+    // display: flex;
+    right: 0;
+    top: 400px;
+    opacity: 1;
+    background-color: yellow;
+    transition-duration: 3s;
+
+}
+
+main {
+    overflow: hidden;
+}

@@ -2,6 +2,7 @@ import React from 'react';
 import { Route } from 'react-router-dom';
 import GreetingContainer from '../greeting/greeting_container';
 import DropdownContainer from '../dropdowns/dropdown_container'
+import DropClassChange from '../testing_class_changer/drop_class_change';
 
 
 
@@ -35,6 +36,7 @@ class NavBar extends React.Component {
         const dropdown = (this.props.dropdown === "dropdown-nav") ? <DropdownContainer /> : null
         return (
             <>
+                {/* <DropClassChange/> testing nav*/}
                 <nav className="nav-bar">
                     <div className="upper-nav">
                         <a href="#">For Events</a>

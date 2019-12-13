@@ -11,7 +11,6 @@ const EventsReducer = (state = {}, action) => {
       case RECEIVE_EVENT:
         const { event } = action.payload
         const newState = Object.assign({}, state, event)
-        debugger
         return newState;
 
       default:

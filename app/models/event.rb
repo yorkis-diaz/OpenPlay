@@ -42,4 +42,10 @@ class Event < ApplicationRecord
         foreign_key: :event_id,
         class_name: :Review,
         dependent: :destroy
+
+
+    def self.search(searchQuery)
+        where("name LIKE ?", "%#{searchQuery}%")
+    end
+
 end

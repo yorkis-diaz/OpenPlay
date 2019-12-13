@@ -7,4 +7,14 @@ class Api::EventsController < ApplicationController
         @event = Event.find(params[:id])
         render :show
     end
+
+    def search
+        debugger
+        if params[:search].present? 
+            @events = Event.search(params[:search]) 
+            render :index  
+        else
+            render json: {message: 'No results found'}
+        end
+    end
 end
