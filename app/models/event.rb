@@ -42,4 +42,10 @@ class Event < ApplicationRecord
         foreign_key: :event_id,
         class_name: :Review,
         dependent: :destroy
+
+
+    def self.search(searchQuery)
+        where("name LIKE ? OR event_city LIKE ? OR event_state LIKE ?", "%#{searchQuery}%", "%#{searchQuery}%", "%#{searchQuery}%").includes(:reviews)
+    end
+
 end

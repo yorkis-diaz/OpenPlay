@@ -15,8 +15,17 @@ body {
     // background-color: red;
 }
 
-
+// #root {
+//     width: 100%;
+// }
 main {
     position: relative;
+    // width: 100%;
 }
 
+footer {
+    width: 100%;
+    height: 900px;
+    background-color: #333333;
+    margin-top: 60px;
+}
