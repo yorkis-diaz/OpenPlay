@@ -6,7 +6,7 @@ import NavBarContainer from './nav_bar/nav_bar_container';
 import SearchBarContainer from './search_bar/search_bar_container';
 import HomepageContainer from './homepage_component/homepage_container';
 import EventShowContainer from './events/event_show_container';
-import SearchResult from './search_bar/search_result';
+import SearchResultContainer from './search_bar/search_result_container';
 
 // import ErrorItem from './user_forms/errors/error_item';
 
@@ -20,7 +20,7 @@ const App = () => {
           <Route exact path="/" component={SearchBarContainer} />
         </header>
 
-        <Route path="/search/:searchQuery" component={SearchResult} />
+        <Route exact path="/search/:searchQuery" component={SearchResultContainer} />
         <Route exact path="/events/:eventId" component={EventShowContainer} />
 
         <Route exact path="/" component={HomepageContainer} />

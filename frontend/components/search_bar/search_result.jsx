@@ -5,7 +5,11 @@ class SearchResult extends React.Component {
 
     render () {
         return (
-            <h1>Hello from SearchPage</h1>
+            <div>
+                <h1>
+                    Hello again
+                </h1>
+            </div>
         )
     }
 }
