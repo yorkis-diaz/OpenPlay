@@ -11,7 +11,6 @@ class NavBar extends React.Component {
         super(props)
         this.handleDropdown = this.handleDropdown.bind(this)
         this.handleClick = this.handleClick.bind(this);
-
     }
     handleDropdown(value) {
         return (e) => {

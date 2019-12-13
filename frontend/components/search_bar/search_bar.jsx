@@ -111,6 +111,7 @@ class SearchBar extends React.Component {
                   </select>
                 </span>
                 <select onChange={this.handleChange("numParticipants")}>
+                  <option default></option>
                   {people}
                   <option value="Large Group">Large Group</option>
                 </select>

@@ -5,13 +5,13 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+User.destroy_all
+Event.destroy_all
 
 
+demo_user = User.create!({email: "johndoe@gmail.com", firstname: "John", lastname: "Doe", password: "johndoe"})
 
-
-demo_user = User.create!(email: "johndoe@gmail.com", firstname: "John", lastname: "Doe", password: "johndoe")
-
-event = Event.create!(name: "Volley Tournament",
+event = Event.create!({name: "Volley Tournament",
     info: "Teams of two compete to end top prices",
     lat: 40.735091,
     lng: -73.990801,
@@ -29,9 +29,9 @@ event = Event.create!(name: "Volley Tournament",
     address: "E 10th Street",
     capacity: 12,
     cost: 20
-)
+})
 
-event2 = Event.create!(name: "Yu-Gi-Oh! Tournament",
+event2 = Event.create!({name: "Yu-Gi-Oh! Tournament",
     info: "Participants compete with each other for a chance at the top prices",
     lat: 40.864840,
     lng: -73.882856,
@@ -49,9 +49,9 @@ event2 = Event.create!(name: "Yu-Gi-Oh! Tournament",
     address: "2900 Southern Blvd",
     capacity: 24,
     cost: 10
-)
+})
 
-event3 = Event.create!(name: "Volley Tournament",
+event3 = Event.create!({name: "Volley Tournament",
     info: "Teams of two compete to end top prices",
     lat: 40.735091,
     lng: -73.990801,
@@ -69,9 +69,9 @@ event3 = Event.create!(name: "Volley Tournament",
     address: "E 10th Street",
     capacity: 12,
     cost: 20
-)
+})
 
-event4 = Event.create!(name: "Yu-Gi-Oh! Tournament",
+event4 = Event.create!({name: "Yu-Gi-Oh! Tournament",
     info: "Participants compete with each other for a chance at the top prices",
     lat: 40.864840,
     lng: -73.882856,
@@ -89,10 +89,10 @@ event4 = Event.create!(name: "Yu-Gi-Oh! Tournament",
     address: "2900 Southern Blvd",
     capacity: 24,
     cost: 10
-)
+})
 
 
-event5 = Event.create!(name: "Yu-Gi-Oh! Tournament",
+event5 = Event.create!({name: "Yu-Gi-Oh! Tournament",
     info: "Participants compete with each other for a chance at the top prices",
     lat: 40.864840,
     lng: -73.882856,
@@ -110,9 +110,9 @@ event5 = Event.create!(name: "Yu-Gi-Oh! Tournament",
     address: "2900 Southern Blvd",
     capacity: 24,
     cost: 10
-)
+})
 
-event6 = Event.create!(name: "Volley Tournament The bronx",
+event6 = Event.create!({name: "Volley Tournament The bronx",
     info: "Teams of two compete to end top prices",
     lat: 40.735091,
     lng: -73.990801,
@@ -130,9 +130,9 @@ event6 = Event.create!(name: "Volley Tournament The bronx",
     address: "E 10th Street",
     capacity: 12,
     cost: 20
-)
+})
 
-event7 = Event.create!(name: "Yu-Gi-Oh! Tournament",
+event7 = Event.create!({name: "Yu-Gi-Oh! Tournament",
     info: "Participants compete with each other for a chance at the top prices",
     lat: 40.864840,
     lng: -73.882856,
@@ -150,9 +150,9 @@ event7 = Event.create!(name: "Yu-Gi-Oh! Tournament",
     address: "2900 Southern Blvd",
     capacity: 24,
     cost: 10
-)
+})
 
-reservation = Reservation.create!(time: "time: 04:00:00", num_participants: 3, date: "2019-12-22", participant_id: 1, event_id: 1)
-review = Review.create!(body: "The venue is very clean and well maintained", rating: 5, reviewer_id: 1, event_id: 1, reservation_id: 1)
-review2 = Review.create!(body: "The venue is excellent", rating: 4, reviewer_id: 1, event_id: 1, reservation_id: 1)
-savedevent = SavedEvent.create(user_id: 1, event_id: 1)
+reservation = Reservation.create!({time: "time: 04:00:00", num_participants: 3, date: "2019-12-22", participant_id: demo_user.id, event_id: event.id})
+review = Review.create!({body: "The venue is very clean and well maintained", rating: 5, reviewer_id: demo_user.id, event_id: event.id, reservation_id: reservation.id})
+review2 = Review.create!({body: "The venue is excellent", rating: 4, reviewer_id: demo_user.id, event_id: event.id, reservation_id: reservation.id})
+savedevent = SavedEvent.create({user_id: demo_user.id, event_id: event.id})
