@@ -2,14 +2,89 @@ import React from 'react';
 
 class SearchBar extends React.Component {
     constructor(props) {
-        super(props)
-        this.state = {
-            date: new Date()
-        }
+      super(props)
+      this.state = {
+        date: new Date(),
+        requestedDate: `${new Date().getFullYear()}-${new Date().getMonth() +
+          1}-${new Date().getDate()}`,
+        time: `${new Date().getHours()}:${new Date().getMinutes()} ${(new Date().getHours() < 13) ? `AM` : `PM`}`,
+        numParticipants: "2",
+        searchInput: ""
+      };
+      this.handleSearch = this.handleSearch.bind(this)
+      this.handleChange = this.handleChange.bind(this)
+      debugger
     }
 
-    handleSearch () {
+    handleChange(value) {
+      debugger
+      return (e) => {
+        debugger
+        this.setState({
+          [value]: e.target.value
+        })
+      }
+    }
+
+    handleSearch (e) {
       e.preventDefault();
+      this.props.searchEvents(this.state.searchInput).then(() => {
+        debugger
+        this.props.receiveSearch(this.state)
+        this.props.history.push(`/search/${this.state.searchInput}`)
+        this.setState({
+          date: new Date(),
+          requestedDate: "",
+          time: "",
+          numParticipants: "",
+          searchInput: ""
+        });
+      })
+      
+    }
+
+    makePeopleOptions () {
+      return [...Array(20).keys()].map(num => {
+        let start = num + 1;
+        if (start === 1) {
+          return <option value={start}>{start} Person</option>;
+        } else {
+          return (
+            <option
+              value={start}
+            >
+              {start} People
+            </option>
+          );
+        }
+      });
+    }
+
+    makeTimeOptions () {
+      return [...Array(24).keys()].map(num => {
+        if (num === 0) {
+          return (
+            <>
+              <option value={`12:00 AM`}>12:00 AM</option>
+              <option value={`12:30 AM`}>12:30 AM</option>
+            </>
+          );
+        } else if (num > 12) {
+          return (
+            <>
+              <option value={`${num - 12}:00 AM`}>{num - 12}:00 AM</option>
+              <option value={`${num - 12}:30 AM`}>{num - 12}:30 AM</option>
+            </>
+          );
+        } else {
+          return (
+            <>
+              <option value={`${num}:00 AM`}>{num}:00 AM</option>
+              <option value={`${num}:30 AM`}>{num}:30 AM</option>
+            </>
+          );
+        }
+      });
     }
 
 
@@ -18,28 +93,34 @@ class SearchBar extends React.Component {
         const today = `${date.getFullYear()}-${date.getMonth() +
           1}-${date.getDate()}`;
 
+        const people = this.makePeopleOptions()
+        const time = this.makeTimeOptions()
+
         return (
           <div className="search-form">
             <h1>Find your event for any occasion</h1>
             <div className="outer-div">
               <div className="form-selects">
-                <input type="date" min={today} defaultValue={today} />
+                <input 
+                  onChange={this.handleChange("requestedDate")}
+                  type="date" min={today} 
+                  defaultValue={today} />
                 <span className="select-containers">
-                  <select>
-                    <option>1:00 PM</option>
+                  <select onChange={this.handleChange("time")}>
+                    {time}
                   </select>
                 </span>
-                <select name="" id="">
-                  <option>1 Person</option>
+                <select onChange={this.handleChange("numParticipants")}>
+                  {people}
+                  <option value="Large Group">Large Group</option>
                 </select>
               </div>
               <input
+                onChange={this.handleChange("searchInput")}
                 type="text"
-                name=""
-                placeholder={`${date.getFullYear()}/${date.getMonth() +
-                  1}/${date.getDate()}`}
+                placeholder="Location, Event, or Type"
               />
-              <button>Let's go</button>
+              <button onClick={this.handleSearch}>Let's go</button>
             </div>
           </div>
         );

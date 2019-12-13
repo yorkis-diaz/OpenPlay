@@ -15,7 +15,7 @@ Rails.application.routes.draw do
       resources :reviews, only: [:index]
     end
 
-    get 'api/events/search', to: 'events#search'
+    get '/search', to: 'events#search'
     #resources :reservations, [:create,:update, :destroy]
   end
 end

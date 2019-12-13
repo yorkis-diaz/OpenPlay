@@ -45,7 +45,7 @@ class Event < ApplicationRecord
 
 
     def self.search(searchQuery)
-        where("name LIKE ?", "%#{searchQuery}%")
+        where("name LIKE ? OR event_city LIKE ? OR event_state LIKE ?", "%#{searchQuery}%", "%#{searchQuery}%", "%#{searchQuery}%").includes(:reviews)
     end
 
 end

@@ -11,7 +11,6 @@ class Homepage extends React.Component {
     }
 
     render () {
-      debugger
         let { events } = this.props
         const eventItems = events.map((event) => {
             return (

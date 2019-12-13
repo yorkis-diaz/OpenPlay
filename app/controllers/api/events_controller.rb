@@ -9,12 +9,11 @@ class Api::EventsController < ApplicationController
     end
 
     def search
-        debugger
         if params[:search].present? 
             @events = Event.search(params[:search]) 
             render :index  
         else
-            render json: {message: 'No results found'}
+            render json: {message:'No results found' }
         end
     end
 end

@@ -4,7 +4,6 @@ import * as EventsUtil from '../util/events_util';
 
 
 const receiveEvents = (events) => {
-  debugger
     return {
         type: RECEIVE_EVENTS,
         events
@@ -31,9 +30,7 @@ export const fetchEvent = (eventId) => dispatch => {
 };
 
 export const searchEvents = search => dispatch => {
-  debugger
   return EventsUtil.searchEvents(search).then(events => {
-    debugger
     dispatch(receiveEvents(events));
   });
 };

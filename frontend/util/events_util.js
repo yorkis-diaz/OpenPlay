@@ -11,9 +11,8 @@ export const fetchEvent = (eventId) => {
 }
 
 export const searchEvents = (search) => {
-  debugger
   return $.ajax({
-    url: "/api/events/search",
+    url: "/api/search",
     data: { search }
   });
   
