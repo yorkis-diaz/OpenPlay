@@ -42,23 +42,29 @@ class NavBar extends React.Component {
                     <div className="upper-nav">
                         <a href="#">For Events</a>
                         <button onClick={this.handleDropdown('dropdown-language')}>
-                            Mobile
+                            Mobile <span className="mobile-arrow">⌃</span>
                         </button>
                         <a href="#">Help</a>
                         <button onClick={this.handleDropdown('dropdown-language')}>
-                            EN
+                            EN <span className="en-arrow">⌃</span>
                         </button>
                     </div>
-                    <div className="lower-nav">
-                        <div className="logo" onClick={this.handleClick}>
-                            <li></li>
-                            <h2>OpenPlay</h2>
-                        </div>
-                        <div className="greeting-info">
-                            <Route exact path="/" component={GreetingContainer} />
-                            <div className="nav-drop-menu-btn">
-                                <button onClick={this.handleDropdown('dropdown-nav')}>
-                                </button>
+                    <div className="lower-nav-container">
+                        <div className="lower-nav">
+                            <div className="logo">
+                                <li>
+                                    <span className="arrow-logo">⤗</span>
+                                    <span className="target-logo">⌾</span>
+                                    <h2 className="app-name">OpenPlay</h2>
+                                </li>
+                                
+                            </div>
+                            <div className="greeting-info">
+                                <Route exact path="/" component={GreetingContainer} />
+                                <div className="nav-drop-menu-btn">
+                                    <button onClick={this.handleDropdown('dropdown-nav')}>
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>

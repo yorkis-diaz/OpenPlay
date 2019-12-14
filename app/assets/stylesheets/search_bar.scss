@@ -12,6 +12,9 @@
     background-image: url(http://www.advpolytech.com/wp-content/uploads/Private-Residence-Miami-Beach-2012-Cushion-Plus.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0.377);
+    background-blend-mode: darken;
     // top: 0;
     // bottom: 0;
     // left: 0;
@@ -78,6 +81,7 @@ input[type="date"]::-webkit-calendar-picker-indication {
     width: 480px;
     background-color: white;
     border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .form-selects select {
@@ -104,6 +108,7 @@ input[type="date"]::-webkit-calendar-picker-indication {
 
 .select-containers > select {
     width: 158px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .outer-div > input{
@@ -115,6 +120,7 @@ input[type="date"]::-webkit-calendar-picker-indication {
     padding-left: 40px;
     background-color: white;
     border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 
@@ -132,6 +138,7 @@ input[type="date"]::-webkit-calendar-picker-indication {
     font-size: 18px;
     transition-property: background-color;
     transition-duration: 800ms;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .outer-div > button:hover {
