@@ -13,13 +13,23 @@ class SearchBar extends React.Component {
       };
       this.handleSearch = this.handleSearch.bind(this)
       this.handleChange = this.handleChange.bind(this)
-      debugger
+    }
+
+    componentDidMount () {
+      this.setState({
+        date: new Date(),
+        requestedDate: `${new Date().getFullYear()}-${new Date().getMonth() +
+          1}-${new Date().getDate()}`,
+        time: `${new Date().getHours()}:${new Date().getMinutes()} ${
+          new Date().getHours() < 13 ? `AM` : `PM`
+        }`,
+        numParticipants: "2",
+        searchInput: ""
+      });
     }
 
     handleChange(value) {
-      debugger
       return (e) => {
-        debugger
         this.setState({
           [value]: e.target.value
         })
@@ -29,18 +39,8 @@ class SearchBar extends React.Component {
     handleSearch (e) {
       e.preventDefault();
       this.props.searchEvents(this.state.searchInput).then(() => {
-        debugger
-        this.props.receiveSearch(this.state)
-        this.props.history.push(`/search/${this.state.searchInput}`)
-        this.setState({
-          date: new Date(),
-          requestedDate: "",
-          time: "",
-          numParticipants: "",
-          searchInput: ""
-        });
+        this.props.history.push(`/search/${this.state.searchInput}`);
       })
-      
     }
 
     makePeopleOptions () {
@@ -111,7 +111,6 @@ class SearchBar extends React.Component {
                   </select>
                 </span>
                 <select onChange={this.handleChange("numParticipants")}>
-                  <option default></option>
                   {people}
                   <option value="Large Group">Large Group</option>
                 </select>

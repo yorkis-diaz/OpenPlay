@@ -2,7 +2,7 @@ import React from 'react';
 import { Route } from 'react-router-dom';
 import GreetingContainer from '../greeting/greeting_container';
 import DropdownContainer from '../dropdowns/dropdown_container'
-import DropClassChange from '../testing_class_changer/drop_class_change';
+
 
 
 
@@ -33,24 +33,21 @@ class NavBar extends React.Component {
 
     render () {
         const dropdown = (this.props.dropdown === "dropdown-nav") ? <DropdownContainer /> : null
+        const dropLang = (this.props.dropdown === "dropdown-language") ? <DropdownContainer /> : null
+        const dropDevVersion = (this.props.dropdown === "dev-version") ? <DropdownContainer /> : null
         return (
             <>
                 {/* <DropClassChange/> testing nav*/}
                 <nav className="nav-bar">
                     <div className="upper-nav">
                         <a href="#">For Events</a>
-                        <select>
-                            <option placeholder="Mobile" hidden>Mobile</option>
-                            <option >iOS App</option>
-                            <option >Android App</option>
-                        </select>
+                        <button onClick={this.handleDropdown('dropdown-language')}>
+                            Mobile
+                        </button>
                         <a href="#">Help</a>
-                        <select>
-                            <option placeholder="EN" hidden>EN</option>
-                            <option >Deutch</option>
-                            <option >English</option>
-                            <option >Español</option>
-                        </select>
+                        <button onClick={this.handleDropdown('dropdown-language')}>
+                            EN
+                        </button>
                     </div>
                     <div className="lower-nav">
                         <div className="logo" onClick={this.handleClick}>
@@ -59,9 +56,7 @@ class NavBar extends React.Component {
                         </div>
                         <div className="greeting-info">
                             <Route exact path="/" component={GreetingContainer} />
-                            {/* <h1></h1> */}
                             <div className="nav-drop-menu-btn">
-                                {/* {dropdown} */}
                                 <button onClick={this.handleDropdown('dropdown-nav')}>
                                 </button>
                             </div>
@@ -69,6 +64,8 @@ class NavBar extends React.Component {
                     </div>
                 </nav>
                 {dropdown}
+                {dropLang}
+                {dropDevVersion}
             </>
         )
     }

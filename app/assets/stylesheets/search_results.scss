@@ -1,0 +1,22 @@
+.search-results-container {
+    display: flex;
+    background-color: indianred;
+    height: 800px;
+    justify-content: center;
+    margin: 0 auto;
+    width: 75%;
+}
+
+.search-aside {
+    display: flex;
+    flex-direction: column;
+    background-color: green;
+    width: 25%;
+}
+
+.search-ul {
+    background-color: yellow;
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+}

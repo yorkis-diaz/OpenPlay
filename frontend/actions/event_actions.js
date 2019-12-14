@@ -1,5 +1,6 @@
 export const RECEIVE_EVENTS = "RECEIVE_EVENTS"
 export const RECEIVE_EVENT = "RECEIVE_EVENT";
+export const RECEIVE_SEARCH = "RECEIVE_SEARCH";
 import * as EventsUtil from '../util/events_util';
 
 
@@ -17,6 +18,15 @@ const receiveEvent = payload => {
   };
 };
 
+
+export const receiveSearch = searchQuery => {
+  return {
+    type: RECEIVE_SEARCH,
+    searchQuery
+  };
+};
+
+
 export const fetchEvents = () => dispatch => {
     return EventsUtil.fetchEvents().then((events) => {
         dispatch(receiveEvents(events))
@@ -30,7 +40,7 @@ export const fetchEvent = (eventId) => dispatch => {
 };
 
 export const searchEvents = search => dispatch => {
-  return EventsUtil.searchEvents(search).then(events => {
-    dispatch(receiveEvents(events));
+  return EventsUtil.searchEvents(search).then(searchQuery => {
+    dispatch(receiveSearch(searchQuery));
   });
 };

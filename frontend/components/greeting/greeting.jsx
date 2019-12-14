@@ -30,6 +30,7 @@ class Greeting extends React.Component {
       return (
         <div className="greeting">
           {dropdown}
+          <hr />
           <button className="greeting-content" onClick={this.handleDropdown('greeting-menu')}>
              <h1>Hi, {this.props.currentUser.firstname} </h1>
           </button>
