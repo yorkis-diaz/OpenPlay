@@ -12,7 +12,6 @@ export const searchEvents = (state, searchQuery) => {
             events.push(event)
         }
     })
-    debugger
     return events
 }
 
