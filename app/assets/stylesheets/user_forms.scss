@@ -83,13 +83,12 @@
 }
 
 .signin-btn {
-    border: 1px solid gray;
     // width: 80%;
     border-radius: 3px;
     padding: 15px;
     background-color: white;
     text-align: center;
-    background-color: rgb(69, 69, 236);
+    background-color: #DA3743;
     color: white;
     font-size: 18px;
     transition-property: background-color;
@@ -97,13 +96,12 @@
 }
 
 .demo-user-btn {
-    border: 1px solid gray;
     // width: 80%;
     border-radius: 3px;
     padding: 15px;
     background-color: white;
     text-align: center;
-    background-color: rgb(69, 69, 236);
+    background-color: #DA3743;
     color: white;
     font-size: 18px;
     transition-property: background-color;
@@ -111,11 +109,11 @@
 }
 
 .signin-btn:hover {
-    background-color: rgb(42, 42, 194);
+    background-color: #BB242F;
 }
 
 .demo-user-btn:hover {
-    background-color: rgb(42, 42, 194);
+    background-color: #BB242F;
 
 }
 
@@ -145,10 +143,6 @@
     // width: 100%;
 }
 
-.external-resource-btn:hover {
-    border: 1px solid rgb(233, 37, 37);
-    
-}
 
 .form-container > p:first-of-type > a {
     color: rgb(233, 37, 37);
@@ -163,15 +157,6 @@
     color: red;
 }
 
-
-.checkboxes {
-    display: flex;
-    margin: 10px 0;
-}
-
-.checkboxes > input {
-    margin-right: 4px;
-}
 
 
 
