@@ -1,6 +1,8 @@
 import React from 'react';
 import GreetingMenu from '../greeting/greeting_menu';
 import DropdownNav from '../nav_bar/dropdown_nav';
+import DropdownLanguage from '../nav_bar/dropdown_language';
+import DevVersionDrop from '../nav_bar/dev-version-drop';
 
 
 const Dropdown = ({ dropdown, closeDropdown, logout, openDropdown, loggedIn }) => {
@@ -11,12 +13,19 @@ const Dropdown = ({ dropdown, closeDropdown, logout, openDropdown, loggedIn }) =
     let component;
     switch (dropdown) {
         case 'greeting-menu':
-            component = < GreetingMenu logout={logout}/>
+            component = < GreetingMenu logout={logout}/>;
             break;
 
         case 'dropdown-nav':
-            component = < DropdownNav logout={logout} closeDropdown={closeDropdown} openDropdown={openDropdown} loggedIn={loggedIn}/>
+            component = < DropdownNav logout={logout} closeDropdown={closeDropdown} openDropdown={openDropdown} loggedIn={loggedIn}/>;
             break;
+
+        case 'dropdown-language':
+            component = <DropdownLanguage />;
+            break
+
+        case 'dev-version':
+            component = <DevVersionDrop />;
 
         default:
             return null;

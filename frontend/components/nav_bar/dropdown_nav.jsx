@@ -42,7 +42,7 @@ const DropdownNav = ({ logout, closeDropdown, loggedIn }) => {
               <Link to="#">Français</Link>
               <Link to="#">Italiano</Link>
               <Link to="#">Nederlands</Link>
-              <Link to="#">Japanese</Link>
+              <Link to="#">日本語</Link>
             </div>
             <Link>iOS App</Link>
             <Link>Android App</Link>

@@ -19,8 +19,12 @@ const App = () => {
           <NavBarContainer />
           <Route exact path="/" component={SearchBarContainer} />
         </header>
+<<<<<<< HEAD
 
         <Route exact path="/search/:searchQuery" component={SearchResultContainer} />
+=======
+        <Route path="/search/:searchQuery" component={SearchResultContainer} />
+>>>>>>> search_feature
         <Route exact path="/events/:eventId" component={EventShowContainer} />
 
         <Route exact path="/" component={HomepageContainer} />

@@ -9,7 +9,8 @@ class EventShow extends React.Component {
     }
 
     componentDidUpdate () {
-        //have to implement upun event searched
+        //have to implement upon event searched
+        // prev.location.pathname -- this.props.history.location.pathname logic
     }
 
     render() {

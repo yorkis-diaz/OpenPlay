@@ -1,5 +1,5 @@
 import React from 'react';
-import HomepageEventItem from '../events/homepage_event_item';
+import HomepageEventItem from '../homepage_component/homepage_event_item'
 
 class Homepage extends React.Component {
     constructor (props) {
@@ -14,7 +14,7 @@ class Homepage extends React.Component {
         let { events } = this.props
         const eventItems = events.map((event) => {
             return (
-                <HomepageEventItem event={event} />
+                <HomepageEventItem event={event} key={event.id}/>
             )
         })
         return (

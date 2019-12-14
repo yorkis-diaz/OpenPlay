@@ -1,4 +1,4 @@
-import { RECEIVE_EVENTS, RECEIVE_EVENT } from "../../actions/event_actions";
+import { RECEIVE_EVENTS, RECEIVE_EVENT, RECEIVE_SEARCH } from "../../actions/event_actions";
 
 
 
@@ -12,6 +12,10 @@ const EventsReducer = (state = {}, action) => {
         const { event } = action.payload
         const newState = Object.assign({}, state, event)
         return newState;
+
+      case RECEIVE_SEARCH:
+        debugger
+        return Object.assign({}, state, action.searchQuery)
 
       default:
         return state;
