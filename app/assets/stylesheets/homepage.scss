@@ -6,7 +6,7 @@
     height: 100%;
     justify-content: center;
     transition-property: width;
-    transition-duration: 20ms;
+    transition-duration: 800ms;
 }
 
 .recently-viewed-container {
@@ -163,6 +163,17 @@
     background-image: url("./chicago");
 }
 
+@media (max-width: 1080px) {
+    .homepage {
+        width: 80%;
+    }
+}
+
+@media (max-width: 1020px) {
+    .homepage {
+        width: 95%;
+    }
+}
 
 @media (max-width: 760px) {
     .featured-area-ul > a {

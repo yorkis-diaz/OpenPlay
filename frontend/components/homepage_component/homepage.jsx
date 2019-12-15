@@ -32,8 +32,8 @@ class Homepage extends React.Component {
           <ul class="top-events">{eventItems}</ul>
         </div>
         <div className="featured-area">
-          <h1>Featured Areas</h1>
-          <hr></hr>
+          <h1 className="h1-headers">Featured Areas</h1>
+          <hr className="homepage-hr" />
           <ul class="featured-area-ul">
             <Link to="/search/New%20York%20City" className="featured-link">
               New York Area
