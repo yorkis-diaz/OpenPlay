@@ -16,14 +16,7 @@ class SearchResult extends React.Component {
                 <SearchResultItem event={event} key={event.id}/>
             )
         })
-        debugger
         return (
-<<<<<<< HEAD
-            <div>
-                <h1>
-                    Hello again
-                </h1>
-=======
             <div className="search-results-container">
                 <aside className="search-aside">
                     <map name="">
@@ -36,7 +29,6 @@ class SearchResult extends React.Component {
                 <ul className="search-ul">
                     {eventLis}
                 </ul>
->>>>>>> search_feature
             </div>
         )
     }

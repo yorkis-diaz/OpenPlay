@@ -14,7 +14,6 @@ const EventsReducer = (state = {}, action) => {
         return newState;
 
       case RECEIVE_SEARCH:
-        debugger
         return Object.assign({}, state, action.searchQuery)
 
       default:
