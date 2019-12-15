@@ -1,7 +1,7 @@
 .search-results-container {
     display: flex;
-    background-color: indianred;
-    height: 800px;
+    // background-color: indianred;
+    height: 100%;
     justify-content: center;
     margin: 0 auto;
     width: 75%;
@@ -15,7 +15,7 @@
 }
 
 .search-ul {
-    background-color: yellow;
+    // background-color: yellow;
     display: flex;
     flex-direction: column;
     width: 75%;
@@ -35,17 +35,30 @@
 .event-details {
     display: flex;
     flex-direction: column;
+    height: 70%;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    justify-content: space-evenly;
 }
+
 
 .timeslots {
     display: flex;
+}
+
+.event-name {
+    font-size: 18px;
+    font-weight: 600;
+    color: #247F9E;
+
 }
 
 .timeslots > li{
     // border: 1px solid gray;
     // width: 80%;
     border-radius: 3px;
-    padding: 7px 13px;
+    padding: 7px 20px;
     // flex-shrink: 4;
     margin-right: 21px;
     height: 15px;
@@ -60,5 +73,157 @@
 }
 
 .timeslots li:hover {
+    background-color: #BB242F;
+}
+
+.event-subdetail { 
+    font-size: 15px;
+    color: #272D38;
+}
+
+.event-rating {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.event-subdetail > span{ 
+    color: black;
+}
+
+
+
+
+/////////// Result Form Style ///////
+
+
+.result-search-form {
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: #2D333F;
+}
+
+.result-search-form > .result-outer-div {
+    padding: 20px 0;
+    padding-bottom: 10px;
+}
+
+.result-outer-div {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    // margin: 0 5px;
+    transition-delay: 1ms;
+    // transition-duration: 1ms;
+}
+
+input[type="date"]{
+    width: 132px;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+    border: none;
+    text-align: center;
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 49px;
+    border-radius: 5px 0 0 5px;
+    border-right: 1px solid rgba(192, 191, 191, 0.466);
+    cursor: pointer;
+}
+
+input[type="date"]::-webkit-inner-spin-button {
+    display: none;
+}
+
+input[type="date"]::-webkit-clear-button {
+    display: none;
+}
+
+input[type="date"]::-webkit-calendar-picker-indication {
+    // display: none;
+}
+
+
+
+
+.result-form-selects {
+    display: flex;
+    margin: 0 12px;
+    margin-right: 0;
+    justify-content: center;
+    align-items: center;
+    width: 480px;
+    background-color: white;
+    border-radius: 5px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.result-form-selects select {
+    height: 49px;
+    border: 1px solid white;
+    background-color: white;
+    margin: 0 1px;
+    width: 140px;
+    font-size: 18px;
+    font-family: sans-serif serif;
+    padding-left: 5px;
+    outline: none;
+    cursor: pointer;
+    // -webkit-appearance: none;
+}
+
+.result-form-selects > select {
+    width: 134px;
+}
+
+.result-select-containers {
+    border-right: 1px solid rgba(192, 191, 191, 0.466);
+}
+
+.result-select-containers > select {
+    width: 158px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.result-outer-div > input{
+    width: 250px;
+    height: 49px;
+    margin: 0;
+    margin: 0 0;
+    margin-left: 0;
+    padding-left: 40px;
+    background-color: white;
+    // border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.result-outer-div > button {
+    // border: 1px solid gray;
+    height: 19.3px;
+    border-radius: 5px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    width: 115px;
+    padding: 15px;
+    margin: 0 12px;
+    margin-left: 0;
+    background-color: white;
+    text-align: center;
+    background-color: #DA3743;
+    color: white;
+    font-size: 18px;
+    transition-property: background-color;
+    transition-duration: 800ms;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.result-outer-div > button:hover {
     background-color: #BB242F;
 }

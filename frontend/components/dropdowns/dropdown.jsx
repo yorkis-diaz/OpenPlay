@@ -22,10 +22,11 @@ const Dropdown = ({ dropdown, closeDropdown, logout, openDropdown, loggedIn }) =
 
         case 'dropdown-language':
             component = <DropdownLanguage />;
-            break
+            break;
 
         case 'dev-version':
             component = <DevVersionDrop />;
+            break;
 
         default:
             return null;

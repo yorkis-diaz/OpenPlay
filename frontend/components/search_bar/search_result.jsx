@@ -1,5 +1,7 @@
 import React from 'react';
 import SearchResultItem from './search_result_item';
+import ResultSearchBarContainer from './result_search_bar_container';
+
 
 class SearchResult extends React.Component {
     constructor (props) {
@@ -16,21 +18,35 @@ class SearchResult extends React.Component {
                 <SearchResultItem event={event} key={event.id}/>
             )
         })
-        return (
-            <div className="search-results-container">
-                <aside className="search-aside">
-                    <map name="">
-
-                    </map>
-                    <div>
-                        Filters
+        
+        if (events.length > 0) {
+            return (
+                <>
+                    <ResultSearchBarContainer/>
+                    <div className="search-results-container">
+                        <aside className="search-aside">
+                            <map name="">
+                                Map Link Goes Here
+                            </map>
+                            <div>
+                                Filters
+                            </div>
+                        </aside>
+                        <ul className="search-ul">
+                            {eventLis}
+                        </ul>
                     </div>
-                </aside>
-                <ul className="search-ul">
-                    {eventLis}
-                </ul>
-            </div>
-        )
+                </>
+            )
+        } else {
+          return (
+                <>
+                    <ResultSearchBarContainer/>
+                    <h1>Sorry nothing to see</h1>
+                </>
+
+            )  
+        }
     }
 }
 
