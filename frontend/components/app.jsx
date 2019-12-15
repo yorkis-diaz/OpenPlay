@@ -20,7 +20,7 @@ const App = () => {
           <Route exact path="/" component={SearchBarContainer} />
         </header>
 
-        <Route exact path="/search/:searchQuery" component={SearchResultContainer} />
+        <Route path="/search/:searchQuery" component={SearchResultContainer} />
         <Route exact path="/events/:eventId" component={EventShowContainer} />
 
         <Route exact path="/" component={HomepageContainer} />

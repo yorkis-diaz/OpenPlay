@@ -40,7 +40,6 @@ class ResultSearchBar extends React.Component {
           new Date().getHours() < 13 ? `AM` : `PM`
         }`,
         numParticipants: "2",
-        searchInput: ""
       });
     }
   }

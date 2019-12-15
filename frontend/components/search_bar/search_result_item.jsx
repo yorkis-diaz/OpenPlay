@@ -19,7 +19,7 @@ const SearchResultItem = ({ event }) => {
         <Link to={`/events/${event.id}`}>
           <img src="https://ae01.alicdn.com/kf/HTB1qIMKexGYBuNjy0Fnq6x5lpXaa/Bright-Indoor-basketball-court-sport-arena-light-backdrop-Vinyl-cloth-High-quality-Computer-print-wall-Background.jpg" />
         </Link>
-        <div className="event-details">
+        <div className="search-event-details">
           <Link className="event-name" to={`/events/${event.id}`}>
             {event.name}
           </Link>
@@ -28,18 +28,23 @@ const SearchResultItem = ({ event }) => {
             <span>{affordable}</span> • {event.event_type} • {event.event_city}
           </p>
           <ul className="timeslots">
-            <li>
-              {start_hour}:{opens.getUTCMinutes()}0
-            </li>
-            <li>
-              {start_hour + event.event_duration}:{opens.getUTCMinutes()}0
-            </li>
-            <li>
-              {start_hour + event.event_duration + event.event_duration}:
-              {opens.getUTCMinutes()}0
-            </li>
-            <li></li>
-            <li></li>
+            <Link to="/">
+              <li>
+                {start_hour}:{opens.getUTCMinutes()}0
+              </li>
+            </Link>
+
+            <Link to="/">
+              <li>
+                {start_hour + event.event_duration}:{opens.getUTCMinutes()}0
+              </li>
+            </Link>
+            <Link to="/">
+              <li>
+                {start_hour + event.event_duration + event.event_duration}:
+                {opens.getUTCMinutes()}0
+              </li>
+            </Link>
           </ul>
         </div>
       </li>
