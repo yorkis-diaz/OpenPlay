@@ -83,7 +83,6 @@ export const logout = () => dispatch => {
 
 export const createFavorite = (user_id, event_id) => dispatch => {
   return FavoriteAPIUtil.createFavorite(user_id, event_id).then(favorite => {
-    debugger
     dispatch(receiveFavorite(favorite));
   });
 }

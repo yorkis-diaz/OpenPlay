@@ -1,10 +1,10 @@
 class Api::EventsController < ApplicationController
     def index
-        @events = Event.all.includes(:reviews)
+        @events = Event.includes(:reviews).all
     end
 
     def show
-        @event = Event.find(params[:id])
+        @event = Event.includes(:reviews, :reviewers).find(params[:id])
         render :show
     end
 
@@ -16,5 +16,4 @@ class Api::EventsController < ApplicationController
             render json: {message:'No results found' }
         end
     end
-    
 end

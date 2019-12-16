@@ -11,3 +11,11 @@ json.set! "reviews" do
         end
     end
 end
+
+json.set! "reviewers" do 
+    @event.reviewers.each do |reviewer|
+        json.set! reviewer.id do 
+            json.extract! reviewer, :firstname, :lastname
+        end
+    end
+end

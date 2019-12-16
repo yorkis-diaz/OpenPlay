@@ -39,7 +39,9 @@ class NavBar extends React.Component {
         return (
           <>
             {/* <DropClassChange/> testing nav*/}
-            <nav className="nav-bar">
+            <nav
+              className="nav-bar"
+            >
               <div className="upper-nav">
                 <a href="#">For Events</a>
                 <button onClick={this.handleDropdown("dev-version")}>
@@ -66,7 +68,8 @@ class NavBar extends React.Component {
                     <div className="nav-drop-menu-btn">
                       <button
                         onClick={this.handleDropdown("dropdown-nav")}
-                      ></button>
+                      >
+                      </button>
                     </div>
                   </div>
                 </div>

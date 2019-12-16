@@ -2,7 +2,6 @@ import { RECEIVE_CURRENT_USER, LOGOUT_CURRENT_USER, RECEIVE_FAVORITE, REMOVE_FAV
 
 const SavedEventsReducer = (state = {}, action) => {
   Object.freeze(state);
-  debugger
   switch (action.type) {
     case RECEIVE_CURRENT_USER:
       const { savedEvents } = action.currentUser

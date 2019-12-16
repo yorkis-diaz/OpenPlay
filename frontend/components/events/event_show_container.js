@@ -2,6 +2,8 @@ import { connect } from 'react-redux';
 import { fetchEvent } from '../../actions/event_actions'
 import EventShow from './event_show';
 import { createFavorite, deleteFavorite } from "../../actions/session_actions";
+import { openModal } from '../../actions/modal_actions';
+import { selectReviews } from '../../util/selectors';
 
 
 const mapStateToProps = (state, ownProps) => {
@@ -14,12 +16,19 @@ const mapStateToProps = (state, ownProps) => {
       savedEventId = savedEvent.id
     }
   });
+  const eventReviews = selectReviews(
+    state.entities.reviews,
+    ownProps.match.params.eventId
+  );
+  
+  debugger
         
   return {
     loggedIn: Boolean(currentUser),
     currentUser,
     event,
-    savedEventId
+    savedEventId,
+    eventReviews
   };
 };
 
@@ -27,7 +36,8 @@ const mapDispatchToProps = dispatch => {
   return {
     createFavorite: (user_id, event_id) => dispatch(createFavorite(user_id, event_id)),
     deleteFavorite: (favorite_id) => dispatch(deleteFavorite(favorite_id)),
-    fetchEvent: eventId => dispatch(fetchEvent(eventId))
+    fetchEvent: eventId => dispatch(fetchEvent(eventId)),
+    openModal: (modal) => dispatch(openModal(modal))
   };
 };
 

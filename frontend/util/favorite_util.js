@@ -8,7 +8,6 @@ export const createFavorite = (user_id, event_id) => {
 }
 
 export const deleteFavorite = (favorite_id) => {
-    debugger
     return $.ajax({
         method: "DELETE",
         url: `/api/saved_events/${favorite_id}`

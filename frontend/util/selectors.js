@@ -15,3 +15,15 @@ export const searchEvents = (state, searchQuery) => {
     return events
 }
 
+export const selectReviews = (state, eventId) => {
+    const reviews = Object.values(state);
+    const eventReviews = [];
+    debugger
+    reviews.forEach((review) => {
+        if (review.event_id === parseInt(eventId)) {
+            eventReviews.push(review);
+        }
+    })
+    return eventReviews;
+}
+

@@ -19,9 +19,3 @@ json.extract! event, :id,
     :address,
     :capacity,
     :cost
-
-json.set! "review_ids" do
-    json.array! event.reviews do |review|
-        review.id
-    end
-end

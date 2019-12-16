@@ -43,6 +43,10 @@ class Event < ApplicationRecord
         class_name: :Review,
         dependent: :destroy
 
+    has_many :reviewers,
+        through: :reviews,
+        source: :reviewer
+
 
     def self.search(searchQuery)
         where("name LIKE ? OR event_city LIKE ? OR event_state LIKE ? OR event_type LIKE ?", "%#{searchQuery}%", "%#{searchQuery}%", "%#{searchQuery}%", "%#{searchQuery}%").includes(:reviews)

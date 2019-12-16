@@ -13,7 +13,7 @@ const Dropdown = ({ dropdown, closeDropdown, logout, openDropdown, loggedIn }) =
     let component;
     switch (dropdown) {
         case 'greeting-menu':
-            component = < GreetingMenu logout={logout}/>;
+            component = < GreetingMenu logout={logout} closeDropdown={closeDropdown}/>;
             break;
 
         case 'dropdown-nav':
@@ -34,6 +34,7 @@ const Dropdown = ({ dropdown, closeDropdown, logout, openDropdown, loggedIn }) =
 
     return (
         <>
+            
             {component}
         </>
     )

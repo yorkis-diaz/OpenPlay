@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import ReservationForm from './reservation_form';
+import ReviewItem from './review_item';
 
 class EventShow extends React.Component {
     constructor (props) {
@@ -23,9 +24,9 @@ class EventShow extends React.Component {
     }
 
     handleFavorite (e) {
-      let { currentUser, event, savedEventId } = this.props;
-      debugger
+      let { currentUser, event, savedEventId, loggedIn } = this.props;
       e.preventDefault();
+      loggedIn ? null : this.props.openModal("login");
       if (savedEventId) {
         this.props.deleteFavorite(savedEventId)
       } else {
@@ -34,6 +35,7 @@ class EventShow extends React.Component {
     }
 
     render() {
+        debugger
         const { event } = this.props
         
         if (!event) {
@@ -41,11 +43,23 @@ class EventShow extends React.Component {
                 <div>Event doesn't exist</div>
             );
         } else {
+          const { eventReviews } = this.props
+          const reviewsLis = eventReviews.map((review) => {
+            return (
+              <ReviewItem review={review}/>
+            )
+          })
           return (
             <section className="event-show-container">
-                <button onClick={this.handleFavorite} className="favorite-btn">
-                    Save this event
+              {this.props.savedEventId ? (
+                <button onClick={this.handleFavorite} className="favorited-btn">
+                  <span></span> Event Saved!
                 </button>
+              ) : (
+                <button onClick={this.handleFavorite} className="favorite-btn">
+                  Save this event
+                </button>
+              )}
               <div className="event-image-container">
                 <img src="./assets/events/volleyball" alt="volleyball" />
               </div>
@@ -58,7 +72,7 @@ class EventShow extends React.Component {
                     <a ref="event-detail-main">Overview</a>
                     <a href="#event-info">Photo</a>
                     {/* <a href="">Reviews</a> */}
-                  {/* </div> */} 
+                  {/* </div> */}
                   <h1>{event.name}</h1>
                   <section className="event-detail-main">
                     <ul className="event-subdetail-ul">
@@ -72,6 +86,9 @@ class EventShow extends React.Component {
                   </section>
                   <article className="event-detail-reviews">
                     <h1>What People Are Saying</h1>
+                    <ul className="reviews-list">
+                        {reviewsLis}
+                    </ul>
                   </article>
                 </main>
                 <aside className="event-show-aside">

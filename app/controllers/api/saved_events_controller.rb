@@ -5,7 +5,6 @@ class Api::SavedEventsController < ApplicationController
         if @saved_event.save
             render :show
         else
-            debugger
             render json: saved_event.errors.full_messages, status: 422
         end
     end

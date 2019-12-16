@@ -19,6 +19,7 @@ const HomepageEventItem = ({ event }) => {
                 />
                 <div className="event-details">
                     <h1>{event.name}</h1>
+                    <p>{event.reviews_count} reviews</p>
                     <p>Rating Goes here</p>
                     <p>
                     {event.event_type} • {affordable} • {event.event_city}
