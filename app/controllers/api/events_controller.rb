@@ -16,4 +16,5 @@ class Api::EventsController < ApplicationController
             render json: {message:'No results found' }
         end
     end
+    
 end
