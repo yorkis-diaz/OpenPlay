@@ -1,4 +1,5 @@
 import React from 'react';
+import MarkerManager from '../../util/marker_manager';
 
 class OpenMap extends React.Component {
 
@@ -9,11 +10,19 @@ class OpenMap extends React.Component {
         };
 
         this.map = new google.maps.Map(this.mapNode, mapOptions)
+        this.MarkerManager = new MarkerManager(this.map)
+    }
+
+    componentDidUpdate () {
+        
     }
 
     render () {
-        <div ref={ map => this.mapNode = map} id="map-container">
-        </div>
+        return (
+            <div ref={ map => this.mapNode = map} id="map-container">
+                Map
+            </div>
+        )
     }
 }
 
