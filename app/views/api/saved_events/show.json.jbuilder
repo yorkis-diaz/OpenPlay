@@ -1,0 +1,1 @@
+json.extract! @saved_event, :id, :user_id, :event_id

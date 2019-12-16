@@ -4,9 +4,9 @@ import ReservationForm from './reservation_form';
 
 class EventShow extends React.Component {
     constructor (props) {
-        super(props)
+      super(props)
 
-        this.handleFavorite = this.handleFavorite.bind(this)
+      this.handleFavorite = this.handleFavorite.bind(this)
     }
 
     componentDidMount () {
@@ -23,9 +23,14 @@ class EventShow extends React.Component {
     }
 
     handleFavorite (e) {
-        let { currentUser, event } = this.props;
-        e.preventDefault();
+      let { currentUser, event, savedEventId } = this.props;
+      debugger
+      e.preventDefault();
+      if (savedEventId) {
+        this.props.deleteFavorite(savedEventId)
+      } else {
         this.props.createFavorite(currentUser.id, event.id);
+      }
     }
 
     render() {
@@ -70,7 +75,9 @@ class EventShow extends React.Component {
                   </article>
                 </main>
                 <aside className="event-show-aside">
-                  <ReservationForm />
+                  <div className="reservation-div">
+                    <ReservationForm />
+                  </div>
                 </aside>
               </div>
             </section>
