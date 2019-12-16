@@ -24,7 +24,7 @@ class SearchBar extends React.Component {
           new Date().getHours() < 13 ? `AM` : `PM`
         }`,
         numParticipants: "2",
-        searchInput: ""
+        searchInput: "New York"
       });
     }
 
@@ -102,6 +102,7 @@ class SearchBar extends React.Component {
             <div className="outer-div">
               <div className="form-selects">
                 <input 
+                  className="search-bar-date"
                   onChange={this.handleChange("requestedDate")}
                   type="date" min={today} 
                   defaultValue={today} />
@@ -119,6 +120,7 @@ class SearchBar extends React.Component {
                 onChange={this.handleChange("searchInput")}
                 type="text"
                 placeholder="Location, Event, or Type"
+                defaultValue={this.state.searchInput}
               />
               <button onClick={this.handleSearch}>Let's go</button>
             </div>

@@ -2,7 +2,9 @@ export const RECEIVE_CURRENT_USER = "RECEIVE_CURRENT_USER";
 export const LOGOUT_CURRENT_USER = "LOGOUT_CURRENT_USER";
 export const RECEIVE_SESSION_ERRORS = "RECEIVE_SESSION_ERRORS";
 export const CLEAR_ERRORS = "CLEAR_ERRORS"
+export const RECEIVE_FAVORITE = "RECEIVE_FAVORITE";
 import * as SessionAPIUtil from '../util/session_api_util';
+import * as FavoriteAPIUtil from '../util/favorite_util';
 
 
 const receiveCurrentUser = (currentUser) => {
@@ -29,6 +31,14 @@ export const clearErrors = () => {
   return {
     type: CLEAR_ERRORS
   }
+}
+
+export const receiveFavorite = (favorite) => {
+  return {
+    type: RECEIVE_FAVORITE,
+    favorite
+  }
+  
 }
 
 export const login = user => dispatch => {
@@ -62,4 +72,10 @@ export const logout = () => dispatch => {
       dispatch(receiveErrors(err.responseJSON));
     }
   );
+}
+
+export const createFavorite = (user_id, event_id) => dispatch => {
+  return FavoriteAPIUtil.createFavorite(user_id, event_id).then(favorite => {
+    dispatch(receiveFavorite(favorite));
+  });
 }

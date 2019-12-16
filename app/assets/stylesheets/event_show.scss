@@ -1,0 +1,287 @@
+.event-show-container {
+    position: relative;
+    // background-color: red;
+}
+
+.event-image-container img {
+    width: 100%;
+    height: 298px;
+}
+
+.favorite-btn {
+    // border: 1px solid gray;
+    height: 19.3px;
+    border-radius: 3px;
+    // border-top-left-radius: 0;
+    // border-bottom-left-radius: 0;
+    width: 17%;
+    padding: 15px 0;
+    margin: 0 12px;
+    margin-left: 0;
+    background-color: white;
+    text-align: center;
+    color: black;
+    font-size: 13px;
+    transition-property: background-color;
+    transition-duration: 800ms;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 20px auto;
+    position: absolute;
+    right: 25px;
+}
+
+.favorite-btn:hover {
+    border: 2px solid #DA3743;
+}
+
+.event-show-details {
+    width: 69%;
+    height: 1000px;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    justify-content: space-between;
+    // position: absolute;
+}
+
+.event-detail {
+    // background-color: saddlebrown;
+    width: 64%;
+    // overflow-x: visible;
+    // overflow-y: visible;
+    display: flex;
+    flex-flow: column wrap;
+    // background-color: green;
+    // position: absolute;
+}
+
+.event-show-aside {
+    width: 32%;
+
+    // top: 200px;
+    // right: 200px;
+}
+
+// .navigation-menu {
+//     display: flex;
+//     justify-content: space-evenly;
+//     border-bottom: 1px solid #D8D9DB;
+//     position: -webkit-sticky;
+//     position: sticky;
+//     top: 0;
+//     width: 100%;
+// }
+
+// .navigation-menu > a {
+//     // background-color: seashell;
+//     padding: 20px 30px;
+//     font-family: Arial, Helvetica, sans-serif;
+// }
+
+// .navigation-menu > a:hover {
+//     color: #DA3743;
+//     border-bottom: 2px solid #DA3743;
+//     padding-bottom: 18px;
+// }
+
+.event-detail > h1 {
+    font-size: 45px;
+    font-weight: bold;
+    color: #2D333F;
+    // margin: 0 auto;
+    padding: 40px 0;
+    border-bottom: 1px solid #D8D9DB;
+    width: 100%;
+    // text-align: center;
+}
+
+.event-detail-main {
+    // padding: 20px 0;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 10px 0;
+    // background-color: red;
+}
+
+.event-subdetail-ul {
+    display: flex;
+    padding: 10px 0;
+}
+
+.event-subdetail-ul > li{
+    padding-right: 10px;
+    color: #000000;
+}
+
+.event-info {
+    padding: 20px 0;
+    color: #2D333F;
+}
+
+
+
+/////////// Reservation Form Style ///////
+
+
+
+.reservation-form {
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    // flex-wrap:wrap;
+    // align-items: center;
+    // justify-content: center;
+    width: 100%;
+    background-color: #FFFFFF;
+    // background-color: hotpink;
+    // background-color: red;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 3px;
+    // border: 1px solid red;
+    z-index: 10;
+    box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.13), -1px -1px 2px 2px rgba(0, 0, 0, 0.13);
+
+
+}
+
+.reservation-form > h1 {
+    padding: 10px 0;
+    text-align: center;
+    color: #000000;
+    font-size: 24px;
+    font-weight: bold;
+    border-bottom: 1px solid #D8D9DB;
+}
+
+.reservation-form-outer-div {
+    display: flex;
+    flex-wrap: wrap;
+    // flex-flow: column wrap;
+    // justify-content: center;
+    // margin: 0 auto;
+    // margin: 0 5px;
+    // transition-delay: 1ms;
+    // width: 100%;
+    // flex-wrap: wrap;
+    padding: 20px 10px;
+    transition-duration: 1ms;
+}
+
+.reservation-form-outer-div > label:first-of-type {
+    width: 100%;
+    border-bottom: 1px solid #D8D9DB;
+}
+
+.date-label {
+    width: 40%;
+    border-bottom: 1px solid #D8D9DB;
+    margin-right: 10px;
+}
+
+.reservation-form-outer-div > label:last-of-type {
+    width: 44%;
+    border-bottom: 1px solid #D8D9DB;
+    margin-left: 10px;
+
+}
+
+.party-select {
+    height: 49px;
+    border: 1px solid white;
+    background-color: white;
+    // margin: 0 1px;
+    // width: 100%;
+    font-size: 18px;
+    width: 100%;
+    font-family: sans-serif serif;
+    padding-left: 5px;
+    outline: none;
+    cursor: pointer;
+    // -webkit-appearance: none;
+    // border-bottom: 1px solid #D8D9DB;
+    // border-radius: 0;
+    // border-bottom: 1px solid #D8D9DB;
+}
+
+.time-select {
+    height: 49px;
+    border: 1px solid white;
+    background-color: white;
+    margin: 0 1px;
+    width: 100%;
+    font-size: 18px;
+    font-family: sans-serif serif;
+    padding-left: 5px;
+    outline: none;
+    cursor: pointer;
+    // -webkit-appearance: none;
+    // border-bottom: 1px solid #D8D9DB;
+    // border-bottom: 1px solid #D8D9DB;
+    // margin-left: 2px;
+}
+
+
+.date-input {
+    width: 100%;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+    border: none;
+    text-align: center;
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 49px;
+    // border-radius: 5px 0 0 5px;
+    // border-right: 1px solid rgba(192, 191, 191, 0.466);
+    cursor: pointer;
+    // border-bottom: 1px solid #D8D9DB;
+    // background-color: red;
+    border-bottom: 1px solid #D8D9DB;
+}
+
+.date-input::-webkit-inner-spin-button {
+    display: none;
+}
+
+.date-input::-webkit-clear-button {
+    display: none;
+}
+
+.date-input::-webkit-calendar-picker-indication {
+    // display: none;
+}
+
+.reservation-form-outer-div > label > h2 {
+    font-weight: bold;
+    padding-top: 10px;
+    font-size: 11px;
+}
+
+.reservation-form-outer-div > button {
+    // border: 1px solid gray;
+    height: 19.3px;
+    border-radius: 2px;
+    // border-top-left-radius: 0;
+    // border-bottom-left-radius: 0;
+    width: 85%;
+    padding: 15px;
+    margin: 0 12px;
+    margin-left: 0;
+    background-color: white;
+    text-align: center;
+    background-color: #DA3743;
+    color: white;
+    font-size: 18px;
+    transition-property: background-color;
+    transition-duration: 800ms;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 20px auto;
+}
+
+.reservation-form-outer-div > button:hover {
+    background-color: #BB242F;
+}
+

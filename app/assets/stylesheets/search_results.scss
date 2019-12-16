@@ -175,7 +175,7 @@
     // transition-duration: 1ms;
 }
 
-input[type="date"]{
+.search-result-bar-date {
     width: 132px;
     font-size: 18px;
     margin: 0;
@@ -190,15 +190,15 @@ input[type="date"]{
     cursor: pointer;
 }
 
-input[type="date"]::-webkit-inner-spin-button {
+.search-result-bar-date::-webkit-inner-spin-button {
     display: none;
 }
 
-input[type="date"]::-webkit-clear-button {
+.search-result-bar-date::-webkit-clear-button {
     display: none;
 }
 
-input[type="date"]::-webkit-calendar-picker-indication {
+.search-result-bar-date::-webkit-calendar-picker-indication {
     // display: none;
 }
 

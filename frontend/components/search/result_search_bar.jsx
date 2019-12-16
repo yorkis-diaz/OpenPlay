@@ -110,6 +110,7 @@ class ResultSearchBar extends React.Component {
         <div className="result-outer-div">
           <div className="result-form-selects">
             <input
+              className="search-result-bar-date"
               onChange={this.handleChange("requestedDate")}
               type="date"
               min={today}
