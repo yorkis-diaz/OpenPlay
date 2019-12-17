@@ -93,11 +93,11 @@ class LoginForm extends React.Component {
           </button>
         </form>
         <p>New to OpenPlay? {this.props.signupForm}</p>
-        <p>
+        {/* <p>
           This site is protected by reCAPTCHA and the Google{" "}
           <span>Privacy</span> <span>Policy</span> and{" "}
           <span>Terms of Service</span> apply.
-        </p>
+        </p> */}
       </div>
     );
   }

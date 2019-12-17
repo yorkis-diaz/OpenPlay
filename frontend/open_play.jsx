@@ -13,7 +13,6 @@ document.addEventListener("DOMContentLoaded", () => {
         const preloadedState = {
             session: {
                 currentUser: currentUser.user,
-                reservations: currentUser.reservations,
                 savedEvents: currentUser.savedEvents
             }
         }

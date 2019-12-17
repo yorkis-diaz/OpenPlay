@@ -1,4 +1,5 @@
 import React from "react";
+import ReservationTimes from "../reservations/reservation_times";
 
 class ReservationForm extends React.Component {
   constructor(props) {
@@ -28,20 +29,6 @@ class ReservationForm extends React.Component {
       numParticipants: "2",
     });
   }
-
-//   componentDidUpdate(prev) {
-//     if (prev.location.pathname !== this.props.location.pathname) {
-//       this.setState({
-//         date: new Date(),
-//         requestedDate: `${new Date().getFullYear()}-${new Date().getMonth() +
-//           1}-${new Date().getDate()}`,
-//         time: `${new Date().getHours()}:${new Date().getMinutes()} ${
-//           new Date().getHours() < 13 ? `AM` : `PM`
-//         }`,
-//         numParticipants: "2"
-//       });
-//     }
-//   }
 
   handleChange(value) {
     return e => {
@@ -74,22 +61,19 @@ class ReservationForm extends React.Component {
       if (num === 0) {
         return (
           <>
-            <option value={`12:00 AM`}>12:00 AM</option>
-            <option value={`12:30 AM`}>12:30 AM</option>
+            <option value={num}>12:00 AM</option>
           </>
         );
       } else if (num > 12) {
         return (
           <>
-            <option value={`${num - 12}:00 AM`}>{num - 12}:00 AM</option>
-            <option value={`${num - 12}:30 AM`}>{num - 12}:30 AM</option>
+            <option value={num}>{num - 12}:00 PM</option>
           </>
         );
       } else {
         return (
           <>
-            <option value={`${num}:00 AM`}>{num}:00 AM</option>
-            <option value={`${num}:30 AM`}>{num}:30 AM</option>
+            <option value={num}>{num}:00 AM</option>
           </>
         );
       }
@@ -110,7 +94,10 @@ class ReservationForm extends React.Component {
         <div className="reservation-form-outer-div">
           <label className="party-size-div">
             <h2>Party Size</h2>
-            <select className="party-select" onChange={this.handleChange("numParticipants")}>
+            <select
+              className="party-select"
+              onChange={this.handleChange("numParticipants")}
+            >
               {people}
               <option value="Large Group">Large Group</option>
             </select>
@@ -125,11 +112,21 @@ class ReservationForm extends React.Component {
               defaultValue={today}
             />
           </label>
-          <label >
+          <label>
             <h2>Time</h2>
-            <select className="time-select" onChange={this.handleChange("time")}>{time}</select>
+            <select
+              className="time-select"
+              onChange={this.handleChange("time")}
+            >
+              {time}
+            </select>
           </label>
-          <button onClick={this.handleSearch}>Find an Event</button>
+          {/* <button onClick={this.handleSearch}>Find an Event</button> */}
+          <ReservationTimes
+            event={this.props.event}
+            receiveReservationInfo={this.props.receiveReservationInfo}
+            reservationInfo={this.props.reservationInfo}
+          />
         </div>
       </div>
     );

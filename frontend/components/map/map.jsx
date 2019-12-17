@@ -18,7 +18,6 @@ class OpenMap extends React.Component {
     }
 
     render () {
-        debugger
         return (
             <div ref={ map => this.mapNode = map} id="map-container">
                 Map

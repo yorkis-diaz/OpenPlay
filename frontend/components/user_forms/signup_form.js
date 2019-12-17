@@ -113,10 +113,10 @@ class SignupForm extends React.Component {
 
           <button className="signin-btn">Create Account</button>
         </form>
-        <p>
+        {/* <p>
           By creating an account you agree to the{" "}
           <span>OpenPlay Terms of Use</span> <span>Privacy Policy</span>
-        </p>
+        </p> */}
       </div>
     );
   }

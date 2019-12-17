@@ -4,6 +4,7 @@ import EventShow from './event_show';
 import { createFavorite, deleteFavorite } from "../../actions/session_actions";
 import { openModal } from '../../actions/modal_actions';
 import { selectReviews } from '../../util/selectors';
+import { receiveReservationInfo } from '../../actions/reservation_actions';
 
 
 const mapStateToProps = (state, ownProps) => {
@@ -27,16 +28,20 @@ const mapStateToProps = (state, ownProps) => {
     event,
     savedEventId,
     eventReviews,
-    reviewers: state.entities.users
+    reviewers: state.entities.users,
+    reservationInfo: state.session.reservationInfo
   };
 };
 
 const mapDispatchToProps = dispatch => {
   return {
-    createFavorite: (user_id, event_id) => dispatch(createFavorite(user_id, event_id)),
-    deleteFavorite: (favorite_id) => dispatch(deleteFavorite(favorite_id)),
+    createFavorite: (user_id, event_id) =>
+      dispatch(createFavorite(user_id, event_id)),
+    deleteFavorite: favorite_id => dispatch(deleteFavorite(favorite_id)),
     fetchEvent: eventId => dispatch(fetchEvent(eventId)),
-    openModal: (modal) => dispatch(openModal(modal))
+    openModal: modal => dispatch(openModal(modal)),
+    receiveReservationInfo: reservationInfo =>
+      dispatch(receiveReservationInfo(reservationInfo))
   };
 };
 

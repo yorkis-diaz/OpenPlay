@@ -37,7 +37,6 @@ class EventShow extends React.Component {
 
     render() {
         const { event } = this.props
-        debugger
         if (!event) {
             return (
                 <div>Event doesn't exist</div>
@@ -79,7 +78,10 @@ class EventShow extends React.Component {
                   <section className="event-detail-main">
                     <ul className="event-subdetail-ul">
                       <li>{event.rating} Rating</li>
-                      <li><span className="review-chatbox"></span>{eventReviews.length} Reviews</li>
+                      <li>
+                        <span className="review-chatbox"></span>
+                        {eventReviews.length} Reviews
+                      </li>
                       <li>${event.cost} and under</li>
                       <li>Difficulty: {event.skill_level}</li>
                       <li>{event.event_type}</li>
@@ -88,16 +90,18 @@ class EventShow extends React.Component {
                   </section>
                   <article className="event-detail-reviews">
                     <h1>What People Are Saying</h1>
-                    <ul className="reviews-list">
-                        {reviewsLis}
-                    </ul>
+                    <ul className="reviews-list">{reviewsLis}</ul>
                   </article>
                 </main>
                 <aside className="event-show-aside">
                   <div className="reservation-div">
-                    <ReservationForm />
+                    <ReservationForm
+                      event={this.props.event}
+                      receiveReservationInfo={this.props.receiveReservationInfo}
+                      reservationInfo={this.props.reservationInfo}
+                    />
                   </div>
-                  <OpenMap eventLat={event.lat} evenLng={event.lng}/>
+                  {/* <OpenMap eventLat={event.lat} evenLng={event.lng}/>               */}
                 </aside>
               </div>
             </section>
