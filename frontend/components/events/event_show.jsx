@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import ReservationForm from './reservation_form';
 import ReviewItem from './review_item';
+import OpenMap from '../map/map';
 
 class EventShow extends React.Component {
     constructor (props) {
@@ -36,7 +37,7 @@ class EventShow extends React.Component {
 
     render() {
         const { event } = this.props
-        
+        debugger
         if (!event) {
             return (
                 <div>Event doesn't exist</div>
@@ -96,6 +97,7 @@ class EventShow extends React.Component {
                   <div className="reservation-div">
                     <ReservationForm />
                   </div>
+                  <OpenMap eventLat={event.lat} evenLng={event.lng}/>
                 </aside>
               </div>
             </section>

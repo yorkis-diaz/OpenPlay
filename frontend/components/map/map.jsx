@@ -5,7 +5,7 @@ class OpenMap extends React.Component {
 
     componentDidMount () {
         const mapOptions = {
-          center: { lat: 40.760746, lng: -73.983324 },
+          center: { lat: this.props.eventLat, lng: this.props.eventLng },
           zoom: 13
         };
 
@@ -18,6 +18,7 @@ class OpenMap extends React.Component {
     }
 
     render () {
+        debugger
         return (
             <div ref={ map => this.mapNode = map} id="map-container">
                 Map
