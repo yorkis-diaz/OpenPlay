@@ -47,6 +47,8 @@ class Event < ApplicationRecord
         through: :reviews,
         source: :reviewer
 
+    has_one_attached :photo
+
 
     def self.search(searchQuery)
         where("name LIKE ? OR event_city LIKE ? OR event_state LIKE ? OR event_type LIKE ?", "%#{searchQuery}%", "%#{searchQuery}%", "%#{searchQuery}%", "%#{searchQuery}%").includes(:reviews)
