@@ -46,7 +46,7 @@ class EventShow extends React.Component {
           const reviewsLis = eventReviews.map((review) => {
             reviewers
             return (
-              <ReviewItem review={review} reviewer={reviewers[review.reviewer_id]}/>
+              <ReviewItem review={review} reviewer={reviewers[review.reviewer_id]} event={event}/>
             )
           })
 
@@ -77,8 +77,8 @@ class EventShow extends React.Component {
                   <h1>{event.name}</h1>
                   <section className="event-detail-main">
                     <ul className="event-subdetail-ul">
-                      <li>Rating</li>
-                      <li>Reviews</li>
+                      <li>{event.rating} Rating</li>
+                      <li><span className="review-chatbox"></span>{eventReviews.length} Reviews</li>
                       <li>${event.cost} and under</li>
                       <li>Difficulty: {event.skill_level}</li>
                       <li>{event.event_type}</li>
