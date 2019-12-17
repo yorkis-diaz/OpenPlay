@@ -18,7 +18,6 @@ export const searchEvents = (state, searchQuery) => {
 export const selectReviews = (state, eventId) => {
     const reviews = Object.values(state);
     const eventReviews = [];
-    debugger
     reviews.forEach((review) => {
         if (review.event_id === parseInt(eventId)) {
             eventReviews.push(review);

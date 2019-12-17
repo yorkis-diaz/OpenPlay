@@ -35,7 +35,6 @@ class EventShow extends React.Component {
     }
 
     render() {
-        debugger
         const { event } = this.props
         
         if (!event) {
@@ -43,12 +42,14 @@ class EventShow extends React.Component {
                 <div>Event doesn't exist</div>
             );
         } else {
-          const { eventReviews } = this.props
+          const { eventReviews, reviewers } = this.props
           const reviewsLis = eventReviews.map((review) => {
+            reviewers
             return (
-              <ReviewItem review={review}/>
+              <ReviewItem review={review} reviewer={reviewers[review.reviewer_id]}/>
             )
           })
+
           return (
             <section className="event-show-container">
               {this.props.savedEventId ? (

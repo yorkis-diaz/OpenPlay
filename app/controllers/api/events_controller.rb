@@ -13,7 +13,7 @@ class Api::EventsController < ApplicationController
             @events = Event.search(params[:search]) 
             render :index  
         else
-            render json: {message:'No results found' }
+            render json: { message:'No results found' }
         end
     end
 end

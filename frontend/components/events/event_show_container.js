@@ -20,15 +20,14 @@ const mapStateToProps = (state, ownProps) => {
     state.entities.reviews,
     ownProps.match.params.eventId
   );
-  
-  debugger
         
   return {
     loggedIn: Boolean(currentUser),
     currentUser,
     event,
     savedEventId,
-    eventReviews
+    eventReviews,
+    reviewers: state.entities.users
   };
 };
 
