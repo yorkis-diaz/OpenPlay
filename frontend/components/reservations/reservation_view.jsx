@@ -15,7 +15,10 @@ const ReservationView = (props) => {
                 </li>  
             </ul>
             <div className="reservation-view-user-info">
-                user info
+                <div className="view-user-name-circle"></div>
+                <div className="view-user-info">
+
+                </div>
             </div>
         </section>
     )
