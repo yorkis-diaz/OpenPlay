@@ -1,8 +1,8 @@
 export const createReservation = (reservation) => {
   return $.ajax({
     method: "POST",
-    url: ``,
-    data: {}
+    url: `/api/`,
+    data: {reservation}
   });
 };
 
