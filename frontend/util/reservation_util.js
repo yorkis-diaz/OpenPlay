@@ -1,7 +1,7 @@
-export const createReservation = (reservation) => {
+export const createReservation = (user_id, reservation) => {
   return $.ajax({
     method: "POST",
-    url: `/api/`,
+    url: `/api/users/${user_id}/reservations`,
     data: {reservation}
   });
 };

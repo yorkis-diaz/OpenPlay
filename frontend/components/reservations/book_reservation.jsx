@@ -1,34 +1,35 @@
 import React from 'react';
 import queryString from 'query-string';
+import { Route } from 'react-router-dom';
 
 class BookReservation extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      phone: ""
+      phoneNumber: ""
     }
-    this.handleClick = this.handleClick.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
   }
 
   componentDidUpdate (prev) {
-    debugger
   }
 
-  handleClick (e) {
+  handleSubmit (e) {
     e.preventDefault();
-    debugger
-    const { reservationInfo } = this.props
+    const { reservationInfo, currentUser } = this.props
     const reservationDetails = { 
       time: reservationInfo.requestedTime,
       num_participants: reservationInfo.numParticipants,
       date: reservationInfo.requestedDate, 
       participant_id: this.props.currentUser.id, 
-      event_id: this.props.event.id
+      event_id: this.props.event.id,
+      phone_number: this.state.phoneNumber
     }
-    const reservation = Object.assign({}, this.state, reservationDetails)
-    this.props.createReservation(reservation).then(() => {
-      this.props.history.push("/")
+
+    this.props.createReservation(currentUser.id, reservationDetails).then((reservation) => {
+
+      this.props.history.push(`/reservation/view/${reservation.id}`)
     })
   }
 
@@ -40,7 +41,6 @@ class BookReservation extends React.Component {
     }
   }
 
-
   render() {
     const { currentUser, loggedIn, event, reservationInfo } = this.props
     if (Object.values(reservationInfo).length === 0 ){
@@ -51,7 +51,7 @@ class BookReservation extends React.Component {
         <main className="book-page">
           <h1>You're almost done!</h1>
           <div className="reservation-info">
-            <figure></figure>
+            <img src={event.photoUrl} alt={event.event_type}/>
             <article className="reservation-event-info">
               <h2>{event.name}</h2>
               <ul className="reservation-details">
@@ -85,10 +85,10 @@ class BookReservation extends React.Component {
               </h3>
             )}
             <div className="reservation-inputs">
-              <input type="text" placeholder="Phone Number" onChange={this.handleChange} required/>
+              <input type="text" placeholder="Phone Number" onChange={this.handleChange("phoneNumber")} />
               <input type="email" value={(loggedIn) ? currentUser.email : ""} disabled />
             </div>
-            <button className="complete-reservation-btn" onClick={this.handleClick}>
+            <button className="complete-reservation-btn" onClick={this.handleSubmit}>
               Complete reservation
             </button>
           </div>

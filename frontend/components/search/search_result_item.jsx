@@ -24,7 +24,7 @@ const SearchResultItem = (props) => {
     return (
       <li className="search-item" key={event.id}>
         <Link to={`/events/${event.id}`}>
-          <img src="https://ae01.alicdn.com/kf/HTB1qIMKexGYBuNjy0Fnq6x5lpXaa/Bright-Indoor-basketball-court-sport-arena-light-backdrop-Vinyl-cloth-High-quality-Computer-print-wall-Background.jpg" />
+          <img src={event.photoUrl} alt={event.event_type}/>
         </Link>
         <div className="search-event-details">
           <Link className="event-name" to={`/events/${event.id}`}>

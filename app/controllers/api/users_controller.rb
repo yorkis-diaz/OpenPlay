@@ -1,6 +1,6 @@
 class Api::UsersController < ApplicationController
     def show
-        @user = User.find(params[:id]).includes(:reservations, :saved_events)
+        @user = User.includes(:reservations, :saved_events).find(params[:id])
     end
 
     def create

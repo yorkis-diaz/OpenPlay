@@ -9,7 +9,6 @@ const mapStateToProps = (state, ownProps) => {
   const { eventId } = state.session.reservationInfo
   const event = state.entities.events[eventId]
 
-  debugger
   return {
     event,
     loggedIn: Boolean(currentUser),
@@ -22,7 +21,7 @@ const mapDispatchToProps = dispatch => {
   return {
     logout: () => dispatch(logout()),
     openModal: modal => dispatch(openModal(modal)),
-    createReservation: reservation => dispatch(createReservation(reservation))
+    createReservation: (user_id, reservation) => dispatch(createReservation(user_id, reservation))
   };
 };
 

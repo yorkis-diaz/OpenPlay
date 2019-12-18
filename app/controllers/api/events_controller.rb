@@ -1,10 +1,10 @@
 class Api::EventsController < ApplicationController
     def index
-        @events = Event.includes(:reviews).all
+        @events = Event.with_attached_photo.includes(:reviews).all
     end
 
     def show
-        @event = Event.includes(:reviews, :reviewers).find(params[:id])
+        @event = Event.with_attached_photo.includes(:reviews, :reviewers).find(params[:id])
         render :show
     end
 

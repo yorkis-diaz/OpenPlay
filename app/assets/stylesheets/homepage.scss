@@ -129,7 +129,7 @@
 }
 
 .featured-link {
-    background-image: url("./newyork");
+    background-image: url("https://open-play-seed.s3.amazonaws.com/newyork.jpeg");
     background-size: cover;
     background-repeat: no-repeat;
     background-color: rgba(0, 0, 0, 0.377);
@@ -144,23 +144,24 @@
 }
 
 .featured-area-ul > a:nth-child(2) {
-    background-image: url("./neworleans");
+    background-image: url("https://open-play-seed.s3.amazonaws.com/neworleans.jpeg");
 }
 
 .featured-area-ul a:nth-child(3) {
-    background-image: url("./miami");
+    background-image: url("https://open-play-seed.s3.amazonaws.com/miami.jpeg");
 }
 
 .featured-area-ul a:nth-child(4) {
-    background-image: url("./losangeles");
+    background-image: url("https://open-play-seed.s3.amazonaws.com/losangeles.jpeg");
 }
 
 .featured-area-ul a:nth-child(5) {
-    background-image: url("./lasvegas");
+    background-image: url("https://open-play-seed.s3.amazonaws.com/lasvegas.jpeg");
 }
 
 .featured-area-ul a:nth-child(6) {
-    background-image: url("./chicago");
+    // background-image: url("./chicago");
+    background-image: url("http://open-play-seed.s3.amazonaws.com/chicago.jpeg");
 }
 
 @media (max-width: 1080px) {

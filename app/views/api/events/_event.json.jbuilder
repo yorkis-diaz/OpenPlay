@@ -19,3 +19,7 @@ json.extract! event, :id,
     :address,
     :capacity,
     :cost
+
+if event.photo.attached?
+    json.photoUrl url_for(event.photo)
+end

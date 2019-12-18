@@ -8,6 +8,7 @@ import HomepageContainer from './homepage_component/homepage_container';
 import EventShowContainer from './events/event_show_container';
 import SearchResultContainer from './search/search_result_container';
 import BookReservationContainer from './reservations/book_reservation_container';
+import ReservationViewContainer from './reservations/reservation_view_container';
 
 // import ErrorItem from './user_forms/errors/error_item';
 
@@ -21,7 +22,8 @@ const App = () => {
           <Route exact path="/" component={SearchBarContainer} />
         </header>
 
-        <AuthRoute path="/reservation" component={BookReservationContainer}/>
+        <Route path="/reservation/view/:reservationId" component={ReservationViewContainer} />
+        <AuthRoute exact path="/reservation" component={BookReservationContainer}/>
         <Route path="/search/:searchQuery" component={SearchResultContainer} />
         <Route exact path="/events/:eventId" component={EventShowContainer} />
 

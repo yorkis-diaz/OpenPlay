@@ -461,6 +461,13 @@
     line-height: 1.5em;
 }
 
+@media (max-width: 1238px) {
+    .event-show-details {
+       width: 75%; 
+    }
+    
+}
+
 @media (max-width: 1190px) {
     .event-show-details {
        width: 80%; 

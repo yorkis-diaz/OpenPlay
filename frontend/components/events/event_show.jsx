@@ -63,7 +63,7 @@ class EventShow extends React.Component {
             </button>
           )}
           <div className="event-image-container">
-            <img src="./assets/events/volleyball" alt="volleyball" />
+            <img src={event.photoUrl} alt={event.event_type} />
           </div>
           <div className="event-show-details">
             <main className="event-detail">

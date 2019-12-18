@@ -26,11 +26,12 @@
     padding: 20px 0;
 }
 
-.reservation-info > figure {
+.reservation-info > img {
     width: 70px;
     height: 70px;
-    background-color: yellow;
+    // background-color: yellow;
     margin: 0;
+    border-radius: 5px;
 }
 
 .reservation-event-info {

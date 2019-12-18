@@ -14,8 +14,8 @@ const HomepageEventItem = ({ event }) => {
       <Link to={`/events/${event.id}`}>
             <div  className="homepage-event-item">
                 <img
-                    src="https://ae01.alicdn.com/kf/HTB1qIMKexGYBuNjy0Fnq6x5lpXaa/Bright-Indoor-basketball-court-sport-arena-light-backdrop-Vinyl-cloth-High-quality-Computer-print-wall-Background.jpg"
-                    alt="Basketball Court"
+                    src={event.photoUrl}
+                    alt={event.event_type}
                 />
                 <div className="event-details">
                     <h1>{event.name}</h1>

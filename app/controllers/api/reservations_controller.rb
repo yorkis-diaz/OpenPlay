@@ -1,10 +1,11 @@
 class Api::ReservationsController < ApplicationController
     def create
-        @reservation = current_user.reservations.new(reservation_params)
+        user = User.find(params[:user_id])
+        @reservation = user.reservations.new(reservation_params)
         if @reservation.save
             render :show
         else
-            render json: @reservation.errors.full_messages
+            render json: @reservation.errors.full_messages, status: 422
         end
     end
 
@@ -13,7 +14,7 @@ class Api::ReservationsController < ApplicationController
         if @reservation.update_attributes(reservation_params)
             render :show
         else
-            render json: @reservation.errors.full_messages
+            render json: @reservation.errors.full_messages, status: 422
         end
     end
 
@@ -25,7 +26,7 @@ class Api::ReservationsController < ApplicationController
 
     private 
     def reservation_params
-        params.require(:reservation).permit(:time, :num_participants, :date, :participant_id, :event_id)
+        params.require(:reservation).permit(:time, :num_participants, :date, :participant_id, :event_id, :phone_number)
         #need phone number
     end
 end
