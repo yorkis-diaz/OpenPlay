@@ -20,9 +20,7 @@ class SearchBar extends React.Component {
         date: new Date(),
         requestedDate: `${new Date().getFullYear()}-${new Date().getMonth() +
           1}-${new Date().getDate()}`,
-        time: `${new Date().getUTCHours()}:${Math.floor(new Date().getUTCMinutes())} ${
-          (new Date().getUTCHours() < 13) ? `AM` : `PM`
-        }`,
+        time: `${new Date().getHours()}`,
         numParticipants: "2",
         searchInput: "New York"
       });

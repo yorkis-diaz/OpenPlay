@@ -11,6 +11,9 @@ class Homepage extends React.Component {
     this.props.fetchEvents()
   }
 
+  componentDidUpdate(prev){
+  }
+
   render () {
     let { events } = this.props
     const eventItems = events.map((event) => {

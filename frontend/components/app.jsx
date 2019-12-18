@@ -21,7 +21,7 @@ const App = () => {
           <Route exact path="/" component={SearchBarContainer} />
         </header>
 
-        <Route path="/reservation" component={BookReservationContainer}/>
+        <AuthRoute path="/reservation" component={BookReservationContainer}/>
         <Route path="/search/:searchQuery" component={SearchResultContainer} />
         <Route exact path="/events/:eventId" component={EventShowContainer} />
 

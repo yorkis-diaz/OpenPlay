@@ -1,7 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import ReservationTimes from '../reservations/reservation_times';
 
-const SearchResultItem = ({ event }) => {
+const SearchResultItem = (props) => {
+  const { event } = props
+  debugger
     let affordable;
     if (event.cost < 10) {
         affordable = "$"
@@ -12,6 +15,7 @@ const SearchResultItem = ({ event }) => {
     }
     const opens = new Date(event.participation_open_time)
     const close = new Date(event.participation_close_time)
+    const ReservationTimesWithRouter = withRouter(ReservationTimes);
     const start_hour =
       (opens.getUTCHours() < 13) ? opens.getUTCHours() : (opens.getUTCHours() - 12);
     return (
@@ -28,6 +32,14 @@ const SearchResultItem = ({ event }) => {
             <span>{affordable}</span> • {event.event_type} • {event.event_city}
           </p>
           <ul className="timeslots">
+            <ReservationTimesWithRouter
+              event={this.props.event}
+              receiveReservationInfo={this.props.receiveReservationInfo}
+              reservationInfo={this.props.reservationInfo}
+              loggedIn={this.props.loggedIn}
+              openModal={this.props.openModal}
+            />
+
             <Link to="/">
               <li>
                 {start_hour}:{opens.getUTCMinutes()}0

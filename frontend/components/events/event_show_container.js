@@ -36,12 +36,12 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = dispatch => {
   return {
     createFavorite: (user_id, event_id) =>
-      dispatch(createFavorite(user_id, event_id)),
+    dispatch(createFavorite(user_id, event_id)),
     deleteFavorite: favorite_id => dispatch(deleteFavorite(favorite_id)),
     fetchEvent: eventId => dispatch(fetchEvent(eventId)),
     openModal: modal => dispatch(openModal(modal)),
     receiveReservationInfo: reservationInfo =>
-      dispatch(receiveReservationInfo(reservationInfo))
+    dispatch(receiveReservationInfo(reservationInfo))
   };
 };
 
