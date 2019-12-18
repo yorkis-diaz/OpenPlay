@@ -5,7 +5,6 @@ export default class MarkerManager {
   }
 
   updateMarkers(events) {
-    console.log("time to update")
   }
 
 }
