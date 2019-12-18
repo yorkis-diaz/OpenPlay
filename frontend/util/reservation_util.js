@@ -1,4 +1,4 @@
-export const createReservation = () => {
+export const createReservation = (reservation) => {
   return $.ajax({
     method: "POST",
     url: ``,

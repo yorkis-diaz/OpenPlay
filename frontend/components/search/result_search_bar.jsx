@@ -7,9 +7,7 @@ class ResultSearchBar extends React.Component {
       date: new Date(),
       requestedDate: `${new Date().getFullYear()}-${new Date().getMonth() +
         1}-${new Date().getDate()}`,
-      time: `${new Date().getHours()}:${new Date().getMinutes()} ${
-        new Date().getHours() < 13 ? `AM` : `PM`
-      }`,
+      time: `${new Date().getHours()}`,
       numParticipants: "2",
       searchInput: ""
     };
@@ -22,11 +20,9 @@ class ResultSearchBar extends React.Component {
       date: new Date(),
       requestedDate: `${new Date().getFullYear()}-${new Date().getMonth() +
         1}-${new Date().getDate()}`,
-      time: `${new Date().getHours()}:${new Date().getMinutes()} ${
-        new Date().getHours() < 13 ? `AM` : `PM`
-      }`,
+      time: `${new Date().getHours()}`,
       numParticipants: "2",
-      searchInput: ""
+      searchInput: "New York"
     });
   }
 
@@ -36,9 +32,7 @@ class ResultSearchBar extends React.Component {
         date: new Date(),
         requestedDate: `${new Date().getFullYear()}-${new Date().getMonth() +
           1}-${new Date().getDate()}`,
-        time: `${new Date().getHours()}:${new Date().getMinutes()} ${
-          new Date().getHours() < 13 ? `AM` : `PM`
-        }`,
+        time: `${new Date().getHours()}`,
         numParticipants: "2",
       });
     }
@@ -54,18 +48,19 @@ class ResultSearchBar extends React.Component {
 
   handleSearch(e) {
     e.preventDefault();
-        this.props.searchEvents(this.state.searchInput).then(() => {
+      this.props.searchEvents(this.state.searchInput).then(() => {
+        this.props.receiveReservationInfo(Object.assign({}, this.state))
         this.props.history.push(`/search/${this.state.searchInput}`);
-    });
+      });
   }
 
   makePeopleOptions() {
     return [...Array(20).keys()].map(num => {
       let start = num + 1;
       if (start === 1) {
-        return <option value={start}>{start} Person</option>;
+        return <option key={start} value={start}>{start} Person</option>;
       } else {
-        return <option value={start}>{start} People</option>;
+        return <option key={start} value={start}>{start} People</option>;
       }
     });
   }
@@ -75,22 +70,19 @@ class ResultSearchBar extends React.Component {
       if (num === 0) {
         return (
           <>
-            <option value={`12:00 AM`}>12:00 AM</option>
-            <option value={`12:30 AM`}>12:30 AM</option>
+            <option value={0}>12:00 AM</option>
           </>
         );
       } else if (num > 12) {
         return (
           <>
-            <option value={`${num - 12}:00 AM`}>{num - 12}:00 AM</option>
-            <option value={`${num - 12}:30 AM`}>{num - 12}:30 AM</option>
+            <option value={num}>{num - 12}:00 PM</option>
           </>
         );
       } else {
         return (
           <>
-            <option value={`${num}:00 AM`}>{num}:00 AM</option>
-            <option value={`${num}:30 AM`}>{num}:30 AM</option>
+            <option value={num}>{num}:00 AM</option>
           </>
         );
       }

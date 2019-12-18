@@ -9,9 +9,7 @@ class ReservationForm extends React.Component {
       date: new Date(),
       requestedDate: `${new Date().getFullYear()}-${new Date().getMonth() +
         1}-${new Date().getDate()}`,
-      time: `${new Date().getHours()}:${new Date().getMinutes()} ${
-        new Date().getHours() < 13 ? `AM` : `PM`
-      }`,
+      time: `${new Date().getHours()}`,
       numParticipants: "2",
       searchInput: "",
       searched: false

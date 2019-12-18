@@ -31,8 +31,8 @@ class Homepage extends React.Component {
         </div>
         <h1 className="h1-headers">Top Events</h1>
         <hr className="homepage-hr" />
-        <div class="top-events-container">
-          <ul class="top-events">{eventItems}</ul>
+        <div className="top-events-container">
+          <ul className="top-events">{eventItems}</ul>
         </div>
         <div className="featured-area">
           <h1 className="h1-headers">Featured Areas</h1>

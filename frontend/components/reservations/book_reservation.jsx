@@ -4,11 +4,48 @@ import queryString from 'query-string';
 class BookReservation extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      phone: ""
+    }
+    this.handleClick = this.handleClick.bind(this);
+    this.handleChange = this.handleChange.bind(this);
+  }
+
+  componentDidUpdate (prev) {
+    debugger
+  }
+
+  handleClick (e) {
+    e.preventDefault();
+    debugger
+    const { reservationInfo } = this.props
+    const reservationDetails = { 
+      time: reservationInfo.requestedTime,
+      num_participants: reservationInfo.numParticipants,
+      date: reservationInfo.requestedDate, 
+      participant_id: this.props.currentUser.id, 
+      event_id: this.props.event.id
+    }
+    const reservation = Object.assign({}, this.state, reservationDetails)
+    this.props.createReservation(reservation).then(() => {
+      this.props.history.push("/")
+    })
+  }
+
+  handleChange (value) {
+    return (e) => {
+      this.setState({
+        [value]: e.target.value
+      })
+    }
   }
 
 
   render() {
-    const { currentUser, loggedIn } = this.props
+    const { currentUser, loggedIn, event, reservationInfo } = this.props
+    if (Object.values(reservationInfo).length === 0 ){
+      return this.props.history.push("/")
+    }
     return (
       <section className="book-page-container">
         <main className="book-page">
@@ -16,11 +53,13 @@ class BookReservation extends React.Component {
           <div className="reservation-info">
             <figure></figure>
             <article className="reservation-event-info">
-              <h2> Restaurant name</h2>
+              <h2>{event.name}</h2>
               <ul className="reservation-details">
-                <li>reservation date</li>
-                <li>reservation time</li>
-                <li>reservation paticipant amount</li>
+                <li>{reservationInfo.requestedDate}</li>
+                <li>{reservationInfo.requestedTime}</li>
+                <li>{(reservationInfo.numParticipants === 1) ? (`${reservationInfo.numParticipants} Person`) : 
+                  (`${reservationInfo.numParticipants} People`)}
+                </li>
               </ul>
             </article>
           </div>
@@ -46,10 +85,10 @@ class BookReservation extends React.Component {
               </h3>
             )}
             <div className="reservation-inputs">
-              <input type="text" placeholder="Phone Number" />
+              <input type="text" placeholder="Phone Number" onChange={this.handleChange} required/>
               <input type="email" value={(loggedIn) ? currentUser.email : ""} disabled />
             </div>
-            <button className="complete-reservation-btn">
+            <button className="complete-reservation-btn" onClick={this.handleClick}>
               Complete reservation
             </button>
           </div>

@@ -26,17 +26,35 @@ const ReservationTimes = (props) => {
         return "12:00 PM"
       }
     }
-    debugger
     const handleClick = (e) => {
       if (!props.loggedIn) {
         return props.openModal('login')
       }
       e.preventDefault();
-      const newState = Object.assign({}, reservationInfo, { requestedTime: e.target.value })
+      const newState = Object.assign({}, reservationInfo, { requestedTime: e.target.value }, { eventId: event.id})
       receiveReservationInfo(newState)
       props.history.push("/reservation")
     }
 
+    const buttonsLis = []
+    for(let i = 0; i < 4; i++) {
+      if (requestedRange[i]) {
+        buttonsLis.push(
+          <button
+            key={i}
+            className="times-btns"
+            onClick={handleClick}
+            value={convertTime(requestedRange[i])}
+          >
+            {convertTime(requestedRange[i])}
+          </button>
+        );
+      } else {
+      buttonsLis.push(
+          <li className="no-times-btns" key={i}></li>
+        )
+      }
+    }
     if (requestedRange.length === 0) {
       return (
         <article className="reservation-form-no-result">
@@ -48,24 +66,42 @@ const ReservationTimes = (props) => {
       );
     } else {
       return (
-        <ul className="times-btns-ul" onClick={handleClick} value={convertTime(requestedRange[0])}>
-          <button className="times-btns">
+        <ul className="times-btns-ul">
+          {buttonsLis}
+          {/* <button
+            className="times-btns"
+            onClick={handleClick}
+            value={convertTime(requestedRange[0])}
+          >
             {convertTime(requestedRange[0])}
           </button>
-          <button className="times-btns" value={convertTime(requestedRange[1])}>
+          <button
+            className="times-btns"
+            onClick={handleClick}
+            value={convertTime(requestedRange[1])}
+          >
             {convertTime(requestedRange[1])}
           </button>
-          <button className="times-btns" value={convertTime(requestedRange[2])} >
+          <button
+            className="times-btns"
+            onClick={handleClick}
+            value={convertTime(requestedRange[2])}
+          >
             {convertTime(requestedRange[2])}
           </button>
-          {/* <button className="times-btns">
+          <button
+            className="times-btns"
+            onClick={handleClick}
+            value={convertTime(requestedRange[3])}
+          >
             {convertTime(timeRange[3])}
           </button>
-          <button className="times-btns">
+          <button
+            className="times-btns"
+            onClick={handleClick}
+            value={convertTime(requestedRange[4])}
+          >
             {convertTime(timeRange[4])}
-          </button>
-          <button className="times-btns">
-            {convertTime(timeRange[5])}
           </button> */}
         </ul>
       );

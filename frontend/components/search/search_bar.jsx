@@ -46,10 +46,11 @@ class SearchBar extends React.Component {
       return [...Array(20).keys()].map(num => {
         let start = num + 1;
         if (start === 1) {
-          return <option value={start}>{start} Person</option>;
+          return <option key={start} value={start}>{start} Person</option>;
         } else {
           return (
             <option
+              key={start}
               value={start}
             >
               {start} People
@@ -64,19 +65,19 @@ class SearchBar extends React.Component {
         if (num === 0) {
           return (
             <>
-              <option value={0}>12:00 AM</option>
+              <option key={num} value={0}>12:00 AM</option>
             </>
           );
         } else if (num > 12) {
           return (
             <>
-              <option value={num}>{num - 12}:00 PM</option>
+              <option key={num} value={num}>{num - 12}:00 PM</option>
             </>
           );
         } else {
           return (
             <>
-              <option value={num}>{num}:00 AM</option>
+              <option key={num} value={num}>{num}:00 AM</option>
             </>
           );
         }

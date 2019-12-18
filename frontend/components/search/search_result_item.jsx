@@ -1,10 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import ReservationTimes from '../reservations/reservation_times';
 
 const SearchResultItem = (props) => {
   const { event } = props
-  debugger
     let affordable;
     if (event.cost < 10) {
         affordable = "$"
@@ -13,11 +12,15 @@ const SearchResultItem = (props) => {
     } else {
         affordable = "$$$"
     }
-    const opens = new Date(event.participation_open_time)
-    const close = new Date(event.participation_close_time)
+
     const ReservationTimesWithRouter = withRouter(ReservationTimes);
-    const start_hour =
-      (opens.getUTCHours() < 13) ? opens.getUTCHours() : (opens.getUTCHours() - 12);
+
+
+    // const opens = new Date(event.participation_open_time)
+    // const close = new Date(event.participation_close_time)
+    // 
+    // const start_hour =
+    //   (opens.getUTCHours() < 13) ? opens.getUTCHours() : (opens.getUTCHours() - 12);
     return (
       <li className="search-item" key={event.id}>
         <Link to={`/events/${event.id}`}>
@@ -33,13 +36,13 @@ const SearchResultItem = (props) => {
           </p>
           <ul className="timeslots">
             <ReservationTimesWithRouter
-              event={this.props.event}
-              receiveReservationInfo={this.props.receiveReservationInfo}
-              reservationInfo={this.props.reservationInfo}
-              loggedIn={this.props.loggedIn}
-              openModal={this.props.openModal}
+              event={props.event}
+              receiveReservationInfo={props.receiveReservationInfo}
+              reservationInfo={props.reservationInfo}
+              loggedIn={props.loggedIn}
+              openModal={props.openModal}
             />
-
+{/* 
             <Link to="/">
               <li>
                 {start_hour}:{opens.getUTCMinutes()}0
@@ -56,7 +59,7 @@ const SearchResultItem = (props) => {
                 {start_hour + event.event_duration + event.event_duration}:
                 {opens.getUTCMinutes()}0
               </li>
-            </Link>
+            </Link> */}
           </ul>
         </div>
       </li>
