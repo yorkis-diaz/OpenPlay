@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import ProfileReservationItem from "./profile_reservation_item";
+import SavedEvents from "./saved_events";
 
 
 class UserProfile extends React.Component {
@@ -48,9 +49,9 @@ class UserProfile extends React.Component {
                 </div>
                 <section className="profile-container">
                     <div className="navigation-menu">
-                        <button>Reservations</button>
-                        <button>Saved Events</button>
-                        <button>Account Detail</button>
+                        <Link to="/user/profile">Reservations</Link> 
+                        <Link>Saved Events</Link>
+                        {/* <button>Account Detail</button> */}
                     </div>
                     <main className="profile-content">
                         <ul className="upcoming-res-ul">
@@ -63,6 +64,7 @@ class UserProfile extends React.Component {
                         </ul>
                     </main>
                 </section>
+                {/* <SavedEvents savedEvents={savedEvents[0]}/> */}
             </>
         )
     }
