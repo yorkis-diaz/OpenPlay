@@ -11,9 +11,7 @@ class SavedEvents extends React.Component {
     }
 
     componentDidMount() {
-        debugger
         const { currentUser, fetchFavorites } = this.props
-        debugger
         fetchFavorites(currentUser.id).then(() => {
             this.setState({
                 fetched: true
@@ -24,11 +22,8 @@ class SavedEvents extends React.Component {
 
     render () {
         if (this.state.fetched === false) return null
-        debugger
         const { savedEvents, events, deleteFavorite, currentUser } = this.props
-        debugger
         const savedEventLis = savedEvents.map((savedEvent) => {
-            debugger
             return (
                 <SavedEventItem
                     key={savedEvent.id}
