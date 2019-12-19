@@ -1,6 +1,7 @@
 import React from 'react';
 import queryString from 'query-string';
 import { Route } from 'react-router-dom';
+import ErrorItem from '../user_forms/errors/error_item';
 
 class BookReservation extends React.Component {
   constructor(props) {
@@ -12,7 +13,8 @@ class BookReservation extends React.Component {
     this.handleChange = this.handleChange.bind(this);
   }
 
-  componentDidUpdate (prev) {
+  componentDidMount () {
+    this.props.clearErrors();
   }
 
   handleSubmit (e) {
@@ -26,6 +28,7 @@ class BookReservation extends React.Component {
       event_id: this.props.event.id,
       phone_number: (this.state.phoneNumber.length === 0) ? null : this.state.phoneNumber
     }
+    this.props.clearErrors()
 
     this.props.createReservation(currentUser.id, reservationDetails).then((reservation) => {
       this.props.history.push(`/reservation/view/${reservation.id}`)
@@ -44,6 +47,14 @@ class BookReservation extends React.Component {
     const { currentUser, loggedIn, event, reservationInfo } = this.props
     if (Object.values(reservationInfo).length === 0 ){
       return this.props.history.push("/")
+    }
+    let error;
+    if (this.props.errors.length > 0) {
+      error = < ErrorItem
+        error={true}
+        message={this.props.errors[0]}
+        style={"book-error"}
+      />
     }
     return (
       <section className="book-page-container">
@@ -87,6 +98,7 @@ class BookReservation extends React.Component {
               <input type="text" placeholder="Phone Number" onChange={this.handleChange("phoneNumber")} />
               <input type="email" value={(loggedIn) ? currentUser.email : ""} disabled />
             </div>
+            {error}
             <button className="complete-reservation-btn" onClick={this.handleSubmit}>
               Complete reservation
             </button>

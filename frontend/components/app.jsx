@@ -11,6 +11,7 @@ import BookReservationContainer from './reservations/book_reservation_container'
 import ReservationViewContainer from './reservations/reservation_view_container';
 import UserProfileContainer from './user_profile/user_profile_container';
 import SavedEventsContainer from './user_profile/saved_events_container';
+import ReviewsContainer from './reviews/reviews_container';
 
 // import ErrorItem from './user_forms/errors/error_item';
 
@@ -25,6 +26,7 @@ const App = () => {
         </header>
 
         <Route path="/reservation/view/:reservationId" component={ReservationViewContainer} />
+        <Route path="/reviews" component={ReviewsContainer} />
         <AuthRoute exact path="/user/profile" component={UserProfileContainer} />
         <AuthRoute exact path="/user/saved-events" component={SavedEventsContainer} />
         <AuthRoute exact path="/reservation" component={BookReservationContainer}/>

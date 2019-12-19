@@ -1,6 +1,7 @@
 .event-show-container {
     position: relative;
-    // background-color: red;
+    background-color: #FCFCFC;
+    width: 100%;
 }
 
 .reservation-div {
@@ -81,24 +82,31 @@
 
 .event-show-details {
     width: 69%;
-    height: 1000px;
-    margin: 0 auto;
-    background-color: #FFFFFF;
+    height: 100%;
+    // margin: 0 auto;
+    background-color: #FCFCFC;
     display: flex;
     font-family: Arial, Helvetica, sans-serif;
+    margin: -48px auto;
     justify-content: space-between;
     transition: all 500ms;
 }
 
 .event-detail {
     // background-color: saddlebrown;
-    width: 64%;
+    width: 62%;
     // overflow-x: visible;
     // overflow-y: visible;
     display: flex;
     flex-flow: column wrap;
     // background-color: green;
     // position: absolute;
+    // padding-top: 20px;
+    margin-top: -20px;
+    margin: auto;
+    // padding-left: 50px;
+    border-radius: 5px;
+    margin-right: 55px;
 }
 
 .event-show-aside {
@@ -139,6 +147,9 @@
     border-bottom: 1px solid #D8D9DB;
     width: 100%;
     // text-align: center;
+    background-color: white;
+    padding-left: 10px;
+    border-radius: 2px;
 }
 
 .event-detail-main {
@@ -149,6 +160,7 @@
     justify-content: space-evenly;
     padding: 10px 0;
     border-bottom: 1px solid #D8D9DB;
+    padding-left: 10px;
 }
 
 .event-subdetail-ul {
@@ -182,6 +194,7 @@
 
     border-bottom: 1px solid #D8D9DB;
     width: 100%;
+    padding-left: 10px;
 }
 
 
