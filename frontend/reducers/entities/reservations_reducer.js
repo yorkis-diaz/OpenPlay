@@ -9,7 +9,8 @@ const ReservationsReducer = (state = {}, action) => {
       return Object.assign({}, reservations);
 
     case RECEIVE_RESERVATION:
-      return Object.assign({}, state, { [action.reservation.id]: action.reservation})
+      const { reservation } = action.payload
+      return Object.assign({}, state, { [reservation.id]: reservation})
 
     case REMOVE_RESERVATION:
       const newState = Object.assign({}, state);

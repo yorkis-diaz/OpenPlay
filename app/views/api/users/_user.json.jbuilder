@@ -1,11 +1,11 @@
 json.set! "user" do
-    json.extract! user, :id, :email, :firstname, :lastname
+    json.extract! user, :id, :email, :firstname, :lastname, :created_at
 end
 
 json.set! "reservations" do
     user.reservations.each do |reservation|
         json.set! reservation.id do
-            json.extract! reservation, :id, :time, :num_participants, :event_id, :date, :participant_id 
+            json.extract! reservation, :id, :time, :num_participants, :event_id, :date, :participant_id
         end
     end
 end

@@ -28,7 +28,6 @@ class BookReservation extends React.Component {
     }
 
     this.props.createReservation(currentUser.id, reservationDetails).then((reservation) => {
-
       this.props.history.push(`/reservation/view/${reservation.id}`)
     })
   }

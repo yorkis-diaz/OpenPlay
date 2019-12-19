@@ -1,4 +1,8 @@
 class Api::ReservationsController < ApplicationController
+    def show
+        @reservation = Reservation.includes(:event).find(params[:id])
+    end
+
     def create
         user = User.find(params[:user_id])
         @reservation = user.reservations.new(reservation_params)

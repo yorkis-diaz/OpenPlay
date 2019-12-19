@@ -1,5 +1,5 @@
 json.set! "user" do
-    json.extract! @user, :id, :email, :firstname, :lastname
+    json.extract! @user, :id, :email, :firstname, :lastname, :created_at
 end
 
 json.set! "reservations" do

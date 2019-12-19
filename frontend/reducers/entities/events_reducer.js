@@ -1,4 +1,5 @@
 import { RECEIVE_EVENTS, RECEIVE_EVENT, RECEIVE_SEARCH } from "../../actions/event_actions";
+import { RECEIVE_RESERVATION } from "../../actions/reservation_actions";
 
 
 
@@ -15,6 +16,10 @@ const EventsReducer = (state = {}, action) => {
 
       case RECEIVE_SEARCH:
         return Object.assign({}, state, action.searchQuery)
+
+      case RECEIVE_RESERVATION:
+        const nextState = Object.assign({}, state, action.payload.event)
+        return nextState;
 
       default:
         return state;

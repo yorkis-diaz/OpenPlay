@@ -5,10 +5,10 @@ import * as ReservationUtil from '../util/reservation_util';
 
 
 
-const receiveReservation = reservation => {
+const receiveReservation = payload => {
   return {
     type: RECEIVE_RESERVATION,
-    reservation
+    payload
   };
 };
 
@@ -27,9 +27,9 @@ export const receiveReservationInfo = (reservationInfo) => {
 }
 
 export const createReservation = (user_id, reservation) => dispatch => {
-  return ReservationUtil.createReservation(user_id, reservation).then(reservation => {
-    dispatch(receiveReservation(reservation));
-    return reservation
+  return ReservationUtil.createReservation(user_id, reservation).then(payload => {
+    dispatch(receiveReservation(payload));
+    return payload.reservation
   });
 };
 

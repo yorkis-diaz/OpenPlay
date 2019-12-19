@@ -9,20 +9,20 @@ export const createReservation = (user_id, reservation) => {
 export const fetchReservation = (reservationId) => {
     return $.ajax({
         method: "GET",
-        url: ``
+        url: `/api/reservations/${reservationId}`
     })
 }
 
-export const deleteReservation = () => {
+export const deleteReservation = (reservationId) => {
   return $.ajax({
     method: "DELETE",
-    url: ``
+    url: `/api/reservations/${reservationId}`
   });
 };
 
-export const updateReservation = () => {
+export const updateReservation = reservationId => {
   return $.ajax({
     method: "PATCH",
-    url: ``
+    url: `/api/reservations/${reservationId}`
   });
 };
