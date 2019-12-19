@@ -22,9 +22,10 @@ const EventsReducer = (state = {}, action) => {
         const nextState = Object.assign({}, state, action.payload.event);
         return nextState;
 
-      case RECEIVE_CURRENT_USER:
-        const { events } = action.payload.events;
-        return Object.assign({}, state, events);
+      // somehow its fetching for new events
+      // case RECEIVE_CURRENT_USER:
+      //   const { events } = action.payload.events;
+      //   return Object.assign({}, state, events);
 
       case RECEIVE_FAVORITES:
         const favState = Object.assign({}, state, action.favorites);
