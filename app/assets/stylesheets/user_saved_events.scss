@@ -73,7 +73,7 @@
     border-top: 1px solid rgba(211, 211, 211, 0.568);
 }
 
-.saved-events-info > img {
+.saved-image-link > img {
     width: 105px;
     height: 105px;
     margin: 0;
@@ -87,14 +87,14 @@
     justify-content: space-around;
 }
 
-.saved-events-content > h2 {
+.saved-events-content > a {
     font-weight: 600;
     color: #181818;
 }
 
 .unsave-btn {
     cursor: pointer;
-    color: #60B2D0;
+    color: #666666;
 }
 
 .unsave-btn:hover {

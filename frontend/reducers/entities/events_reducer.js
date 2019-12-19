@@ -1,6 +1,6 @@
 import { RECEIVE_EVENTS, RECEIVE_EVENT, RECEIVE_SEARCH } from "../../actions/event_actions";
 import { RECEIVE_RESERVATION } from "../../actions/reservation_actions";
-import { RECEIVE_CURRENT_USER } from "../../actions/session_actions";
+import { RECEIVE_CURRENT_USER, RECEIVE_FAVORITES } from "../../actions/session_actions";
 
 
 
@@ -25,6 +25,10 @@ const EventsReducer = (state = {}, action) => {
       case RECEIVE_CURRENT_USER:
         const { events } = action.payload.events;
         return Object.assign({}, state, events);
+
+      case RECEIVE_FAVORITES:
+        const favState = Object.assign({}, state, action.favorites);
+        return favState;
 
       default:
         return state;

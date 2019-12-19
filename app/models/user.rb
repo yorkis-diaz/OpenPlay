@@ -35,6 +35,10 @@ class User < ApplicationRecord
         through: :reservations,
         source: :event
 
+    has_many :favorites, 
+        through: :saved_events,
+        source: :event
+
     
 
     attr_reader :password
@@ -45,7 +49,7 @@ class User < ApplicationRecord
     end
 
     def self.find_by_credentials(email, password) 
-        user = User.includes(:reservations, :events).find_by(email: email)
+        user = User.includes(:reservations, :events, :favorites).find_by(email: email)
         user && user.is_password?(password) ? user : nil
     end
 

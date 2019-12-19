@@ -1,4 +1,9 @@
 class Api::SavedEventsController < ApplicationController
+    def index
+        user = User.includes(:favorites).find(params[:user_id])
+        @favorites = user.favorites
+        render :index
+    end
     def create
         user = User.find(params[:user_id])
         @saved_event = user.saved_events.new(favorite_params)

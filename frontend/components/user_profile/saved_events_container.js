@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 import SavedEvents from "./saved_events";
-import { deleteFavorite } from "../../actions/session_actions";
+import { deleteFavorite, fetchFavorites } from "../../actions/session_actions";
 
 
 const mapStateToProps = (state, ownProps) => {
@@ -16,6 +16,7 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = dispatch => {
     return {
         deleteFavorite: favorite_id => dispatch(deleteFavorite(favorite_id)),
+        fetchFavorites: userId => dispatch(fetchFavorites(userId))
     };
 };
 

@@ -1,3 +1,9 @@
+export const fetchFavorites = (user_id) => {
+    return $.ajax({
+        method: "GET",
+        url: `/api/users/${user_id}/saved_events`,
+    })
+}
 
 export const createFavorite = (user_id, event_id) => {
     return $.ajax({

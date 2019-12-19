@@ -10,7 +10,7 @@ const GreetingMenu = ({ logout, closeDropdown }) => {
         {/* <div className="points-div"></div> */}
         <Link to="/user/profile">My Profile</Link>
         <Link to="/user/profile">My Event History</Link>
-        <Link to="/user/profile">My Saved Events</Link>
+        <Link to="/user/saved-events">My Saved Events</Link>
         <button onClick={() => logout()}>Sign out</button>
       </div>
     );

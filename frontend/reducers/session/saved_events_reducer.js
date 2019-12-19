@@ -13,7 +13,7 @@ const SavedEventsReducer = (state = {}, action) => {
 
     case REMOVE_FAVORITE:
       const newState = Object.assign({}, state);
-      delete newState[action.favorite_id]
+      delete newState[action.favoriteId]
       return newState
 
     case LOGOUT_CURRENT_USER:
