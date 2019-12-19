@@ -13,7 +13,7 @@
 #
 
 class Reservation < ApplicationRecord
-    validates :time, :num_participants, :date, presence: true
+    validates :time, :num_participants, :phone_number, :date, presence: true
 
     belongs_to :participant,
         foreign_key: :participant_id,

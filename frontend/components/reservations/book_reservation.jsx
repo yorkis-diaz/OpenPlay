@@ -24,7 +24,7 @@ class BookReservation extends React.Component {
       date: reservationInfo.requestedDate, 
       participant_id: this.props.currentUser.id, 
       event_id: this.props.event.id,
-      phone_number: this.state.phoneNumber
+      phone_number: (this.state.phoneNumber.length === 0) ? null : this.state.phoneNumber
     }
 
     this.props.createReservation(currentUser.id, reservationDetails).then((reservation) => {
