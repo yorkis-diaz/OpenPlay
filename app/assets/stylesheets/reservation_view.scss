@@ -9,16 +9,22 @@
 
 .reservation-view-details {
     width: 64%;
-    background-color: red;
+    // background-color: red;
     // margin: 0 auto;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 }
 
-.reservation-view-detail {
+.reservation-view-confirmation {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
     // height: 100%;
-    background-color: aqua;
+    background-color: rgb(45, 216, 145);
     width: 100%;
+    font-size: 20px;
+    padding: 10px 20px;
+    display: flex;
 }
 
 .reservation-view-event-info {
@@ -33,51 +39,49 @@
     padding: 10px;
 }
 
-.view-user-info {
-    width: 25%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    // padding: 20px 20px;
-    padding-right: 10px;
-    justify-content: space-evenly;
-}
-
 .view-user-name-circle {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 80px;
-    width: 80px;
+    height: 63px;
+    width: 63px;
     border-radius: 50%;
     background-color: #6C8AE4;
     color: white;
-}
-
-
-/////
-
-
-.review-content {
-    width: 70%;
-    display: flex;
-    flex-direction: column;
-    padding: 20px 5px;
-    justify-content: center;
-}
-
-.reviewer-area {
-    color: gray;
     text-align: center;
 }
 
-.review-item-name-circle {
+.view-user-info {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    // padding: 0 5px;
+    // justify-content: center;
+    margin-left: 10px;
+}
+
+.view-user-info > h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.view-confirmation-circle {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 40px;
-    width: 40px;
+    height: 63px;
+    width: 63px;
     border-radius: 50%;
-    background-color: #6C8AE4;
-    color: white;
+    background-color: white;
+    color: rgb(45, 216, 145);
+    text-align: center;
+    font-size: 50px;
+    transform: rotate(20deg);
+    margin: 0;
+}
+
+.reservation-view-confirmation-text  {
+    width: 60%;
+    margin: 0;
 }
