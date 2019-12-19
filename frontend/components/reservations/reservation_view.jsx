@@ -32,10 +32,8 @@ class ReservationView extends React.Component {
     }
 
   render() {
-        debugger;
         const { event, reservation, user } = this.props;
         if (!reservation) return null;
-        debugger;
         const date = new Date(reservation.date).toDateString();
         const time = new Date(reservation.date).toLocaleTimeString();
         const joinedYear = new Date(user.created_at).getFullYear();

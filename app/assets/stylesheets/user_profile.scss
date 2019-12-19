@@ -1,0 +1,111 @@
+.name-container {
+    width: 100%;
+    background-color: #FFFFFF;
+}
+
+.user-profile-name {
+    width: 70%;
+    background-color: #FFFFFF;
+    font-weight: 600;
+    font-size: 35px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.profile-container {
+    width: 70%;
+    margin: 40px auto;
+    height: 100%;
+    // background-color: red;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navigation-menu {
+    display: flex;
+    flex-direction: column;
+    // background-color: lightsalmon;
+    width: 20%;
+    position: sticky;
+    top: 0;
+}
+
+.navigation-menu > button {
+    color: #999999;
+    padding: 20px 0;
+}
+
+.navigation-menu > button:hover {
+    color: #DA3743;
+}
+
+.profile-content {
+    // background-color: saddlebrown;
+    width: 75%;
+}
+
+.upcoming-res-ul {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px 2px rgba(211, 211, 211, 0.801);
+    margin-bottom: 20px;
+}
+
+.past-res-ul {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px 2px rgba(211, 211, 211, 0.801);
+    margin-bottom: 20px;
+}
+
+.upcoming-res-ul > h1 {
+    width: 100%;
+    background-color: #FFFFFF;
+    font-weight: 600;
+    font-size: 25px;
+    // margin: 0 auto;
+    padding: 20px;
+}
+
+
+.past-res-ul > h1 {
+    width: 100%;
+    background-color: #FFFFFF;
+    font-weight: 600;
+    font-size: 25px;
+    // margin: 0 auto;
+    padding: 20px;
+}
+
+
+.res-info {
+    padding: 20px;
+    background-color: #FCFCFC;
+    width: 100%;
+    display: flex;
+    border-top: 1px solid rgba(211, 211, 211, 0.568);
+}
+
+.res-info > img {
+    width: 105px;
+    height: 105px;
+    margin: 0;
+    border-radius: 5px;
+}
+
+.res-content {
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.res-content > h2 {
+    font-weight: 600;
+    color: #181818;
+}
+

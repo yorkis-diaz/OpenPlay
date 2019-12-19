@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, Route } from "react-router-dom";
 import DropdownContainer from "../dropdowns/dropdown_container";
 import DropdownNav from "../nav_bar/dropdown_nav";
 
@@ -7,6 +7,13 @@ class Greeting extends React.Component {
   constructor(props) {
     super(props)
     this.handleDropdown = this.handleDropdown.bind(this)
+  }
+
+  componentDidUpdate (prev) {
+    const { dropdown } = this.props
+    if ((prev.location.pathname !== this.props.history.location.pathname) && (dropdown !== null)) {
+      this.props.closeDropdown();
+    }
   }
 
 
@@ -31,7 +38,7 @@ class Greeting extends React.Component {
         <div className="greeting">
           {dropdown}
           <hr />
-          <button className="greeting-content" onClick={this.handleDropdown('greeting-menu')}>
+          <button className="greeting-content" on onClick={this.handleDropdown('greeting-menu')}>
              <h1>Hi, {this.props.currentUser.firstname} </h1>
           </button>
           {/* <div>

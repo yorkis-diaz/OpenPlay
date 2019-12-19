@@ -45,7 +45,7 @@ class User < ApplicationRecord
     end
 
     def self.find_by_credentials(email, password) 
-        user = User.find_by(email: email)
+        user = User.includes(:reservations, :events).find_by(email: email)
         user && user.is_password?(password) ? user : nil
     end
 

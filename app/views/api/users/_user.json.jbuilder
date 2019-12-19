@@ -17,3 +17,33 @@ json.set! "savedEvents" do
         end
     end
 end
+
+json.set! "events" do 
+    user.events.each do |event|
+        json.set! event.id do 
+            json.extract! event, :id,
+                :name,
+                :info,
+                :lat,
+                :lng,
+                :event_city,
+                :event_state,
+                :event_zipcode,
+                :event_country,
+                :event_type,
+                :participation_open_time,
+                :participation_close_time,
+                :event_duration,
+                :phone,
+                :skill_level,
+                :rating,
+                :address,
+                :capacity,
+                :cost
+
+            if event.photo.attached?
+                json.photoUrl url_for(event.photo)
+            end
+        end
+    end
+end

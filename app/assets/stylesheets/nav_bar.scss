@@ -309,8 +309,9 @@
     border-radius: 3px;
     right: 20px;
     top: 35px;
-    background-color: rgb(236, 234, 234);
+    background-color: white;
     z-index: 2;
+    align-items: flex-start;
     // box-shadow: 3px, 3px, 5px, 5px rgba(255, 255, 255, 0.473);
     // background-color: palegreen;
 }
@@ -319,37 +320,41 @@
 
 
 
-.session-menu a {
+.session-menu > a {
     padding: 10px;
     padding-bottom: 15px;
     padding-left: 18px;
     font-family: Arial, Helvetica, sans-serif;
     color: rgb(110, 110, 110);
     background-color: rgba(255, 255, 255, 0.473);
+    width: 86%;
+    text-align: left;
 }
 
 .session-menu a:first-of-type {
     padding-top: 15px;
 }
 
-.session-menu a:hover {
+.session-menu > a:hover {
    background-color: rgba(236, 234, 234, 0.863);
    color: black;
 }
 
-.session-menu button:hover {
+.session-menu > button:hover {
     background-color: rgba(236, 234, 234, 0.863);
     color: black;
 
 }
 
 
-.session-menu button {
+.session-menu > button {
     padding: 12px;
     padding-left: 18px;
     font-family: Arial, Helvetica, sans-serif;
     color: rgb(110, 110, 110);
     background-color: rgba(255, 255, 255, 0.473);
+    width: 86%;
+    text-align: left;
 
 }
 

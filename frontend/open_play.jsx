@@ -11,6 +11,10 @@ document.addEventListener("DOMContentLoaded", () => {
     let store;
     if (window.currentUser) {
         const preloadedState = {
+            entities: {
+                reservations: currentUser.reservations,
+                events: currentUser.events
+            },
             session: {
                 currentUser: currentUser.user,
                 savedEvents: currentUser.savedEvents

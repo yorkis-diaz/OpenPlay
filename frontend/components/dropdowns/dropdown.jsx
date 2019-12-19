@@ -5,39 +5,50 @@ import DropdownLanguage from '../nav_bar/dropdown_language';
 import DevVersionDrop from '../nav_bar/dev-version-drop';
 
 
-const Dropdown = ({ dropdown, closeDropdown, logout, openDropdown, loggedIn }) => {
-    if (!dropdown) {
-        return null;
+class Dropdown extends React.Component {
+    constructor(props) {
+        super(props)
     }
 
-    let component;
-    switch (dropdown) {
-        case 'greeting-menu':
-            component = < GreetingMenu logout={logout} closeDropdown={closeDropdown}/>;
-            break;
-
-        case 'dropdown-nav':
-            component = < DropdownNav logout={logout} closeDropdown={closeDropdown} openDropdown={openDropdown} loggedIn={loggedIn}/>;
-            break;
-
-        case 'dropdown-language':
-            component = <DropdownLanguage />;
-            break;
-
-        case 'dev-version':
-            component = <DevVersionDrop />;
-            break;
-
-        default:
-            return null;
+    componentDidUpdate (prevProps) {
     }
+    
+    
 
-    return (
-        <>
-            
-            {component}
-        </>
-    )
+    render () {
+        if (!this.props.dropdown) {
+          return null;
+        }
+        const { dropdown, closeDropdown, logout, openDropdown, loggedIn } = this.props
+        let component;
+        switch (dropdown) {
+            case 'greeting-menu':
+                component = < GreetingMenu logout={logout} closeDropdown={closeDropdown}/>;
+                break;
+    
+            case 'dropdown-nav':
+                component = < DropdownNav logout={logout} closeDropdown={closeDropdown} openDropdown={openDropdown} loggedIn={loggedIn}/>;
+                break;
+    
+            case 'dropdown-language':
+                component = <DropdownLanguage />;
+                break;
+    
+            case 'dev-version':
+                component = <DevVersionDrop />;
+                break;
+    
+            default:
+                return null;
+        }
+    
+        return (
+            <>
+                {component}
+            </>
+        )
+
+    }
 }
 
 export default Dropdown;
