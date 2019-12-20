@@ -22,7 +22,9 @@ const ProfileReservationItem = ({ reservation, event, completed, deleteReservati
                 className="cancellation-btn"
             >
                 Cancel
-            </button>) : ""}
+            </button>) : (
+                <Link className="review-link" to={`/reviews/${reservation.id}`}>Leave a Review</Link>
+            )}
             
         </article>
     </li>

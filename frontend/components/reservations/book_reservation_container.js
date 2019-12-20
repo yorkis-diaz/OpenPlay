@@ -23,7 +23,7 @@ const mapDispatchToProps = dispatch => {
     logout: () => dispatch(logout()),
     openModal: modal => dispatch(openModal(modal)),
     createReservation: (user_id, reservation) => dispatch(createReservation(user_id, reservation)),
-    clearErrors: () => dispatch(clearErrors)
+    clearErrors: () => dispatch(clearErrors())
   };
 };
 

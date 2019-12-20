@@ -55,7 +55,7 @@ event2 = Event.create!({name: "Yu-Gi-Oh! Tournament",
     event_duration: 4.00,
     phone: "917-202-1000", 
     skill_level: "Advanced",
-    rating: 4,
+    rating: 3,
     address: "2900 Southern Blvd",
     capacity: 24,
     cost: 10
@@ -102,7 +102,7 @@ event4 = Event.create!({name: "Tennis Event",
     event_duration: 1.00,
     phone: "212-909-0000", 
     skill_level: "Beginners",
-    rating: 2,
+    rating: 4,
     address: "West 16th Street",
     capacity: 6,
     cost: 30
@@ -144,7 +144,7 @@ event6 = Event.create!({name: "Chess Valley",
     event_country: "United Sates",
     event_type: "Chess",
     participation_open_time: '08:00:00',
-    participation_close_time: '03:00:00',
+    participation_close_time: '15:00:00',
     event_duration: 1.00,
     phone: "212-222-2200", 
     skill_level: "Advanced",
@@ -180,9 +180,59 @@ event7 = Event.create!({name: "IT Convention",
 event7_photo = open("https://open-play-seed.s3.amazonaws.com/events-images/it_convention.jpeg")
 event7.photo.attach(io: event7_photo, filename: 'it_convention.jpeg')
 
-reservation = Reservation.create!({time: "04:00:00", num_participants: 3, date: "2019-12-22", phone_number: "2123231000", participant_id: demo_user.id, event_id: event1.id})
-reservation2 = Reservation.create!({time: "05:00:00", num_participants: 2, date: "2019-12-22", phone_number: "2125551000", participant_id: demo_user.id, event_id: event3.id})
+event8 = Event.create!({name: "Kayaking Adventure",
+    info: "We provide unforgettable, exhilarating advetures to all participants",
+    lat: 41.084245,
+    lng: -73.830236,
+    event_city: "Tarrytown",
+    event_state: "New York",
+    event_zipcode: "10591",
+    event_country: "United Sates",
+    event_type: "Kayak",
+    participation_open_time: '09:00:00',
+    participation_close_time: '16:00:00',
+    event_duration: 2.00,
+    phone: "914-222-0101", 
+    skill_level: "Intermediate",
+    rating: 4,
+    address: "Old Saw Mill River Rd",
+    capacity: 8,
+    cost: 45
+})
+
+event8_photo = open("https://open-play-seed.s3.amazonaws.com/events-images/kayaking.jpeg")
+event8.photo.attach(io: event8_photo, filename: 'kayaking.jpeg')
+
+event9 = Event.create!({name: "Bowling Event",
+    info: "In the heart of the city, have a great time playing alongside other locals",
+    lat: 40.759017,
+    lng: -73.991287,
+    event_city: "Manhattan",
+    event_state: "New York",
+    event_zipcode: "10036",
+    event_country: "United Sates",
+    event_type: "Bowling",
+    participation_open_time: '13:00:00',
+    participation_close_time: '18:00:00',
+    event_duration: 1.00,
+    phone: "212-222-0001", 
+    skill_level: "Intermediate",
+    rating: 3,
+    address: "West 43rd Street",
+    capacity: 4,
+    cost: 20
+})
+
+event9_photo = open("https://open-play-seed.s3.amazonaws.com/events-images/bowling.jpeg")
+event9.photo.attach(io: event9_photo, filename: 'bowling.jpeg')
+
+reservation = Reservation.create!({time: "16:00:00", num_participants: 3, date: "2019-12-22", phone_number: "2123231000", participant_id: demo_user.id, event_id: event1.id})
+reservation2 = Reservation.create!({time: "17:00:00", num_participants: 2, date: "2019-12-22", phone_number: "2125551000", participant_id: demo_user.id, event_id: event3.id})
+reservation3 = Reservation.create!({time: "11:00:00", num_participants: 2, date: "2019-12-15", phone_number: "2123231000", participant_id: demo_user.id, event_id: event8.id})
+reservation4 = Reservation.create!({time: "14:00:00", num_participants: 1, date: "2019-12-22", phone_number: "2125551000", participant_id: demo_user.id, event_id: event4.id})
 review = Review.create!({body: "The venue is very clean and well maintained", rating: 5, reviewer_id: demo_user.id, event_id: event1.id, reservation_id: reservation.id})
 review2 = Review.create!({body: "The venue is excellent", rating: 4, reviewer_id: demo_user.id, event_id: event3.id, reservation_id: reservation2.id})
 savedevent = SavedEvent.create({user_id: demo_user.id, event_id: event4.id})
+savedevent2 = SavedEvent.create({user_id: demo_user.id, event_id: event8.id})
+savedevent3 = SavedEvent.create({user_id: demo_user.id, event_id: event6.id})
 

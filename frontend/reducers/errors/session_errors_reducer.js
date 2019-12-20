@@ -4,6 +4,7 @@ import {
   CLEAR_ERRORS, 
 } from "../../actions/session_actions";
 import { RECEIVE_RESERVATION_ERRORS } from "../../actions/reservation_actions";
+import { RECEIVE_REVIEWS_ERRORS } from "../../actions/reviews_actions";
 
 
 const _nullErrors = [];
@@ -21,6 +22,9 @@ export default (state = _nullErrors, action) => {
       return [];
 
     case RECEIVE_RESERVATION_ERRORS:
+      return action.errors
+
+    case RECEIVE_REVIEWS_ERRORS:
       return action.errors
 
     default:

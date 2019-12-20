@@ -8,6 +8,7 @@ class Homepage extends React.Component {
   }
 
   componentDidMount () {
+    scrollTo(0, 0)
     this.props.fetchEvents()
   }
 
@@ -16,29 +17,34 @@ class Homepage extends React.Component {
 
   render () {
     let { events } = this.props
-    const eventItems = events.map((event) => {
+    const topRatedItems = events.filter((event) => event.rating >= 4).map((event) => {
       return (
         <HomepageEventItem event={event} key={event.id}/>
       )
     })
+    const areaItems = events.filter((event) => event.event_state === "New York" ).map((event) => {
+      return (
+        <HomepageEventItem event={event} key={event.id} />
+      )
+    })
     return (
       <section className="homepage">
-        <h1 className="h1-headers">Recently Viewed</h1>
+        <h1 className="h1-headers">Events near New York</h1>
         {/* consider changing title to something else */}
         <hr className="homepage-hr" />
         <div className="recently-viewed-container">
-          <ul className="recently-viewed">{eventItems}</ul>
+          <ul className="recently-viewed">{areaItems}</ul>
         </div>
         <h1 className="h1-headers">Top Events</h1>
         <hr className="homepage-hr" />
         <div className="top-events-container">
-          <ul className="top-events">{eventItems}</ul>
+          <ul className="top-events">{topRatedItems}</ul>
         </div>
         <div className="featured-area">
           <h1 className="h1-headers">Featured Areas</h1>
           <hr className="homepage-hr" />
           <ul className="featured-area-ul">
-            <Link to="/search/New%20York%20City" className="featured-link">
+            <Link to="/search/New%20York" className="featured-link">
               New York Area
             </Link>
             <Link to="/search/New%20Orleans" className="featured-link">

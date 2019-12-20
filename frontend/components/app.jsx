@@ -26,7 +26,7 @@ const App = () => {
         </header>
 
         <Route path="/reservation/view/:reservationId" component={ReservationViewContainer} />
-        <Route path="/reviews" component={ReviewsContainer} />
+        <Route path="/reviews/:reservationId" component={ReviewsContainer} />
         <AuthRoute exact path="/user/profile" component={UserProfileContainer} />
         <AuthRoute exact path="/user/saved-events" component={SavedEventsContainer} />
         <AuthRoute exact path="/reservation" component={BookReservationContainer}/>

@@ -69,21 +69,21 @@ class ResultSearchBar extends React.Component {
     return [...Array(24).keys()].map(num => {
       if (num === 0) {
         return (
-          <>
-            <option value={0}>12:00 AM</option>
-          </>
+          
+          <option key={0} value={0}>12:00 AM</option>
+          
         );
       } else if (num > 12) {
         return (
-          <>
-            <option value={num}>{num - 12}:00 PM</option>
-          </>
+          
+          <option key={num} value={num}>{num - 12}:00 PM</option>
+          
         );
       } else {
         return (
-          <>
-            <option value={num}>{num}:00 AM</option>
-          </>
+          
+          <option key={num} value={num}>{num}:00 AM</option>
+          
         );
       }
     });

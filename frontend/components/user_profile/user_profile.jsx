@@ -21,9 +21,10 @@ class UserProfile extends React.Component {
       const pastRes = [] 
         reservations.map((reservation) => {
             let reservationDate = new Date(reservation.date)
-            if (reservationDate < new Date()) {
+            if (reservationDate <= new Date()) {
                 pastRes.push(
                   <ProfileReservationItem
+                    key={reservation.id}
                     reservation={reservation}
                     event={events[reservation.event_id]}
                     completed={true}
@@ -33,6 +34,7 @@ class UserProfile extends React.Component {
             } else {
                 upcomingRes.push(
                   <ProfileReservationItem
+                    key = { reservation.id }
                     reservation={reservation}
                     event={events[reservation.event_id]}
                     completed={false}
