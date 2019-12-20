@@ -4,7 +4,7 @@ OpenPlay is a reservations website that connects people to local events in which
 they want to participate in. It lets users browse through different events of 
 all skill levels.
 
-![Homepage](https://open-play-seed.s3.amazonaws.com/openplay.gif)
+![Homepage](https://open-play-seed.s3.amazonaws.com/+openplay1.gif)
 
 OpenPlay is hosted at [OpenPlay link](https://open-play1.herokuapp.com)
 
@@ -23,6 +23,8 @@ OpenPlay is hosted at [OpenPlay link](https://open-play1.herokuapp.com)
 
 ## Key Features
 ---
+
+[Document Design](https://github.com/yorkis-diaz/OpenPlay/wiki)
 
 ## Reservations
 * Users can search for an event based on Date, Time, How many will Participate and Locations
