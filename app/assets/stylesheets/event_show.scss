@@ -7,6 +7,7 @@
 .reservation-div {
     position: sticky;
     top: 0px;
+    z-index: 2;
     // background-color: red;
 }
 
@@ -102,8 +103,8 @@
     // background-color: green;
     // position: absolute;
     // padding-top: 20px;
-    margin-top: -20px;
-    margin: auto;
+    // margin-top: -20px;
+    // margin: auto;
     // padding-left: 50px;
     border-radius: 5px;
     margin-right: 55px;
