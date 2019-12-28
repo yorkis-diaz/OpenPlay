@@ -37,9 +37,8 @@ class Reviews extends React.Component {
             event_id: event.id
         }
         this.props.clearErrors()
-        this.props.createReview(Object.assign({}, this.state, review)).then(() => {
-            this.props.history.push(`/events/${event.id}`)
-        })
+        this.props.createReview(Object.assign({}, this.state, review))
+        this.props.history.push(`/events/${event.id}`)
     }
 
 
