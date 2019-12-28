@@ -5,7 +5,7 @@ end
 json.set! "reservations" do
     @user.reservations.each do |reservation|
         json.set! reservation.id do
-            json.extract! reservation, :id, :time, :num_participants, :event_id
+            json.extract! reservation, :id, :time, :num_participants, :event_id, :participant_id, :date, :phone_number
         end
     end
 end

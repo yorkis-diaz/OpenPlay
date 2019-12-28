@@ -21,10 +21,17 @@ class UserProfile extends React.Component {
     const { currentUser, reservations, events, deleteReservation } = this.props
     const upcomingRes = []
     const pastRes = [] 
-    debugger
     reservations.map((reservation) => {
-      const reservationDate = new Date(reservation.date).toDateString()
-      if (reservationDate >= new Date().toDateString()) {
+      const currentDate = `${new Date().getFullYear()}/${
+        new Date().getMonth() < 10
+          ? `0${new Date().getMonth()}`
+          : new Date().getMonth()
+      }/${
+        new Date().getDate() < 10
+          ? `0${new Date().getDate()}`
+          : new Date().getDate()
+      }`;
+      if (reservation.date < currentDate) {
         pastRes.push(
           <ProfileReservationItem
             key={reservation.id}
@@ -45,7 +52,7 @@ class UserProfile extends React.Component {
           />
         );
       }
-    })
+    });
     return (
       <>
         <div className="name-container">
