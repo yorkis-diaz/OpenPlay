@@ -104,7 +104,15 @@ class EventShow extends React.Component {
                   openModal={this.props.openModal}
                 />
               </div>
-              {/* <OpenMap eventLat={event.lat} evenLng={event.lng}/>               */}
+              <div className="maps-container">
+                <map className="maps-show-page">
+                  <OpenMap eventLat={event.lat} eventLng={event.lng} />
+                </map>
+                <p>
+                  {event.address} {event.event_city}, {event.event_state}{" "}
+                  {event.event_zipcode}
+                </p>
+              </div>
             </aside>
           </div>
         </section>

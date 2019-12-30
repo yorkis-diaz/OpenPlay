@@ -16,7 +16,6 @@
 
 
  #map-container {
-    width: 250px;
-    height: 250px;
-
+    width: inherit;
+    height: inherit;
  }

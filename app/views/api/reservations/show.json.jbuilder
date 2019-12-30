@@ -1,5 +1,5 @@
 json.set! "reservation" do 
-    json.extract! @reservation, :id, :time, :date, :num_participants, :event_id, :phone_number
+    json.extract! @reservation, :id, :time, :date, :num_participants, :event_id, :phone_number, :participant_id
 end
 
 json.set! "event" do 

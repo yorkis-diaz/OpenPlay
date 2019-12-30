@@ -4,7 +4,7 @@ import { deleteReservation } from "../../actions/reservation_actions";
 
 
 const mapStateToProps = (state, ownProps) => {
-    const { currentUser } = state.session
+  const { currentUser } = state.session
   return {
     currentUser,
     savedEvents: Object.values(state.session.savedEvents),
