@@ -33,14 +33,14 @@ class SearchResult extends React.Component {
             <>
                 <ResultSearchBarContainer/>
                 <div className="search-results-container">
-                    <aside className="search-aside">
+                    {/* <aside className="search-aside">
                         <map name="">
                             Map Link Goes Here
                         </map>
                         <div>
                             Filters
                         </div>
-                    </aside>
+                    </aside> */}
                     <ul className="search-ul">
                         {eventLis}
                     </ul>
@@ -52,12 +52,12 @@ class SearchResult extends React.Component {
           <>
             <ResultSearchBarContainer />
             <div className="search-results-container">
-              <aside className="search-aside">
+              {/* <aside className="search-aside">
                 <map name="">Map Link Goes Here</map>
                 <div>Filters</div>
-              </aside>
+              </aside> */}
               <ul className="no-search-ul">
-                <h1>we did not find a match for youe search</h1>
+                <h1>we did not find a match for your search</h1>
                 <h2>
                   Sorry, we couldn't find any results for "
                   <span>{this.props.match.params.searchQuery}</span>". Try

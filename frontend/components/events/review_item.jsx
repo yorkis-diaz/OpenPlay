@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const ReviewItem = ({ review, reviewer, event }) => {
+  if (!reviewer) return null;
   return (
     <li key={review.id} className="review-item">
       <div className="reviewer-info">
