@@ -7,31 +7,58 @@ class UserProfile extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      date: new Date
-    }
+      date: new Date()
+    };
   }
 
   componentDidMount() {
     this.setState({
-      date: new Date
-    })
+      date: new Date()
+    });
+  }
+
+  convertTime(date) {
+    if (!date) {
+      const newDate = new Date()
+      let month =
+        newDate.getMonth() > 12
+          ? newDate.getMonth() - 12
+          : newDate.getMonth();
+      let day = newDate.getDate();
+      let yr = newDate.getFullYear();
+      return `${yr < 10 ? `0${yr}` : yr}:${month < 10 ? `0${month}` : month}:${
+        day < 10 ? `0${day}` : day
+      }`;
+    } else {
+      const newDate = new Date(date);
+      let month =
+        newDate.getMonth() > 12 ? newDate.getMonth() - 12 : newDate.getMonth();
+      let day = newDate.getDate();
+      let yr = newDate.getFullYear();
+      return `${yr < 10 ? `0${yr}` : yr}:${month < 10 ? `0${month}` : month}:${
+        day < 10 ? `0${day}` : day
+      }`;
+    }
+
   }
 
   render() {
-    const { currentUser, reservations, events, deleteReservation } = this.props
-    const upcomingRes = []
-    const pastRes = [] 
-    reservations.map((reservation) => {
-      const currentDate = `${new Date().getFullYear()}/${
-        new Date().getMonth() < 10
-          ? `0${new Date().getMonth()}`
-          : new Date().getMonth()
-      }/${
-        new Date().getDate() < 10
-          ? `0${new Date().getDate()}`
-          : new Date().getDate()
-      }`;
-      if (reservation.date < currentDate) {
+    const { currentUser, reservations, events, deleteReservation } = this.props;
+    const upcomingRes = [];
+    const pastRes = [];
+    reservations.map(reservation => {
+      // const currentDate = `${new Date().getFullYear()}/${
+      //   new Date().getMonth() < 10
+      //     ? `0${new Date().getMonth()}`
+      //     : new Date().getMonth()
+      // }/${
+      //   new Date().getDate() < 10
+      //     ? `0${new Date().getDate()}`
+      //     : new Date().getDate()
+      // }`;
+      // const currentDate = new Date().getTime();
+      // const resDate = new Date().getTime();
+      if (this.convertTime(reservation.date) < this.convertTime()) {
         pastRes.push(
           <ProfileReservationItem
             key={reservation.id}
@@ -41,10 +68,10 @@ class UserProfile extends React.Component {
             deleteReservation={deleteReservation}
           />
         );
-    } else {
+      } else {
         upcomingRes.push(
           <ProfileReservationItem
-            key = { reservation.id }
+            key={reservation.id}
             reservation={reservation}
             event={events[reservation.event_id]}
             completed={false}
@@ -66,16 +93,18 @@ class UserProfile extends React.Component {
     return (
       <>
         <div className="name-container">
-          <h1 className="user-profile-name">{currentUser.firstname} {currentUser.lastname}</h1>
+          <h1 className="user-profile-name">
+            {currentUser.firstname} {currentUser.lastname}
+          </h1>
         </div>
         <section className="profile-container">
           <div className="navigation-menu">
-            <Link to="/user/profile">Reservations</Link> 
+            <Link to="/user/profile">Reservations</Link>
             <Link to="/user/saved-events">Saved Events</Link>
           </div>
           <main className="profile-content">
             <ul className="upcoming-res-ul">
-              <h1 >Upcoming Reservations</h1>
+              <h1>Upcoming Reservations</h1>
               {upcomingRes}
             </ul>
             <ul className="past-res-ul">
@@ -85,7 +114,7 @@ class UserProfile extends React.Component {
           </main>
         </section>
       </>
-    )
+    );
   }
 }
 

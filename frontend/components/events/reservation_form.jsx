@@ -60,7 +60,6 @@ class ReservationForm extends React.Component {
 
   handleSearch(e) {
     e.preventDefault();
-    debugger
     this.props.receiveReservationInfo(Object.assign({}, this.state));
     this.setState({
       searched: true
@@ -117,7 +116,6 @@ class ReservationForm extends React.Component {
   }
 
   render() {
-    debugger
     const { date } = this.state;
     const today = this.convertDate()
 

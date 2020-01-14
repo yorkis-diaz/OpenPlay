@@ -10,7 +10,8 @@ const mapStateToProps = (state, ownProps) => {
     return {
         reservation,
         event,
-        user: state.session.currentUser
+        user: state.session.currentUser,
+        reservationInfo: state.session.reservationInfo
     };
 };
 
