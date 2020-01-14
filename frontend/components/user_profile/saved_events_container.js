@@ -8,7 +8,6 @@ const mapStateToProps = (state, ownProps) => {
     return {
         currentUser,
         savedEvents: Object.values(state.session.savedEvents),
-        // reservations: Object.values(state.entities.reservations),
         events: state.entities.events
     };
 };

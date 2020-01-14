@@ -73,7 +73,6 @@ class ReservationView extends React.Component {
                 </h1>
                 <p>joined in {joinedYear}</p>
                 <p>{event.event_state} Area</p>
-                {/* <p>num reviews</p> */}
             </div>
             </div>
         </section>

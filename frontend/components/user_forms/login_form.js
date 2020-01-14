@@ -49,7 +49,6 @@ class LoginForm extends React.Component {
       this.setState({
         [value]: e.target.value
       });
-      // this.menu = < GreetingMenu />
     };
 
   };

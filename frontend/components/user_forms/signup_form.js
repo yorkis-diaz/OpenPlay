@@ -102,21 +102,9 @@ class SignupForm extends React.Component {
             message={"Password is too short (minimum is 6 characters)"}
             style={"error-item"}
           />
-          {/* <label>
-            <input
-              type="password"
-              onChange={this.handleUpdate("password")}
-              placeholder="Re-nter password*"
-              value={this.state.password}
-            />
-          </label> */}
 
           <button className="signin-btn">Create Account</button>
         </form>
-        {/* <p>
-          By creating an account you agree to the{" "}
-          <span>OpenPlay Terms of Use</span> <span>Privacy Policy</span>
-        </p> */}
       </div>
     );
   }

@@ -58,9 +58,6 @@ class ReservationForm extends React.Component {
     this.setState({
       searched: true
     })
-    // this.props.searchEvents(this.state.searchInput).then(() => {
-    //   this.props.history.push(`/search/${this.state.searchInput}`); //change
-    // });
   }
 
   makePeopleOptions() {

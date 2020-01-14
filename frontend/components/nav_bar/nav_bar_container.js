@@ -6,10 +6,7 @@ import { openDropdown, closeDropdown } from '../../actions/dropdown_actions';
 import NavBar from './nav_bar';
 
 const mapStateToProps = (state, ownProps) => {
-    // const currentUser = state.session.currentUser
     return {
-        // loggedIn: Boolean(currentUser),
-        // currentUser,
         dropdown: state.ui.dropdown
     }
 }

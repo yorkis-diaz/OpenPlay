@@ -68,41 +68,6 @@ const ReservationTimes = (props) => {
       return (
         <ul className="times-btns-ul">
           {buttonsLis}
-          {/* <button
-            className="times-btns"
-            onClick={handleClick}
-            value={convertTime(requestedRange[0])}
-          >
-            {convertTime(requestedRange[0])}
-          </button>
-          <button
-            className="times-btns"
-            onClick={handleClick}
-            value={convertTime(requestedRange[1])}
-          >
-            {convertTime(requestedRange[1])}
-          </button>
-          <button
-            className="times-btns"
-            onClick={handleClick}
-            value={convertTime(requestedRange[2])}
-          >
-            {convertTime(requestedRange[2])}
-          </button>
-          <button
-            className="times-btns"
-            onClick={handleClick}
-            value={convertTime(requestedRange[3])}
-          >
-            {convertTime(timeRange[3])}
-          </button>
-          <button
-            className="times-btns"
-            onClick={handleClick}
-            value={convertTime(requestedRange[4])}
-          >
-            {convertTime(timeRange[4])}
-          </button> */}
         </ul>
       );
     }

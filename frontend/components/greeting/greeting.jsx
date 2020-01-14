@@ -41,9 +41,6 @@ class Greeting extends React.Component {
           <button className="greeting-content" on onClick={this.handleDropdown('greeting-menu')}>
              <h1>Hi, {this.props.currentUser.firstname} </h1>
           </button>
-          {/* <div>
-            <h1>{"\u2303"}</h1>
-          </div> */}
         </div>
       );
     } else {
@@ -56,9 +53,6 @@ class Greeting extends React.Component {
     }
   }
 }
-// const Greeting = ({loggedIn, logout, currentUser, openModal, openDropdown }) => {
 
-  
-// };
 
 export default Greeting;

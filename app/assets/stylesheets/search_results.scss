@@ -1,6 +1,5 @@
 .search-results-container {
     display: flex;
-    // background-color: indianred;
     height: 100%;
     justify-content: center;
     margin: 0 auto;
@@ -10,13 +9,11 @@
 .search-aside {
     display: flex;
     flex-direction: column;
-    // background-color: green;
     width: 25%;
     align-items: center;
 }
 
 .search-ul {
-    // background-color: yellow;
     display: flex;
     flex-direction: column;
     width: 75%;
@@ -54,31 +51,11 @@
     font-size: 18px;
     font-weight: 600;
     color: #247F9E;
-    // padding-bottom: 10px;
 
 }
 
-// .timeslots li{
-//     // border: 1px solid gray;
-//     // width: 80%;
-//     border-radius: 3px;
-//     padding: 7px 20px;
-//     // flex-shrink: 4;
-//     margin-right: 21px;
-//     height: 15px;
-//     background-color: #DA3743;
-//     text-align: center;
 
-//     color: white;
-//     font-size: 16px;
-//     font-family: Arial, Helvetica, sans-serif;
-//     transition-property: background-color;
-//     transition-duration: 500ms;
-// }
 
-// .timeslots li:hover {
-//     background-color: #BB242F;
-// }
 
 .event-subdetail { 
     font-size: 15px;
@@ -96,11 +73,9 @@
 
 
 .no-search-ul {
-    // background-color: yellow;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    // flex-wrap: wrap;
     width: 75%;
     padding: 20px;
     height: 350px;
@@ -119,11 +94,9 @@
 }
 
 .start-over-btn {
-    // border: 1px solid gray;
     width: fit-content;
     border-radius: 3px;
     padding: 20px 20px;
-    // flex-shrink: 4;
     margin-right: 21px;
     height: 15px;
     
@@ -152,7 +125,6 @@
 .result-search-form {
     height: fit-content;
     display: flex;
-    // flex-wrap:wrap;
     align-items: center;
     justify-content: center;
     width: 100%;
@@ -168,11 +140,9 @@
     display: flex;
     justify-content: center;
     margin: 0 auto;
-    // margin: 0 5px;
     transition-delay: 1ms;
     width: 100%;
     flex-wrap: wrap;
-    // transition-duration: 1ms;
 }
 
 .search-result-bar-date {
@@ -199,7 +169,6 @@
 }
 
 .search-result-bar-date::-webkit-calendar-picker-indication {
-    // display: none;
 }
 
 
@@ -230,7 +199,6 @@
     padding-left: 5px;
     outline: none;
     cursor: pointer;
-    // -webkit-appearance: none;
 }
 
 .result-form-selects > select {
@@ -254,13 +222,11 @@
     margin-left: 0;
     padding-left: 40px;
     background-color: white;
-    // border-radius: 5px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 
 .result-outer-div > button {
-    // border: 1px solid gray;
     height: 19.3px;
     border-radius: 5px;
     border-top-left-radius: 0;

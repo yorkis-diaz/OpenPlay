@@ -15,12 +15,6 @@ const SearchResultItem = (props) => {
 
     const ReservationTimesWithRouter = withRouter(ReservationTimes);
 
-
-    // const opens = new Date(event.participation_open_time)
-    // const close = new Date(event.participation_close_time)
-    // 
-    // const start_hour =
-    //   (opens.getUTCHours() < 13) ? opens.getUTCHours() : (opens.getUTCHours() - 12);
     return (
       <li className="search-item" key={event.id}>
         <Link to={`/events/${event.id}`}>
@@ -42,24 +36,6 @@ const SearchResultItem = (props) => {
               loggedIn={props.loggedIn}
               openModal={props.openModal}
             />
-{/* 
-            <Link to="/">
-              <li>
-                {start_hour}:{opens.getUTCMinutes()}0
-              </li>
-            </Link>
-
-            <Link to="/">
-              <li>
-                {start_hour + event.event_duration}:{opens.getUTCMinutes()}0
-              </li>
-            </Link>
-            <Link to="/">
-              <li>
-                {start_hour + event.event_duration + event.event_duration}:
-                {opens.getUTCMinutes()}0
-              </li>
-            </Link> */}
           </ul>
         </div>
       </li>

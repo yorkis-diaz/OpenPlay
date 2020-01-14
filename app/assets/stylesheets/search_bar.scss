@@ -8,20 +8,12 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    // background-image: url(https://live.staticflickr.com/8272/29086455075_e66df12f09_b.jpg);
-    // background-image: url(http://www.advpolytech.com/wp-content/uploads/Private-Residence-Miami-Beach-2012-Cushion-Plus.jpg);
     background-image: url("https://open-play-seed.s3.amazonaws.com/events-images/tennis_court.jpeg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     background-color: rgba(0, 0, 0, 0.377);
     background-blend-mode: darken;
-    // top: 0;
-    // bottom: 0;
-    // left: 0;
-    // right: 0;
-    // margin: 0 auto;
-    // background-color: green;
 }
 
 .search-form h1 {
@@ -39,9 +31,7 @@
     display: flex;
     justify-content: center;
     margin: 0 auto;
-    // margin: 0 5px;
     transition-delay: 1ms;
-    // transition-duration: 1ms;
 }
 
 .search-bar-date {
@@ -68,7 +58,6 @@
 }
 
 .search-bar-date::-webkit-calendar-picker-indication {
-    // display: none;
 }
 
 
@@ -96,7 +85,6 @@
     padding-left: 5px;
     outline: none;
     cursor: pointer;
-    // -webkit-appearance: none;
 }
 
 .form-selects > select {
@@ -126,7 +114,6 @@
 
 
 .outer-div > button {
-    // border: 1px solid gray;
     height: 18px;
     border-radius: 5px;
     width: 115px;
@@ -161,14 +148,12 @@
     
     
     .search-bar-date {
-        // flex-shrink: 3;
         width: 33.33%;
     }
     
     .form-selects {
         margin: 0 0;
         width: 100%;
-        // flex-shrink: 1;
     }
 
     .select-containers {

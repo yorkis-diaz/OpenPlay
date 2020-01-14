@@ -30,7 +30,6 @@ class Homepage extends React.Component {
     return (
       <section className="homepage">
         <h1 className="h1-headers">Events near New York</h1>
-        {/* consider changing title to something else */}
         <hr className="homepage-hr" />
         <div className="recently-viewed-container">
           <ul className="recently-viewed">{areaItems}</ul>
@@ -63,14 +62,6 @@ class Homepage extends React.Component {
               Chicago
             </Link>
           </ul>
-          {/* <ul class="states-ul">
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-          </ul> */}
         </div>
       </section>
     );

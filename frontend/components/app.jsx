@@ -13,8 +13,6 @@ import UserProfileContainer from './user_profile/user_profile_container';
 import SavedEventsContainer from './user_profile/saved_events_container';
 import ReviewsContainer from './reviews/reviews_container';
 
-// import ErrorItem from './user_forms/errors/error_item';
-
 
 const App = () => {
     return (

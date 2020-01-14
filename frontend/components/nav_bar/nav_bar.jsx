@@ -38,7 +38,6 @@ class NavBar extends React.Component {
         const dropDevVersion = (this.props.dropdown === "dev-version") ? <DropdownContainer /> : null
         return (
           <>
-            {/* <DropClassChange/> testing nav*/}
             <nav
               className="nav-bar"
             >

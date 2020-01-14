@@ -31,16 +31,6 @@ class DropClassChange extends React.Component {
                 <Link to="#">My Profile</Link>
                 <Link to="#">Favorites</Link>
                 <Link to="#">Event History</Link>
-
-                {/* <button
-                        onClick={() =>
-                        logout().then(() => {
-                            closeDropdown();
-                        })
-                        }
-                    >
-                        Sign out
-                    </button> */}
               </div>
               <div className="drop-menu-languages">
                 <h1>Languages</h1>

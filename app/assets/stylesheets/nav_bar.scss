@@ -2,16 +2,12 @@
     display: flex;
     flex-direction: column;
     padding-top: 2px;
-    // background-color: red;
-    // padding-left: 10px;
-    // padding-right: 10px;
 }
 
 .upper-nav {
     background-color: rgba(236, 234, 234, 0.863);
     display: flex;
     justify-content: flex-end;
-    // border: 2px solid black;
     width: 100%;
     transition-property: display;
     transition-duration: 500ms;
@@ -39,8 +35,6 @@
     text-align: center;
     position: relative;
     font-size: 12px;
-    // border: 3px solid rgba(236, 234, 234, 0.863);
-    // background-color: rgba(236, 234, 234, 0.863);
     font-family: sans-serif;
     cursor: pointer;
     padding-right: 13px;
@@ -55,8 +49,6 @@
     text-align: center;
     position: relative;
     font-size: 12px;
-    // border: 3px solid rgba(236, 234, 234, 0.863);
-    // background-color: rgba(236, 234, 234, 0.863);
     font-family: sans-serif;
     cursor: pointer;
 }
@@ -98,7 +90,6 @@
 
 
 .session-buttons {
-    // background-color: rgba(255, 255, 255, 0.473);
     width: 265px;
     display: flex;
     justify-content: flex-end;
@@ -106,15 +97,12 @@
 }
 
 .signup-greet-btn {
-    // border: 1px solid gray;
-    // width: 80%;
     border-radius: 3px;
     padding: 8.5px 14px;
     margin-right: 10px;
     margin-left: 15px;
     padding-top: 8px;
     height: 16px;
-    // background-color: white;
     text-align: center;
     background-color: #237B98;
     color: white;
@@ -125,11 +113,8 @@
 }
 
 .signin-greet-btn {
-    // border: 1px solid gray;
-    // width: 80%;
     border-radius: 3px;
     padding: 7px 13px;
-    // flex-shrink: 4;
     margin-right: 21px;
     height: 15px;
     background-color: (255, 255, 255, 0.473);
@@ -160,7 +145,6 @@
     width: 100%;
     height: 54px;
     border-bottom: 1px solid rgba(192, 191, 191, 0.466);
-    // background-color: yellow;
 }
 
 .logo {
@@ -169,19 +153,16 @@
     display: flex;
     justify-content: space-between;
     position: relative;
-    // overflow: hidden;
     padding-left: 20px;
     border-right: 1px solid rgba(192, 191, 191, 0.466);
     width: 160px;
     cursor: pointer;
-    // background-color: green;
 }
 
 .logo li {
     width: 100%;
     height: 70%;
     position: relative;
-    // background-color: red;
 
 }
 
@@ -192,25 +173,17 @@
     position: absolute;
     height: fit-content;
     top: 8px;
-    // height: 100%;
-    // background-color: purple;
 }
 
 .target-logo {
     position: absolute;
     color: #DA3743;
-    // width: 50px;
     font-weight: bold;
-    // height: 10px;
-    // padding: 0 0;
-    // padding-top: 0;
     line-height: 0.7em;
     font-size: 60px;
     height: fit-content;
     margin-left: 20px;
     top: 0;
-    // background-color: yellow;
-    // background-color: purple;
 }
 
 .app-name {
@@ -220,50 +193,24 @@
     top: 14px;
     font-weight: bold;
     font-size: 18px;
-    // background-color: blue;
 }
 
-// .logo li::before {
-//     content: "⤗";
-//     color: #DA3743;
-//     font-size: 20px;
-//     position: absolute;
-//     top: 20%;
-// }
-
-// .logo li::after {
-//     content: "\233E";
-//     position: absolute;
-//     color: #DA3743;
-//     width: 50px;
-//     font-weight: bold;
-//     font-size: 60px;
-//     margin-left: 20px;
-//     top: -38%;
-// }
 
 
 
 
-
-// .greeting-container {
-//     width: 20%;
-// }
 .greeting-info {
     display: flex;
     align-items: center;
-    // width: 180%;
 
 }
 
 .greeting {
     height: 100%;
-    // width: 100px;
     font-family: Arial, Helvetica, sans-serif;
     position: relative;
     display: flex;
     align-items: center;
-    // border-left: 1px solid rgba(202, 200, 200, 0.466);
     text-align: center;
     padding-left: 10px;
     padding-right: 50px;
@@ -278,7 +225,6 @@
 }
 
 .greeting-content {
-    // for greeting-content::after
 }
 
 .greeting-content::after {
@@ -312,8 +258,6 @@
     background-color: white;
     z-index: 2;
     align-items: flex-start;
-    // box-shadow: 3px, 3px, 5px, 5px rgba(255, 255, 255, 0.473);
-    // background-color: palegreen;
 }
 
 
@@ -400,12 +344,10 @@
     border: 1px solid rgba(255, 255, 255, 1);
     border-radius: 5px;
     padding-bottom: 5px;
-    // padding-left: 18px;
     font-family: Arial, Helvetica, sans-serif;
     background-color: rgba(255, 255, 255, 1);
     top: 25px;
     right: 20px;
-    // padding-left: 25px;
     font-size: 14px;
 }
 
@@ -417,19 +359,16 @@
     flex-direction: column;
     width: 148px;
     padding-left: 25px;
-    // padding: 10px;
     border: 1px solid rgba(255, 255, 255, 1);
     border-radius: 5px;
     padding-bottom: 5px;
     font-size: 14px;
-    // padding-left: 18px;
     font-family: Arial, Helvetica, sans-serif;
     background-color: rgba(255, 255, 255, 1);
 }
 
 .dropdown-mobile-version a {
     padding: 10px 0;
-    // padding-left: ;
     color:  rgb(95, 94, 94);
 }
 
@@ -473,7 +412,6 @@
 }
 
 @media (max-width:760px){
-    /////////// adding media query
     .upper-nav{
         display: none;
     }
@@ -504,7 +442,6 @@
         width: 20px;
         height: 30px;
         margin: 0 10px;
-        // background-color: red;
         background-image: url("hamburger.png");
         background-position: 0 8px;
 
@@ -551,7 +488,6 @@
         padding-bottom: 5px;
         padding-left: 18px;
         font-family: Arial, Helvetica, sans-serif;
-        // color: rgba(110, 110, 110, 0.733);
         background-color: rgba(255, 255, 255, 0.336);
     }
 
@@ -572,14 +508,6 @@
         border-left: 3px solid teal;
         padding-left: 33px;
     }
-
-
-
-
-    // .nav-drop-menu-btn:hover .nav-drop-menu-content {
-    //     right: -1px;
-    //     opacity: 1;
-    // }
 }
 
 @media (min-width: 761px) {
@@ -661,12 +589,10 @@
     opacity: .5;
     right: -400px;
     top: 0;
-    // display: none;
 }
 
 .test-content {
     position: absolute;
-    // display: flex;
     right: 0;
     top: 400px;
     opacity: 1;

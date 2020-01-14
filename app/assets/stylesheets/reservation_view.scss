@@ -10,8 +10,6 @@
 
 .reservation-view-details {
     width: 64%;
-    // background-color: red;
-    // margin: 0 auto;
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -23,7 +21,6 @@
 .reservation-view-confirmation {
     font-family: Arial, Helvetica, sans-serif;
     color: white;
-    // height: 100%;
     background-color: #55B68D;
     width: 100%;
     font-size: 20px;
@@ -40,7 +37,6 @@
 
 .reservation-view-user-info {
     width: 26%;
-    // background-color: yellow;
     display: flex;
     font-family: Arial, Helvetica, sans-serif;
     padding: 20px;
@@ -68,13 +64,8 @@
     width: 70%;
     display: flex;
     flex-direction: column;
-    // padding: 0 5px;
-    // justify-content: center;
     margin-left: 10px;
-    // background-color: aqua;
     height: 108px;
-    // justify-content: space-between;
-    
 }
 
 .view-user-info > h1 {
@@ -117,7 +108,6 @@
     width: 105px;
     height: 105px;
     margin: 0;
-    // border-radius: 5px;
 }
 
 .view-event-info {
@@ -131,7 +121,6 @@
 .view-event-info > h2 {
     font-size: 16px;
     font-weight: 600;
-    // margin-bottom: 5px;
     color: #2D333F;
 }
 
