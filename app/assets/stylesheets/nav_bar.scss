@@ -26,18 +26,22 @@
     letter-spacing: 1px;
 }
 
-.upper-nav > button:last-of-type {
-    text-decoration: none;
-    color: rgb(110, 110, 110);
-    margin: 2px;
+// .upper-nav > button:last-of-type {
+//     text-decoration: none;
+//     color: rgb(110, 110, 110);
+//     margin: 2px;
+//     margin-right: 36px;
+//     margin-left: 45px;
+//     text-align: center;
+//     position: relative;
+//     font-size: 12px;
+//     font-family: sans-serif;
+//     cursor: pointer;
+//     padding-right: 13px;
+// }
+
+.upper-nav > a:last-of-type {
     margin-right: 36px;
-    margin-left: 45px;
-    text-align: center;
-    position: relative;
-    font-size: 12px;
-    font-family: sans-serif;
-    cursor: pointer;
-    padding-right: 13px;
 }
 
 .upper-nav > button:first-of-type {

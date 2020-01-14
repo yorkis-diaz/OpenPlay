@@ -53,6 +53,16 @@ class UserProfile extends React.Component {
         );
       }
     });
+    pastRes.sort((res1, res2) => {
+      const date1 = new Date(res1.props.reservation.date);
+      const date2 = new Date(res2.props.reservation.date);
+      return date2.getTime() - date1.getTime();
+    });
+    upcomingRes.sort((res1, res2) => {
+      const date1 = new Date(res1.props.reservation.date);
+      const date2 = new Date(res2.props.reservation.date);
+      return date2.getTime() - date1.getTime();
+    });
     return (
       <>
         <div className="name-container">

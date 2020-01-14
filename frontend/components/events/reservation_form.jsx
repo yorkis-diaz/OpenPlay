@@ -7,8 +7,11 @@ class ReservationForm extends React.Component {
     super(props);
     this.state = {
       date: new Date(),
-      requestedDate: `${new Date().getFullYear()}-${new Date().getMonth() +
-        1}-${new Date().getDate()}`,
+      requestedDate: `${new Date().getFullYear()}-${
+        new Date().getMonth() + 1 < 10
+          ? `0${new Date().getMonth() + 1}`
+          : new Date().getMonth() + 1
+      }-${new Date().getDate()}`,
       time: `${new Date().getHours()}`,
       numParticipants: "2",
       searchInput: "",
@@ -22,8 +25,11 @@ class ReservationForm extends React.Component {
   componentDidMount() {
     this.setState({
       date: new Date(),
-      requestedDate: `${new Date().getFullYear()}-${new Date().getMonth() +
-        1}-${new Date().getDate()}`,
+      requestedDate: `${new Date().getFullYear()}-${
+        new Date().getMonth() + 1 < 10
+          ? `0${new Date().getMonth() + 1}`
+          : new Date().getMonth() + 1
+      }-${new Date().getDate()}`,
       time: `${new Date().getHours()}`,
       numParticipants: "2",
       searched: false
@@ -39,25 +45,26 @@ class ReservationForm extends React.Component {
     };
   }
 
-  handleToggle (e) {
+  handleToggle(e) {
     e.preventDefault();
     if (this.state.searched === false) {
       this.setState({
         searched: true
-      })
+      });
     } else {
       this.setState({
         searched: false
-      })
+      });
     }
   }
 
   handleSearch(e) {
     e.preventDefault();
-    this.props.receiveReservationInfo(Object.assign({}, this.state))
+    debugger
+    this.props.receiveReservationInfo(Object.assign({}, this.state));
     this.setState({
       searched: true
-    })
+    });
   }
 
   makePeopleOptions() {
@@ -79,6 +86,12 @@ class ReservationForm extends React.Component {
             <option value={num}>12:00 AM</option>
           </>
         );
+      } else if (num === 12) {
+        return (
+          <>
+            <option key={num} value={num}>12:00 PM</option>
+          </>
+        );
       } else if (num > 12) {
         return (
           <>
@@ -95,15 +108,23 @@ class ReservationForm extends React.Component {
     });
   }
 
-  render() {
+  convertDate() {
     const { date } = this.state;
-    const today = `${date.getFullYear()}-${date.getMonth() +
-      1}-${date.getDate()}`;
+    let month = date.getMonth() + 1;
+    return `${date.getFullYear()}-${
+      month < 10 ? `0${month}` : month
+    }-${date.getDate()}`;
+  }
+
+  render() {
+    debugger
+    const { date } = this.state;
+    const today = this.convertDate()
 
     const people = this.makePeopleOptions();
     const time = this.makeTimeOptions();
 
-    const ReservationTimesWithRouter = withRouter(ReservationTimes)
+    const ReservationTimesWithRouter = withRouter(ReservationTimes);
 
     return (
       <div className="reservation-form">
@@ -133,14 +154,15 @@ class ReservationForm extends React.Component {
             <h2>Time</h2>
             <select
               className="time-select"
+              defaultValue={this.state.date.getHours()}
               onChange={this.handleChange("time")}
             >
               {time}
             </select>
           </label>
-          
-          {(this.state.searched) === false ? (
-            <button onClick={this.handleSearch}>Find an Event</button> 
+
+          {this.state.searched === false ? (
+            <button onClick={this.handleSearch}>Find an Event</button>
           ) : (
             <ReservationTimesWithRouter
               event={this.props.event}
@@ -150,7 +172,6 @@ class ReservationForm extends React.Component {
               openModal={this.props.openModal}
             />
           )}
-          
         </div>
       </div>
     );

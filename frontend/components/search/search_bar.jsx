@@ -60,12 +60,24 @@ class SearchBar extends React.Component {
       });
     }
 
+    convertDate() {
+      const { date } = this.state;
+      let month = date.getMonth() + 1
+      return `${date.getFullYear()}-${month < 10 ? `0${month}` : month}-${date.getDate()}`;
+    }
+
     makeTimeOptions () {
       return [...Array(24).keys()].map(num => {
         if (num === 0) {
           return (
             <>
-              <option key={num} value={0}>12:00 AM</option>
+              <option key={num} value={0} >12:00 AM</option>
+            </>
+          );
+        } else if (num === 12) {
+          return (
+            <>
+              <option key={num} value={num}>12:00 PM</option>
             </>
           );
         } else if (num > 12) {
@@ -86,9 +98,7 @@ class SearchBar extends React.Component {
 
 
     render () {
-        const { date } = this.state
-        const today = `${date.getFullYear()}-${date.getMonth() +
-          1}-${date.getDate()}`;
+        const today = this.convertDate()
 
         const people = this.makePeopleOptions()
         const time = this.makeTimeOptions()
@@ -104,7 +114,7 @@ class SearchBar extends React.Component {
                   type="date" min={today} 
                   defaultValue={today} />
                 <span className="select-containers">
-                  <select onChange={this.handleChange("time")}>
+                  <select defaultValue={this.state.date.getHours()} onChange={this.handleChange("time")}>
                     {time}
                   </select>
                 </span>

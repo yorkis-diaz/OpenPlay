@@ -34,7 +34,7 @@ class ReservationView extends React.Component {
   render() {
         const { event, reservation, user } = this.props;
         if (!reservation) return null;
-        const date = new Date(reservation.date).toDateString();
+        // const date = new Date(reservation.date).toDateString();
         const time = new Date(reservation.date).toLocaleTimeString();
         const joinedYear = new Date(user.created_at).getFullYear();
 
@@ -52,7 +52,7 @@ class ReservationView extends React.Component {
                 <article className="view-event-info">
                 <h2>{event.name}</h2>
                 <p>
-                    {date}, {time}
+                    {reservation.date}, {time}
                 </p>
                 <p>
                     {reservation.num_participants === 1

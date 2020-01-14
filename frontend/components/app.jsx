@@ -12,6 +12,7 @@ import ReservationViewContainer from './reservations/reservation_view_container'
 import UserProfileContainer from './user_profile/user_profile_container';
 import SavedEventsContainer from './user_profile/saved_events_container';
 import ReviewsContainer from './reviews/reviews_container';
+import Footer from './homepage_component/footer';
 
 
 const App = () => {
@@ -32,7 +33,9 @@ const App = () => {
         <Route exact path="/events/:eventId" component={EventShowContainer} />
 
         <Route exact path="/" component={HomepageContainer} />
-        <footer></footer>
+        <footer>
+          <Footer />
+        </footer>
       </main>
     );
 }

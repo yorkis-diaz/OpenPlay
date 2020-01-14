@@ -1,8 +1,8 @@
 import React from 'react';
 import GreetingMenu from '../greeting/greeting_menu';
 import DropdownNav from '../nav_bar/dropdown_nav';
-import DropdownLanguage from '../nav_bar/dropdown_language';
-import DevVersionDrop from '../nav_bar/dev-version-drop';
+// import DropdownLanguage from '../nav_bar/dropdown_language';
+// import DevVersionDrop from '../nav_bar/dev-version-drop';
 
 
 class Dropdown extends React.Component {
@@ -30,13 +30,13 @@ class Dropdown extends React.Component {
                 component = < DropdownNav logout={logout} closeDropdown={closeDropdown} openDropdown={openDropdown} loggedIn={loggedIn}/>;
                 break;
     
-            case 'dropdown-language':
-                component = <DropdownLanguage />;
-                break;
+            // case 'dropdown-language':
+            //     component = <DropdownLanguage />;
+            //     break;
     
-            case 'dev-version':
-                component = <DevVersionDrop />;
-                break;
+            // case 'dev-version':
+            //     component = <DevVersionDrop />;
+            //     break;
     
             default:
                 return null;

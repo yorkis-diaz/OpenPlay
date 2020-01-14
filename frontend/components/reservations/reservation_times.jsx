@@ -31,6 +31,7 @@ const ReservationTimes = (props) => {
         return props.openModal('login')
       }
       e.preventDefault();
+      debugger
       const newState = Object.assign({}, reservationInfo, { requestedTime: e.target.value }, { eventId: event.id})
       receiveReservationInfo(newState)
       props.history.push("/reservation")

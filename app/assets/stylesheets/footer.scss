@@ -1,0 +1,25 @@
+.inner-footer {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: 50%;
+    justify-content: center;
+}
+
+.inner-footer > a {
+    text-decoration: none;
+    color: white;
+    margin: 2px;
+    font-size: 12px;
+    padding: 12px;
+    width: 60px;
+    border: 1px solid rgba(236, 234, 234, 0.863);
+    border-radius: 5px;
+    font-family: sans-serif;
+    cursor: pointer;
+    text-align: center;
+}
+
+.inner-footer > a:hover {
+    background-color: rgba(236, 234, 234, 0.219);
+}
