@@ -4,8 +4,8 @@ OpenPlay is a reservations website that connects people to local events in which
 they want to participate in. It lets users browse through different events of 
 all skill levels.
 
-<img src="https://open-play-seed.s3.amazonaws.com/+openplay1.gif" width="800"/>
-<!-- ![Homepage](https://open-play-seed.s3.amazonaws.com/+openplay1.gif) -->
+
+![Homepage](https://open-play-seed.s3.amazonaws.com/+openplay1.gif)
 
 OpenPlay is hosted at [OpenPlay link](https://open-play1.herokuapp.com)
 
@@ -43,7 +43,7 @@ Main challenge was doing time conversion with the user input time and the event 
 
 <!-- ![user-auth](https://open-play-seed.s3.amazonaws.com/user-auth.gif | width=100px) -->
 
-<img src="https://open-play-seed.s3.amazonaws.com/user-auth.gif" width="500"/>
+![auth](https://open-play-seed.s3.amazonaws.com/new-auth.gif)
 
 
 
