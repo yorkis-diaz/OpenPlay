@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { checkIfExist } from "../../util/selectors";
 
-const ProfileReservationItem = ({ reservation, event, completed, deleteReservation }) => {
+const ProfileReservationItem = ({ reservation, event, completed, deleteReservation, reviews }) => {
     const date = new Date(reservation.date).toDateString();
     // const time = new Date(reservation.date).toLocaleTimeString();
     const newTime = new Date(reservation.time)
@@ -11,6 +12,13 @@ const ProfileReservationItem = ({ reservation, event, completed, deleteReservati
     const display =  `${hr}:${min < 10 ? `0${min}` : min}:${sec < 10 ? `0${sec}` : sec} ${
       newTime.getUTCHours() >= 12 ? "PM" : "AM"
     }`;
+    const reviewExist = checkIfExist(reviews, reservation.participant_id, reservation.id)
+    const reviewLink = (reviewExist) ? (
+        <h1 className="review-exist">Review Sent</h1>
+    ) : (
+        <Link className ="review-link" to={`/reviews/${reservation.id}`}>Leave a Review</Link >
+        
+    );
   return (
     <li className="res-info">
         <img src={event.photoUrl} />
@@ -29,9 +37,10 @@ const ProfileReservationItem = ({ reservation, event, completed, deleteReservati
                 className="cancellation-btn"
             >
                 Cancel
-            </button>) : (
-                <Link className="review-link" to={`/reviews/${reservation.id}`}>Leave a Review</Link>
-            )}
+            </button>) : reviewLink
+                // <Link className="review-link" to={`/reviews/${reservation.id}`}>Leave a Review</Link>
+            }
+            {/* {reviewLink} */}
             
         </article>
     </li>

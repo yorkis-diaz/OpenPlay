@@ -26,3 +26,15 @@ export const selectReviews = (state, eventId) => {
     return eventReviews;
 }
 
+export const checkIfExist = (reviews, userId, reservationId) => {
+    if (!reviews) return;
+    let exist = false;
+    const allReviews = Object.values(reviews);
+    allReviews.map(review => {
+        if (review.reviewer_id === userId && review.reservation_id === reservationId) {
+            exist = true;
+        };
+    })
+    return exist
+}
+

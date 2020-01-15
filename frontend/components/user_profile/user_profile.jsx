@@ -15,6 +15,7 @@ class UserProfile extends React.Component {
     this.setState({
       date: new Date()
     });
+    this.props.fetchReviews(this.props.currentUser.id)
   }
 
   convertTime(date) {
@@ -43,7 +44,7 @@ class UserProfile extends React.Component {
   }
 
   render() {
-    const { currentUser, reservations, events, deleteReservation } = this.props;
+    const { currentUser, reservations, events, deleteReservation, reviews } = this.props;
     const upcomingRes = [];
     const pastRes = [];
     reservations.map(reservation => {
@@ -66,6 +67,8 @@ class UserProfile extends React.Component {
             event={events[reservation.event_id]}
             completed={true}
             deleteReservation={deleteReservation}
+            reviews={reviews}
+
           />
         );
       } else {
@@ -88,7 +91,7 @@ class UserProfile extends React.Component {
     upcomingRes.sort((res1, res2) => {
       const date1 = new Date(res1.props.reservation.date);
       const date2 = new Date(res2.props.reservation.date);
-      return date2.getTime() - date1.getTime();
+      return date1.getTime() - date2.getTime();
     });
     return (
       <>
