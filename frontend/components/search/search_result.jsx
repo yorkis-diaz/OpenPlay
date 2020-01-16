@@ -10,7 +10,12 @@ class SearchResult extends React.Component {
 
     }
     
-
+    componentDidUpdate(prevProps) {
+      // if (prevProps.location.path !== this.props.location.path) {
+      //   const { eventId } = this.props.match.params;
+      //   console.log(eventId)
+      // }
+    }
     
 
 

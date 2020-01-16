@@ -62,10 +62,38 @@
     color: #272D38;
 }
 
+.subdetail-period { 
+    color: #F4F4F5;
+}
+
 .event-rating {
     font-size: 15px;
     font-weight: 600;
+    display: flex;
 }
+
+.rating-count {
+    margin-left: 10px;
+}
+
+.rating-count > a {
+    font-size: 12px;
+}
+
+.rating-count > a:hover {
+    color: red;;
+}
+
+.rating-star::before {
+    content: '\2605';
+    color: rgb(200, 200, 201);
+    font-size: 18px;
+}
+
+.rating-star.star::before {
+    color: #FDAF07;
+}
+
 
 .event-subdetail > span{ 
     color: black;
