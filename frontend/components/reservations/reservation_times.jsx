@@ -46,7 +46,7 @@ const ReservationTimes = (props) => {
             className={`${reserved ? "reserved-btn" : "times-btns"}`}
             onClick={handleClick}
             value={convertTime(requestedRange[i])}
-            disabled={`${reserved}`}
+            disabled={reserved}
           >
             {(reserved) ? "Reserved" : convertTime(requestedRange[i])}
           </button>
