@@ -48,7 +48,7 @@
 }
 
 .event-name {
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: 600;
     color: #247F9E;
 
@@ -87,7 +87,7 @@
 .rating-star::before {
     content: '\2605';
     color: rgb(200, 200, 201);
-    font-size: 18px;
+    font-size: 18px;line-height: 1;
 }
 
 .rating-star.star::before {

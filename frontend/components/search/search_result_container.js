@@ -15,7 +15,8 @@ const mapStateToProps = (state, ownProps) => {
       events,
       loggedIn: Boolean(currentUser),
       currentUser,
-      reservationInfo: state.session.reservationInfo
+      reservationInfo: state.session.reservationInfo,
+      reservations: state.entities.reservations
     };
 };
 

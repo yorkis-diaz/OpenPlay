@@ -168,6 +168,7 @@ class ReservationForm extends React.Component {
               reservationInfo={this.props.reservationInfo}
               loggedIn={this.props.loggedIn}
               openModal={this.props.openModal}
+              reservations={this.props.reservations}
             />
           )}
         </div>

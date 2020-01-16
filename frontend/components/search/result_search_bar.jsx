@@ -141,7 +141,7 @@ class ResultSearchBar extends React.Component {
             </span>
             <select onChange={this.handleChange("numParticipants")}>
               {people}
-              <option value="Large Group">Large Group</option>
+              <option key="21" value="Large Group">Large Group</option>
             </select>
           </div>
           <input

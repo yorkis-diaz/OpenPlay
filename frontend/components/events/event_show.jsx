@@ -50,7 +50,6 @@ class EventShow extends React.Component {
           <ReviewItem review={review} reviewer={reviewers[review.reviewer_id]} event={event}/>
         )
       })
-
       return (
         <section className="event-show-container">
           {this.props.savedEventId ? (
@@ -78,10 +77,16 @@ class EventShow extends React.Component {
               <h1>{event.name}</h1>
               <section className="event-detail-main">
                 <ul className="event-subdetail-ul">
-                  <li>{event.rating} Rating</li>
+                  <li className="event-rating">
+                    <span key="1" className={`rating-star ${(event.rating >= 1 && event.reviews_count !== 0) ? `star` : ``}`}></span>
+                    <span key="2" className={`rating-star ${(event.rating >= 2 && event.reviews_count !== 0) ? `star` : ``}`}></span>
+                    <span key="3" className={`rating-star ${(event.rating >= 3 && event.reviews_count !== 0) ? `star` : ``}`}></span>
+                    <span key="4" className={`rating-star ${(event.rating >= 4 && event.reviews_count !== 0) ? `star` : ``}`}></span>
+                    <span key="5" className={`rating-star ${(event.rating >= 5 && event.reviews_count !== 0) ? `star` : ``}`}></span>
+                  </li>
                   <li>
                     <span className="review-chatbox"></span>
-                    {eventReviews.length} Reviews
+                    {eventReviews.length} {(eventReviews.length === 1) ? "Review" : "Reviews"}
                   </li>
                   <li>${event.cost} and under</li>
                   <li>Difficulty: {event.skill_level}</li>
@@ -102,6 +107,7 @@ class EventShow extends React.Component {
                   reservationInfo={this.props.reservationInfo}
                   loggedIn={this.props.loggedIn}
                   openModal={this.props.openModal}
+                  reservations={this.props.reservations}
                 />
               </div>
               <div className="maps-container">

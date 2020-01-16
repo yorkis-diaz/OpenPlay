@@ -20,8 +20,7 @@ const mapStateToProps = (state, ownProps) => {
   const eventReviews = selectReviews(
     state.entities.reviews,
     ownProps.match.params.eventId
-  );
-        
+  ); 
   return {
     loggedIn: Boolean(currentUser),
     currentUser,
@@ -29,7 +28,8 @@ const mapStateToProps = (state, ownProps) => {
     savedEventId,
     eventReviews,
     reviewers: state.entities.users,
-    reservationInfo: state.session.reservationInfo
+    reservationInfo: state.session.reservationInfo,
+    reservations: state.entities.reservations
   };
 };
 

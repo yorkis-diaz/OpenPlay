@@ -1,4 +1,5 @@
 import React from "react";
+import { checkIfReserved } from "../../util/selectors";
 
 
 
@@ -35,18 +36,19 @@ const ReservationTimes = (props) => {
       receiveReservationInfo(newState)
       props.history.push("/reservation")
     }
-
     const buttonsLis = []
     for(let i = 0; i < 4; i++) {
       if (requestedRange[i]) {
+        const reserved = checkIfReserved(props.reservations, event.id, requestedRange[i])
         buttonsLis.push(
           <button
             key={i}
-            className="times-btns"
+            className={`${reserved ? "reserved-btn" : "times-btns"}`}
             onClick={handleClick}
             value={convertTime(requestedRange[i])}
+            disabled={`${reserved}`}
           >
-            {convertTime(requestedRange[i])}
+            {(reserved) ? "Reserved" : convertTime(requestedRange[i])}
           </button>
         );
       } else {

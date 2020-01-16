@@ -137,6 +137,24 @@
     margin: 5px auto;
 }
 
+.reserved-btn {
+    background-color: #DA3743;
+    color: white;
+    width: 20%;
+    height: fit-content;
+    border-radius: 2px;
+    padding: 10px;
+    margin-right: 10px;
+    text-align: center;
+    background-color: rgba(151, 150, 150, 0.377);
+    color: white;
+    font-size: 12px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 5px auto;
+    cursor: default;
+}
+
 .book-error {
     font-family: Arial, Helvetica, sans-serif;
     list-style: none;

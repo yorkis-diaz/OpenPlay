@@ -23,3 +23,4 @@ json.extract! event, :id,
 if event.photo.attached?
     json.photoUrl url_for(event.photo)
 end
+    json.reviews_count event.reviews.length

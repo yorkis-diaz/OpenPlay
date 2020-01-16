@@ -22,10 +22,8 @@ class UserProfile extends React.Component {
     if (!date) {
       const newDate = new Date()
       let month =
-        newDate.getMonth() > 12
-          ? newDate.getMonth() - 12
-          : newDate.getMonth();
-      let day = newDate.getDate();
+        newDate.getMonth() + 1;
+      let day = newDate.getUTCDate();
       let yr = newDate.getFullYear();
       return `${yr < 10 ? `0${yr}` : yr}:${month < 10 ? `0${month}` : month}:${
         day < 10 ? `0${day}` : day
@@ -33,14 +31,13 @@ class UserProfile extends React.Component {
     } else {
       const newDate = new Date(date);
       let month =
-        newDate.getMonth() > 12 ? newDate.getMonth() - 12 : newDate.getMonth();
-      let day = newDate.getDate();
+        newDate.getMonth() + 1;
+      let day = newDate.getUTCDate();
       let yr = newDate.getFullYear();
       return `${yr < 10 ? `0${yr}` : yr}:${month < 10 ? `0${month}` : month}:${
         day < 10 ? `0${day}` : day
       }`;
     }
-
   }
 
   render() {

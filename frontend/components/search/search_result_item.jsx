@@ -12,7 +12,6 @@ const SearchResultItem = (props) => {
     } else {
         affordable = "$$$"
     }
-
     const ReservationTimesWithRouter = withRouter(ReservationTimes);
     return (
       <li className="search-item" key={event.id}>
@@ -47,6 +46,7 @@ const SearchResultItem = (props) => {
               reservationInfo={props.reservationInfo}
               loggedIn={props.loggedIn}
               openModal={props.openModal}
+              reservations={props.reservations}
             />
           </ul>
         </div>
