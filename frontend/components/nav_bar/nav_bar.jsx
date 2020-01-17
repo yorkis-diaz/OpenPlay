@@ -42,13 +42,13 @@ class NavBar extends React.Component {
               className="nav-bar"
             >
               <div className="upper-nav">
-                <a href="http://yorkisdiaz.com/">Portfolio</a>
+                <a target="_blank" href="http://yorkisdiaz.com/">Portfolio</a>
                 {/* <button onClick={this.handleDropdown("dev-version")}>
                   Mobile <span className="mobile-arrow">⌃</span>
                 </button> */}
-                <a href="https://www.linkedin.com/in/yorkis-diaz-596958196/">LinkedIn</a>
-                <a href="https://github.com/yorkis-diaz">Git</a>
-                <a href="https://angel.co/yorkis-diaz">AngelList</a>
+                <a target="_blank" href="https://www.linkedin.com/in/yorkis-diaz-596958196/">LinkedIn</a>
+                <a target="_blank" href="https://github.com/yorkis-diaz">Git</a>
+                <a target="_blank" href="https://angel.co/yorkis-diaz">AngelList</a>
                 {/* <button onClick={this.handleDropdown("dropdown-language")}>
                   EN <span className="en-arrow">⌃</span>
                 </button> */}

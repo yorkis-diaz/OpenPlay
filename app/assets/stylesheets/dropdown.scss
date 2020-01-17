@@ -1,0 +1,12 @@
+
+// dropdown closing div
+.dropdown-modal {
+    position: absolute;
+    height: 2000px;
+    width: 2000px;
+    right: 0;
+    top: 0;
+    background: transparent;
+    z-index: 10;
+    overflow: auto;
+}

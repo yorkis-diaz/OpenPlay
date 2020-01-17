@@ -19,7 +19,7 @@ class Dropdown extends React.Component {
         if (!this.props.dropdown) {
           return null;
         }
-        const { dropdown, closeDropdown, logout, openDropdown, loggedIn } = this.props
+        const { dropdown, closeDropdown, logout, openDropdown, loggedIn, openModal, closeModal } = this.props
         let component;
         switch (dropdown) {
             case 'greeting-menu':
@@ -27,7 +27,14 @@ class Dropdown extends React.Component {
                 break;
     
             case 'dropdown-nav':
-                component = < DropdownNav logout={logout} closeDropdown={closeDropdown} openDropdown={openDropdown} loggedIn={loggedIn}/>;
+                component = < DropdownNav 
+                    logout={logout} 
+                    closeDropdown={closeDropdown} 
+                    openDropdown={openDropdown} 
+                    loggedIn={loggedIn} 
+                    openModal={openModal} 
+                    closeModal={closeModal}
+                />;
                 break;
     
             // case 'dropdown-language':
