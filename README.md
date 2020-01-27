@@ -5,7 +5,7 @@ they want to participate in. It lets users browse through different events of
 all skill levels.
 
 
-![Homepage](https://open-play-seed.s3.amazonaws.com/+openplay1.gif)
+![Homepage](https://open-play-seed.s3.amazonaws.com/openplay-page.gif)
 
 OpenPlay is hosted at [OpenPlay link](https://open-play1.herokuapp.com)
 
