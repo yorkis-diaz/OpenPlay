@@ -41,28 +41,6 @@ event1 = Event.create!({name: "Volleyball Tournament",
 event1_photo = open("https://open-play-seed.s3.amazonaws.com/events-images/volleyball.jpeg")
 event1.photo.attach(io: event1_photo, filename: 'volleyball.jpeg')
 
-event2 = Event.create!({name: "Yu-Gi-Oh! Tournament",
-    info: "Participants compete with each other for a chance at the top prices",
-    lat: 40.864840,
-    lng: -73.882856,
-    event_city: "The Bronx",
-    event_state: "New York",
-    event_zipcode: "10458",
-    event_country: "United Sates",
-    event_type: "Trading Card",
-    participation_open_time: '10:00:00',
-    participation_close_time: '24:00:00',
-    event_duration: 4.00,
-    phone: "917-202-1000", 
-    skill_level: "Advanced",
-    rating: 3,
-    address: "2900 Southern Blvd",
-    capacity: 24,
-    cost: 10
-})
-event2_photo = open("https://open-play-seed.s3.amazonaws.com/events-images/yugioh.png")
-event2.photo.attach(io: event2_photo, filename: 'yugioh.png')
-
 event3 = Event.create!({name: "Basketball Event",
     info: "Groups are split in teams of 5 to complete in this exciting event",
     lat: 41.897940,
