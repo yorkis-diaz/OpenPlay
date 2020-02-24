@@ -11,7 +11,6 @@ class LoginForm extends React.Component {
       email: "",
       password: ""
     }
-    // this.menu = null
     this.handleUpdate = this.handleUpdate.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.demoUser = this.demoUser.bind(this);
@@ -92,11 +91,6 @@ class LoginForm extends React.Component {
           </button>
         </form>
         <p>New to OpenPlay? {this.props.signupForm}</p>
-        {/* <p>
-          This site is protected by reCAPTCHA and the Google{" "}
-          <span>Privacy</span> <span>Policy</span> and{" "}
-          <span>Terms of Service</span> apply.
-        </p> */}
       </div>
     );
   }

@@ -45,17 +45,6 @@ class UserProfile extends React.Component {
     const upcomingRes = [];
     const pastRes = [];
     reservations.map(reservation => {
-      // const currentDate = `${new Date().getFullYear()}/${
-      //   new Date().getMonth() < 10
-      //     ? `0${new Date().getMonth()}`
-      //     : new Date().getMonth()
-      // }/${
-      //   new Date().getDate() < 10
-      //     ? `0${new Date().getDate()}`
-      //     : new Date().getDate()
-      // }`;
-      // const currentDate = new Date().getTime();
-      // const resDate = new Date().getTime();
       if (this.convertTime(reservation.date) < this.convertTime()) {
         pastRes.push(
           <ProfileReservationItem

@@ -1,7 +1,6 @@
 export const RECEIVE_REVIEW = "RECEIVE_REVIEW";
 export const RECEIVE_REVIEWS = "RECEIVE_REVIEWS"
 import * as ReviewUtil from '../util/review_util';
-import { receiveReservationErrors } from './reservation_actions';
 export const RECEIVE_REVIEWS_ERRORS = "RECEIVE_REVIEWS_ERRORS";
 
 const receiveReview = review => {

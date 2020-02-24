@@ -34,8 +34,6 @@ class NavBar extends React.Component {
 
     render () {
         const dropdown = (this.props.dropdown === "dropdown-nav") ? <DropdownContainer /> : null
-        // const dropLang = (this.props.dropdown === "dropdown-language") ? <DropdownContainer /> : null
-        // const dropDevVersion = (this.props.dropdown === "dev-version") ? <DropdownContainer /> : null
         return (
           <>
             <nav
@@ -43,15 +41,9 @@ class NavBar extends React.Component {
             >
               <div className="upper-nav">
                 <a target="_blank" href="http://yorkisdiaz.com/">Portfolio</a>
-                {/* <button onClick={this.handleDropdown("dev-version")}>
-                  Mobile <span className="mobile-arrow">⌃</span>
-                </button> */}
                 <a target="_blank" href="https://www.linkedin.com/in/yorkis-diaz-596958196/">LinkedIn</a>
                 <a target="_blank" href="https://github.com/yorkis-diaz">Git</a>
                 <a target="_blank" href="https://angel.co/yorkis-diaz">AngelList</a>
-                {/* <button onClick={this.handleDropdown("dropdown-language")}>
-                  EN <span className="en-arrow">⌃</span>
-                </button> */}
               </div>
               <div className="lower-nav-container">
                 <div className="lower-nav">
@@ -77,8 +69,6 @@ class NavBar extends React.Component {
               </div>
             </nav>
             {dropdown}
-            {/* {dropLang} */}
-            {/* {dropDevVersion} */}
           </>
         );
     }

@@ -1,7 +1,5 @@
 import React from "react";
-import { Link, Route } from "react-router-dom";
 import DropdownContainer from "../dropdowns/dropdown_container";
-import DropdownNav from "../nav_bar/dropdown_nav";
 
 class Greeting extends React.Component {
   constructor(props) {

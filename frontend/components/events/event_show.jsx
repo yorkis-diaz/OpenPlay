@@ -66,14 +66,6 @@ class EventShow extends React.Component {
           </div>
           <div className="event-show-details">
             <main className="event-detail">
-              {/* <div className="navigation-menu">
-                <button
-                  onClick={() => scrollTo("event-detail-main")}
-                ></button>
-                <a ref="event-detail-main">Overview</a>
-                <a href="#event-info">Photo</a>
-                {/* <a href="">Reviews</a> */}
-              {/* </div> */}
               <h1>{event.name}</h1>
               <section className="event-detail-main">
                 <ul className="event-subdetail-ul">

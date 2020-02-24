@@ -29,5 +29,4 @@ const HomepageEventItem = ({ event }) => {
       </Link>
     );
 }
-// "•"
 export default HomepageEventItem;

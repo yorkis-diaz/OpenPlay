@@ -1,19 +1,11 @@
 import React from 'react';
 import GreetingMenu from '../greeting/greeting_menu';
 import DropdownNav from '../nav_bar/dropdown_nav';
-// import DropdownLanguage from '../nav_bar/dropdown_language';
-// import DevVersionDrop from '../nav_bar/dev-version-drop';
-
 
 class Dropdown extends React.Component {
     constructor(props) {
         super(props)
     }
-
-    componentDidUpdate (prevProps) {
-    }
-    
-    
 
     render () {
         if (!this.props.dropdown) {
@@ -36,14 +28,6 @@ class Dropdown extends React.Component {
                     closeModal={closeModal}
                 />;
                 break;
-    
-            // case 'dropdown-language':
-            //     component = <DropdownLanguage />;
-            //     break;
-    
-            // case 'dev-version':
-            //     component = <DevVersionDrop />;
-            //     break;
     
             default:
                 return null;

@@ -6,10 +6,8 @@ const DropdownNav = ({ logout, closeDropdown, loggedIn, openModal, closeModal })
     if (loggedIn) {
         return (
           <>
-            {/* dropdown closing divs */}
             <div className="dropdown-modal" onClick={() => closeDropdown()}>
               <div className="dropdown-modal-child" onClick={e => e.stopPropagation()}>
-                {/*  */}
                 <div className="nav-drop-menu-content">
                     <div className="drop-menu-profile">
                       <Link to="/user/profile">My Profile</Link>
@@ -30,10 +28,8 @@ const DropdownNav = ({ logout, closeDropdown, loggedIn, openModal, closeModal })
     } else {
         return (
           <>
-            {/* dropdown closing divs */}
             <div className="dropdown-modal" onClick={() => closeDropdown()}>
               <div className="dropdown-modal-child" onClick={e => e.stopPropagation()}>
-                {/*  */}
                 <div className="nav-drop-menu-content">
                   <div className="drop-menu-profile">
                     <button className="" onClick={() => openModal('signup')}>Sign up</button>

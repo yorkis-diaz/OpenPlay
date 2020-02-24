@@ -35,7 +35,6 @@ const SearchResultItem = (props) => {
             </div>
 
           </div>
-          {/* <p className="event-rating">{event.rating} Rating</p> */}
           <p className="event-subdetail">
             <span>{affordable}</span> • {event.event_type} • {event.event_city}
           </p>

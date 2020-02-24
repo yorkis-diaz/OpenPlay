@@ -56,8 +56,6 @@ class Reviews extends React.Component {
 
   render() {
     const { event, reservation } = this.props;
-    // const date = new Date(reservation.date).toDateString();
-    // const time = new Date(reservation.date).toLocaleTimeString();
     let error;
     if (this.props.errors.length > 0) {
       error = (

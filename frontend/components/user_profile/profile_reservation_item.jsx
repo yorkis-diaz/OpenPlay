@@ -4,7 +4,6 @@ import { checkIfExist } from "../../util/selectors";
 
 const ProfileReservationItem = ({ reservation, event, completed, deleteReservation, reviews }) => {
     const date = new Date(reservation.date).toDateString();
-    // const time = new Date(reservation.date).toLocaleTimeString();
     const newTime = new Date(reservation.time)
     let hr = (newTime.getUTCHours() > 12) ? newTime.getUTCHours() - 12 : newTime.getUTCHours();
     let min = newTime.getUTCMinutes()
@@ -38,9 +37,7 @@ const ProfileReservationItem = ({ reservation, event, completed, deleteReservati
             >
                 Cancel
             </button>) : reviewLink
-                // <Link className="review-link" to={`/reviews/${reservation.id}`}>Leave a Review</Link>
             }
-            {/* {reviewLink} */}
             
         </article>
     </li>

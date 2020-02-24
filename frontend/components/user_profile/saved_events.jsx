@@ -44,7 +44,6 @@ class SavedEvents extends React.Component {
                     <div className="navigation-menu">
                         <Link to="/user/profile">Reservations</Link>
                         <Link to="/user/saved-events">Saved Events</Link>
-                        {/* <button>Account Detail</button> */}
                     </div>
                     <main className="profile-content">
                         <ul className="saved-events-ul">

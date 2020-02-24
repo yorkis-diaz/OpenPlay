@@ -1,6 +1,4 @@
 .search-form {
-    // background-color: lightblue;
-    // border-top: 1px solid;
     height: 415px;
     border-radius: 1px;
     display: flex;
@@ -56,12 +54,6 @@
 .search-bar-date::-webkit-clear-button {
     display: none;
 }
-
-.search-bar-date::-webkit-calendar-picker-indication {
-}
-
-
-
 
 .form-selects {
     display: flex;

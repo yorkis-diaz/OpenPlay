@@ -64,7 +64,6 @@ event3 = Event.create!({name: "Basketball Event",
 event3_photo = open("https://open-play-seed.s3.amazonaws.com/events-images/basketball2.jpeg")
 event3.photo.attach(io: event3_photo, filename: 'basketball2.jpeg')
 
-# updated above
 
 event4 = Event.create!({name: "Tennis Event",
     info: "Come join our tennis matches and play with likeminded tennis lovers",
