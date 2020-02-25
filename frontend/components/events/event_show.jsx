@@ -15,7 +15,7 @@ class EventShow extends React.Component {
   componentDidMount () {
     const { eventId } = this.props.match.params;
     this.props.fetchEvent(eventId);
-
+    scrollTo(0, 0)
   }
 
   componentDidUpdate (prevProps) {
