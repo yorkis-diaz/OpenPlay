@@ -203,6 +203,99 @@ event9 = Event.create!({name: "Bowling Event",
 event9_photo = open("https://open-play-seed.s3.amazonaws.com/events-images/bowling.jpeg")
 event9.photo.attach(io: event9_photo, filename: 'bowling.jpeg')
 
+#new Events added \/
+event10 = Event.create!({name: "Kite Flying",
+    info: "Show off your favorite kite in this community event that showcases some of the best kite designs around.",
+    lat: 36.835413,
+    lng: -75.970376,
+    event_city: "Virginia Beach",
+    event_state: "Virginia",
+    event_zipcode: "23451",
+    event_country: "United Sates",
+    event_type: "Kite",
+    participation_open_time: '10:00:00',
+    participation_close_time: '16:00:00',
+    event_duration: 1.00,
+    phone: "767-222-0001", 
+    skill_level: "Intermediate",
+    rating: 4,
+    address: "Atlantic Avenue",
+    capacity: 10,
+    cost: 15
+})
+
+event10_photo = open("https://open-play-seed.s3.amazonaws.com/kite.jpeg")
+event10.photo.attach(io: event10_photo, filename: 'kite.jpeg')
+
+event11 = Event.create!({name: "Surfing Event",
+    info: "Surf amongst the most competitive locals in Santa Cruz",
+    lat: 36.951844,
+    lng: -122.028994,
+    event_city: "Santa Cruz",
+    event_state: "California",
+    event_zipcode: "95060",
+    event_country: "United Sates",
+    event_type: "Surfing",
+    participation_open_time: '07:00:00',
+    participation_close_time: '12:00:00',
+    event_duration: 2.00,
+    phone: "831-222-0001", 
+    skill_level: "Advanced",
+    rating: 3,
+    address: "W Cliff Dr",
+    capacity: 7,
+    cost: 40
+})
+
+event11_photo = open("https://open-play-seed.s3.amazonaws.com/surfing.jpeg")
+event11.photo.attach(io: event11_photo, filename: 'surfing.jpeg')
+
+event12 = Event.create!({name: "Bicycle Event",
+    info: "Compete in a high adrenaline closed course bicycle race.",
+    lat: 29.477954,
+    lng: -98.476993,
+    event_city: "San Antonio",
+    event_state: "Texas",
+    event_zipcode: "78209",
+    event_country: "United Sates",
+    event_type: "Bicycle",
+    participation_open_time: '10:00:00',
+    participation_close_time: '13:00:00',
+    event_duration: 1.00,
+    phone: "210-111-0001", 
+    skill_level: "Intermediate",
+    rating: 2,
+    address: "Alamo Heights",
+    capacity: 6,
+    cost: 10
+})
+
+event12_photo = open("https://open-play-seed.s3.amazonaws.com/bicycles_2.jpeg")
+event12.photo.attach(io: event12_photo, filename: 'bicycles_2.jpeg')
+
+event13 = Event.create!({name: "Go Karting",
+    info: "Race in this competitive go karting event that push people to their limits.",
+    lat: 28.070241,
+    lng: -82.434375,
+    event_city: "Tampa",
+    event_state: "Florida",
+    event_zipcode: "33613",
+    event_country: "United Sates",
+    event_type: "Go Kart",
+    participation_open_time: '09:00:00',
+    participation_close_time: '18:00:00',
+    event_duration: 1.00,
+    phone: "813-813-0001", 
+    skill_level: "Advanced",
+    rating: 5,
+    address: "North 22nd Street",
+    capacity: 13,
+    cost: 50
+})
+
+event13_photo = open("https://open-play-seed.s3.amazonaws.com/gokart.jpeg")
+event13.photo.attach(io: event13_photo, filename: 'gokart.jpeg')
+
 reservation = Reservation.create!({time: "16:00:00", num_participants: 3, date: "2019-12-22", phone_number: "2123231000", participant_id: demo_user.id, event_id: event1.id})
 reservation2 = Reservation.create!({time: "17:00:00", num_participants: 2, date: "2019-12-22", phone_number: "2125551000", participant_id: demo_user.id, event_id: event3.id})
 reservation3 = Reservation.create!({time: "11:00:00", num_participants: 2, date: "2019-12-15", phone_number: "2123231000", participant_id: demo_user.id, event_id: event8.id})
