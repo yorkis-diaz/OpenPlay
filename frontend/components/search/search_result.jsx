@@ -11,7 +11,6 @@ class SearchResult extends React.Component {
     }
 
     render () {
-      debugger
       const { events } = this.props
       const eventLis = events.map((event) => {
         return (
