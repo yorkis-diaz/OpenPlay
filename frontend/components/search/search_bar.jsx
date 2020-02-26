@@ -71,29 +71,13 @@ class SearchBar extends React.Component {
     makeTimeOptions () {
       return [...Array(24).keys()].map(num => {
         if (num === 0) {
-          return (
-            <>
-              <option key={num} value={0} >12:00 AM</option>
-            </>
-          );
+          return <option key={num} value={0} >12:00 AM</option>;
         } else if (num === 12) {
-          return (
-            <>
-              <option key={num} value={num}>12:00 PM</option>
-            </>
-          );
+          return <option key={num} value={num}>12:00 PM</option>;
         } else if (num > 12) {
-          return (
-            <>
-              <option key={num} value={num}>{num - 12}:00 PM</option>
-            </>
-          );
+          return <option key={num} value={num}>{num - 12}:00 PM</option>;
         } else {
-          return (
-            <>
-              <option key={num} value={num}>{num}:00 AM</option>
-            </>
-          );
+          return <option key={num} value={num}>{num}:00 AM</option>;
         }
       });
     }

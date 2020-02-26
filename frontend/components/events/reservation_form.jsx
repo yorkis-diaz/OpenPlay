@@ -70,9 +70,9 @@ class ReservationForm extends React.Component {
     return [...Array(20).keys()].map(num => {
       let start = num + 1;
       if (start === 1) {
-        return <option value={start}>{start} Person</option>;
+        return <option key={start} value={start}>{start} Person</option>;
       } else {
-        return <option value={start}>{start} People</option>;
+        return <option key={start} value={start}>{start} People</option>;
       }
     });
   }
@@ -81,27 +81,19 @@ class ReservationForm extends React.Component {
     return [...Array(24).keys()].map(num => {
       if (num === 0) {
         return (
-          <>
-            <option value={num}>12:00 AM</option>
-          </>
+          <option key={num} value={num}>12:00 AM</option>
         );
       } else if (num === 12) {
         return (
-          <>
-            <option key={num} value={num}>12:00 PM</option>
-          </>
+          <option key={num} value={num}>12:00 PM</option>
         );
       } else if (num > 12) {
         return (
-          <>
-            <option value={num}>{num - 12}:00 PM</option>
-          </>
+          <option key={num} value={num}>{num - 12}:00 PM</option>
         );
       } else {
         return (
-          <>
-            <option value={num}>{num}:00 AM</option>
-          </>
+          <option key={num} value={num}>{num}:00 AM</option>
         );
       }
     });

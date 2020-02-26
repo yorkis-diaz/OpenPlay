@@ -85,11 +85,9 @@ class ResultSearchBar extends React.Component {
         );
       } else if (num === 12) {
         return (
-          <>
             <option key={num} value={num}>
               12:00 PM
             </option>
-          </>
         );
       } else if (num > 12) {
         return (
@@ -121,7 +119,7 @@ class ResultSearchBar extends React.Component {
 
     const people = this.makePeopleOptions();
     const time = this.makeTimeOptions();
-
+    
     return (
       <div className="result-search-form">
         <div className="result-outer-div">

@@ -44,10 +44,10 @@ class EventShow extends React.Component {
       );
     } else {
       const { eventReviews, reviewers } = this.props
-      const reviewsLis = eventReviews.map((review) => {
+      const reviewsLis = eventReviews.map((review, i) => {
         reviewers
         return (
-          <ReviewItem review={review} reviewer={reviewers[review.reviewer_id]} event={event}/>
+          <ReviewItem key={i} review={review} reviewer={reviewers[review.reviewer_id]} event={event}/>
         )
       })
       return (
