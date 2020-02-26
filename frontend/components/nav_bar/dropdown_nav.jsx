@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const DropdownNav = ({ logout, closeDropdown, loggedIn, openModal, closeModal }) => {
-  debugger
     if (loggedIn) {
         return (
           <>
