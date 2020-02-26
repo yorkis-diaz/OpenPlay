@@ -11,6 +11,7 @@ class SearchResult extends React.Component {
     }
 
     render () {
+      debugger
       const { events } = this.props
       const eventLis = events.map((event) => {
         return (
@@ -57,7 +58,7 @@ class SearchResult extends React.Component {
                 <h1>we did not find a match for your search</h1>
                 <h2>
                   Sorry, we couldn't find any results for "
-                  <span>{this.props.match.params.searchQuery}</span>". Try
+                  <span>{this.props.reservationInfo.searchInput}</span>". Try
                   checking your spelling or using less specific keywords.
                   There are no events with availability within 30 miles of
                   your search.

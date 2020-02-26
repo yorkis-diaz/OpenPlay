@@ -36,9 +36,11 @@ class SearchBar extends React.Component {
 
     handleSearch (e) {
       e.preventDefault();
-      this.props.searchEvents(this.state.searchInput).then(() => {
+      let search = this.state.searchInput.split(" ")
+      let capitalize = search.map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()).join(" ")
+      this.props.searchEvents(capitalize).then(() => {
         this.props.receiveReservationInfo(Object.assign({}, this.state))
-        this.props.history.push(`/search/${this.state.searchInput}`);
+        this.props.history.push(`/search/${capitalize}`);
       })
     }
 
