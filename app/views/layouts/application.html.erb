@@ -4,6 +4,11 @@
     <title>OpenPlay</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+
+    <meta property='og:title' content='Open Play'/>
+    <meta property='og:image' content='/assets/images/openplay.png'/>
+    <meta property='og:description' content='Open Play'/>
+    <meta property='og:url' content='https://open-play1.herokuapp.com/#/'/>
     
     <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=#{ENV['MAPS_API_KEY']}" %>
     <%= stylesheet_link_tag    'application', media: 'all' %>
